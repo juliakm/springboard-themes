@@ -10,7 +10,7 @@ regions[content] = Content
 regions[footer] = Footer
 
 ;Stylesheets
-;stylesheets[all][] = 
+stylesheets[all][] = css/styles.css
 
 ;Scripts
-;scripts[] = 
+scripts[] = js/script.js
