@@ -10,10 +10,10 @@ regions[content] = Content
 regions[footer] = Footer
 
 ;Stylesheets
-stylesheets[all][] = css/bootstrap-responsive.min.css
 stylesheets[all][] = css/bootstrap.min.css
+stylesheets[all][] = css/bootstrap-responsive.min.css
 stylesheets[all][] = css/styles.css
 
 ;Scripts
 scripts[] = js/script.js
-scripts[] = js/bootstray.min.js
+scripts[] = js/bootstrap.min.js
