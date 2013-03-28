@@ -223,7 +223,7 @@ function springboard_frontend_textarea($variables) {
     $wrapper_attributes['class'][] = 'resizable';
   }*/
   //$output = '<div' . drupal_attributes($wrapper_attributes) . '>';
-  $output .= '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
+  $output = '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
   //$output .= '</div>';
   return $output;
 }
@@ -254,4 +254,39 @@ function springboard_frontend_textfield($variables) {
   $output = '<input' . drupal_attributes($element['#attributes']) . ' />';
 
   return $output . $extra;
+}
+
+/** 
+ * Overrides theme_button()
+ */
+function springboard_frontend_button($variables) {
+  $element = $variables['element'];
+  $element['#attributes']['type'] = 'submit';
+  element_set_attributes($element, array('id', 'name', 'value'));
+
+  /*$element['#attributes']['class'][] = 'form-' . $element['#button_type'];
+  if (!empty($element['#attributes']['disabled'])) {
+    $element['#attributes']['class'][] = 'form-button-disabled';
+  }*/
+
+  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+}
+
+/** 
+ * Overrides theme_container()
+ */
+function springboard_frontend_container($variables) {
+  $element = $variables['element'];
+  
+  // Special handling for form elements.
+  /*if (isset($element['#array_parents'])) {
+    // Assign an html ID.
+    if (!isset($element['#attributes']['id'])) {
+      $element['#attributes']['id'] = $element['#id'];
+    }
+    // Add the 'form-wrapper' class.
+    $element['#attributes']['class'][] = 'form-wrapper-asdasdadsasda';
+  }*/
+
+  return $element['#children'];
 }
