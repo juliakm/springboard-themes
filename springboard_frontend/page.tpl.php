@@ -1,6 +1,7 @@
 <header class="clearfix">
-  <?php print theme_image($logo, $site_name, $site_name); ?>
-  <?php if($is_front){ ?><h1 id="site-name"><span><?php print($site_name); ?></span></h1><?php } else { print(l('<span>'.$site_name.'</span>', '<front>', array('html' => TRUE, 'attributes' => array('id' => 'site-name')))); } ?>
+  <?php //print theme_image($logo, $site_name, $site_name); ?>
+  <?php if($is_front){ ?>
+    <h1 id="site-name"><span><?php print($site_name); ?></span></h1><?php } else { print(l('<span>'.$site_name.'</span>', '<front>', array('html' => TRUE, 'attributes' => array('id' => 'site-name')))); } ?>
   <?php print render($page['header']); ?>
 </header>
 <div id="main" class="container clearfix">
