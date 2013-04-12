@@ -5,7 +5,6 @@
 	  $(window).ready(function(){
 	    // Validate form
  		$('.webform-client-form').validate({
- 		
  		  onfocusout: function (element) {
         	$(element).valid();
     	  },
@@ -15,7 +14,7 @@
   		  success: 
   		    function(element) {
     		  element.text('OK').addClass('valid').closest('.control-group').removeClass('error').addClass('success');
-  		    }  		  
+  		  }  		  
  		});
   	    // CVV custom validation rule
 		$("#edit-submitted-payment-information-payment-fields-credit-card-cvv").rules("add", { 
@@ -32,8 +31,8 @@
 		});
 		// Other rules to go here
   	  
-  	  });
+  	  }); // window.ready
   	  
-    } // attach
-  } // Drupal.behaviors
+    } // attach.func
+  } // drupal.behaviors
 })(jQuery);
