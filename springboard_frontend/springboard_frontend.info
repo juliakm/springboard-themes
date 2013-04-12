@@ -16,4 +16,5 @@ stylesheets[all][] = css/styles.css
 
 ;Scripts
 scripts[] = js/script.js
-scripts[] = js/bootstrap.min.js
+scripts[] = js/jquery.validate.js
+;scripts[] = js/bootstrap.min.js

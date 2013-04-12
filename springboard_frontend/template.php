@@ -39,7 +39,7 @@ function springboard_frontend_form_element($variables) {
   $prefix = isset($element['#field_prefix']) ? $element['#field_prefix'] : '';
   $suffix = isset($element['#field_suffix']) ? $element['#field_suffix'] : '';
 
-  $output = '';
+  $output = '<div class="control-group">';
   switch ($element['#title_display']) {
     case 'before':
     case 'invisible':
@@ -58,10 +58,10 @@ function springboard_frontend_form_element($variables) {
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
   }
-
   if (!empty($element['#description'])) {
     $output .= '<div class="description">' . $element['#description'] . "</div>\n";
   }
+  $output .= '</div>';
 
   return $output;
 }
@@ -94,9 +94,10 @@ function springboard_frontend_webform_element($variables) {
   if (!isset($element['#title'])) {
     $element['#title_display'] = 'none';
   }
+  
   $prefix = isset($element['#field_prefix']) ? _webform_filter_xss($element['#field_prefix']) : '';
   $suffix = isset($element['#field_suffix']) ? _webform_filter_xss($element['#field_suffix']) : '';
-
+  $output = '<div class="control-group">';
   switch ($element['#title_display']) {
     case 'inline':
     case 'before':
@@ -116,10 +117,10 @@ function springboard_frontend_webform_element($variables) {
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
   }
-
   if (!empty($element['#description'])) {
     $output .= ' <div class="description">' . $element['#description'] . "</div>\n";
   }
+  $output .= '</div>';
 
   return $output;
 }
@@ -214,7 +215,7 @@ function springboard_frontend_password($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'password';
   element_set_attributes($element, array('id', 'name', 'size', 'maxlength'));
-  //_form_set_class($element, array('form-text'));
+  _form_set_class($element, array('form-text'));
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
@@ -260,7 +261,7 @@ function springboard_frontend_radios($variables) {
 function springboard_frontend_select($variables) {
   $element = $variables['element'];
   element_set_attributes($element, array('id', 'name', 'size'));
-  //_form_set_class($element, array('form-select'));
+  _form_set_class($element, array('form-select'));
 
   return '<select' . drupal_attributes($element['#attributes']) . '>' . form_select_options($element) . '</select>';
 }
@@ -271,18 +272,15 @@ function springboard_frontend_select($variables) {
 function springboard_frontend_textarea($variables) {
   $element = $variables['element'];
   element_set_attributes($element, array('id', 'name', 'cols', 'rows'));
-  //_form_set_class($element, array('form-textarea'));
-  /*$wrapper_attributes = array(
-    'class' => array('form-textarea-wrapper'),
-  );*/
+  _form_set_class($element, array('form-textarea'));
   // Add resizable behavior.
   /*if (!empty($element['#resizable'])) {
     drupal_add_library('system', 'drupal.textarea');
     $wrapper_attributes['class'][] = 'resizable';
   }*/
-  //$output = '<div' . drupal_attributes($wrapper_attributes) . '>';
-  $output = '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
-  //$output .= '</div>';
+  $output = '<div class="controls">';
+  $output .= '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
+  $output .= '</div>';
   return $output;
 }
 
@@ -293,7 +291,7 @@ function springboard_frontend_textfield($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'text';
   element_set_attributes($element, array('id', 'name', 'value', 'size', 'maxlength'));
-  //_form_set_class($element, array('form-text'));
+  _form_set_class($element, array('form-text'));
 
   $extra = '';
   if ($element['#autocomplete_path'] && drupal_valid_path($element['#autocomplete_path'])) {
@@ -367,7 +365,10 @@ function springboard_frontend_status_messages($variables) {
     
     if($type == 'status'){ $type = 'success'; }
     
-    $output .= "<div class=\"alert alert-$status \">\n";
+    // $status throwing warning as undefined
+    // $output .= "<div class=\"alert alert-$status \">\n";
+    // Fix and re-add to output below
+    $output .= "<div class=\"alert\">\n";
     // bootstrap dismiss button
     $output .= "<button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\n";
     if (!empty($status_heading[$type])) {

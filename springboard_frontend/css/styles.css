@@ -1,0 +1,11 @@
+/* Hosted Springboard Styles */
+
+
+/* validation style fixs */
+.control-group.error {
+  background:none; 
+  color:#333;
+}
+.control-group.success .controls label {
+  color:#468847;
+}
