@@ -2,6 +2,22 @@
 
 
 /* validation style fixs */
+.control-group {
+  width:100%;
+  clear:both;
+  float:left;
+}
+.control-group input {
+  display:block;
+  float:left;
+  clear:none;
+}
+.control-group.success .error.valid,
+.control-group.error .error {
+  display:block;
+  float:left;
+  clear:none;
+}
 .control-group.error {
   background:none; 
   color:#333;
@@ -9,7 +25,20 @@
 .control-group.error label {
   color:#8c2e0b;
 }
-.control-group.success .error.valid,
-.control-group.success .controls label {
+.control-group.success .error.valid {
   color:#468847;
+  text-indent: -9999px;
+  text-transform: uppercase;
+  font-size:0;
+  line-height: 0;
+  background: transparent url(../img/input-complete.png) no-repeat 0 0;
+  width:14px;
+  height:15px;
+  margin-left:6px;
+  margin-top:8px;
+}
+.control-group.error .error {
+  display: inline;
+  margin-left:6px;
+  margin-top:6px;
 }
