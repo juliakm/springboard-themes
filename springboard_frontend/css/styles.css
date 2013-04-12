@@ -6,6 +6,10 @@
   background:none; 
   color:#333;
 }
+.control-group.error label {
+  color:#8c2e0b;
+}
+.control-group.success .error.valid,
 .control-group.success .controls label {
   color:#468847;
 }
