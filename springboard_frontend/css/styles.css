@@ -7,6 +7,7 @@
   clear:both;
   float:left;
 }
+.control-group select,
 .control-group input {
   display:block;
   float:left;

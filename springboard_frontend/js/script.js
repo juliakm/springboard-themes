@@ -5,6 +5,10 @@
 	  $(window).ready(function(){
 	    // Validate form
  		$('.webform-client-form').validate({
+ 		
+ 		  onfocusout: function (element) {
+        	$(element).valid();
+    	  },
   		  highlight: function(element) {
     		$(element).closest('.control-group').removeClass('success').addClass('error');
   		  },
