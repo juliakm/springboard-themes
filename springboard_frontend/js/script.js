@@ -41,7 +41,7 @@
   		  } 		  
  		});
  		// Zipcode custom validation rule
-		$('#edit-submitted-billing-information-zip').rules("add", { 
+		$('input[name$="[zip]"]').rules("add", { 
 	  	  required: true, 
 	  	  number: true,
 	  	  minlength:5, 
@@ -52,7 +52,7 @@
 	  	  }
 		});
   	    // CVV custom validation rule
-		$("#edit-submitted-payment-information-payment-fields-credit-card-cvv").rules("add", { 
+		$('input[name$="[card_cvv]"]').rules("add", { 
 	  	  required: true, 
 	  	  number: true,
 	  	  minlength:3, 
@@ -65,7 +65,7 @@
 	  	  }
 		});
 		// Credit Card custom validation rule
-		$("#edit-submitted-payment-information-payment-fields-credit-card-number").rules("add", { 
+		$('input[name$="[card_number]"]').rules("add", { 
 	  	  required: true, 
 	  	  creditcard: true,
 	  	  messages: { 
@@ -73,7 +73,7 @@
 	    	creditcard: "Enter a valid credit card number",
 	  	  }
 		});
-		$('#edit-submitted-donation-other-amount').rules("add", {
+		$('input[name$="[other_amount]"]').rules("add", {
 		  required: true, 
 	  	  amount: true,
 	  	  messages: { 
@@ -81,22 +81,20 @@
 	    	amount: "Enter a valid amount",
 	  	  }
 		});
-		
-		// Other rules to go above here
-  	    
+		  	    
   	    // Focus and Blur conditional functions
-  	    $('#edit-submitted-donation-amount input[type="radio"]').change(function(){
+  	    $('input[type="radio"][name$="[amount]"]').change(function(){
 		  if ($(this).val() == 'other') {
-  	        $('#edit-submitted-donation-other-amount').focus();
+  	        $('input[name$="[other_amount]"]').focus();
   	      } else {
-  	        $('#edit-submitted-donation-other-amount').clearEle();  	        
+  	        $('input[name$="[other_amount]"]').clearEle();  	        
   	      }
   	    });
-	    $('#edit-submitted-donation-other-amount').focus(function(){
-  	      $('input[type="radio"][value="other"]').attr('checked', 'checked');	    
+	    $('input[name$="[other_amount]"]').focus(function(){
+  	      $('input[type="radio"][name$="[amount]"][value="other"]').attr('checked', 'checked');	    
 	    })
 	    // Runs on Other Amount field
-	    $('#edit-submitted-donation-other-amount').blur(function(){
+	    $('input[name$="[other_amount]"]').blur(function(){
 	      var value = $(this).val();
 	      // Match 1-3 decimal/comma places and fix value
 	      if (value.match(/([\.,\-]\d{1}?)$/)) {

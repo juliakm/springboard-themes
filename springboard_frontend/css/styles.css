@@ -63,3 +63,7 @@
 .control-group .spacer {
   margin-left:10px;
 }
+.span6,
+[class*="span"] {
+  margin-left:0;
+}

@@ -257,7 +257,8 @@ function springboard_frontend_form($variables) {
 function springboard_frontend_fieldset($variables) {
   $element = $variables['element'];
   element_set_attributes($element, array('id'));
-  _form_set_class($element, array('form-wrapper'));
+  // Adds class to fieldset elements
+  //_form_set_class($element, array(''));
 
   $output = '<div' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
