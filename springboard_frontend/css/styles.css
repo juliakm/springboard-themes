@@ -2,10 +2,24 @@
 
 
 /* validation style fixs */
+.div-title {
+  font-weight: bold;
+}
 .control-group {
   width:100%;
   clear:both;
   float:left;
+}
+#edit-submitted-donation-amount .control-group {
+  width:auto;
+  clear:none;
+  margin-right:10px;
+}
+#edit-submitted-donation-amount .control-group input {
+  margin-top:3px;
+}
+#edit-submitted-donation-amount .control-group label.option {
+  margin-left:4px;
 }
 .control-group select,
 .control-group input {
@@ -42,4 +56,10 @@
   display: inline;
   margin-left:6px;
   margin-top:6px;
+}
+.control-group .description {
+  clear:both;
+}
+.control-group .spacer {
+  margin-left:10px;
 }

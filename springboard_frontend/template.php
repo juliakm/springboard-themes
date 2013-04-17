@@ -278,9 +278,7 @@ function springboard_frontend_textarea($variables) {
     drupal_add_library('system', 'drupal.textarea');
     $wrapper_attributes['class'][] = 'resizable';
   }*/
-  $output = '<div class="controls">';
-  $output .= '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
-  $output .= '</div>';
+  $output = '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
   return $output;
 }
 
