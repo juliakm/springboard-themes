@@ -4,38 +4,12 @@
  * Implements template_preprocess_html().
  */
 function springboard_frontend_preprocess_html(&$variables) {
+  $variables['classes_array'] = array();
   // Compile a list of classes that are going to be applied to the body element.
   // This allows advanced theming based on context (home page, node of certain type, etc.).
   // Add a class that tells us whether we're on the front page or not.
-  // $variables['classes_array'][] = $variables['is_front'] ? 'front' : 'not-front';
   // Add a class that tells us whether the page is viewed by an authenticated user or not.
   $variables['classes_array'][] = $variables['logged_in'] ? 'logged-in' : 'not-logged-in';
-
-  // Add information about the number of sidebars.
-  /*if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['classes_array'][] = 'two-sidebars';
-  }
-  elseif (!empty($variables['page']['sidebar_first'])) {
-    $variables['classes_array'][] = 'one-sidebar sidebar-first';
-  }
-  elseif (!empty($variables['page']['sidebar_second'])) {
-    $variables['classes_array'][] = 'one-sidebar sidebar-second';
-  }
-  else {
-    $variables['classes_array'][] = 'no-sidebars';
-  }*/
-
-  // Populate the body classes.
-  /*if ($suggestions = theme_get_suggestions(arg(), 'page', '-')) {
-    foreach ($suggestions as $suggestion) {
-      if ($suggestion != 'page-front') {
-        // Add current suggestion to page classes to make it possible to theme
-        // the page depending on the current page type (e.g. node, admin, user,
-        // etc.) as well as more specific data like node-12 or node-edit.
-        $variables['classes_array'][] = drupal_html_class($suggestion);
-      }
-    }
-  }*/
 
   // If on an individual node page, add the node type to body classes.
   if ($node = menu_get_object()) {
@@ -154,7 +128,7 @@ function springboard_frontend_form_element($variables) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      $output .= ' ' . $prefix  . $element['#children'] . $suffix . "\n";
       break;
 
     case 'after':
@@ -258,7 +232,7 @@ function springboard_frontend_fieldset($variables) {
   $element = $variables['element'];
   element_set_attributes($element, array('id'));
   // Adds class to fieldset elements
-  //_form_set_class($element, array(''));
+  //_form_set_class($element, array('span6'));
 
   $output = '<div' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
