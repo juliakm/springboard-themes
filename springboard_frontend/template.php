@@ -115,13 +115,13 @@ function springboard_frontend_form_element($variables) {
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
-
+  
   // If #title is not set, we don't display any label or required marker.
   if (!isset($element['#title'])) {
     $element['#title_display'] = 'none';
   }
-  $prefix = isset($element['#field_prefix']) ? $element['#field_prefix'] : '';
-  $suffix = isset($element['#field_suffix']) ? $element['#field_suffix'] : '';
+  $prefix = isset($element['#field_prefix']) ? '<div class="field-prefix">' . $element['#field_prefix'] . '</div>' : '';
+  $suffix = isset($element['#field_suffix']) ? '<div class="field-suffix">' . $element['#field_suffix'] . '</div>' : '';
 
   $output = '<div class="control-group">';
   switch ($element['#title_display']) {
@@ -179,8 +179,8 @@ function springboard_frontend_webform_element($variables) {
     $element['#title_display'] = 'none';
   }
   
-  $prefix = isset($element['#field_prefix']) ? _webform_filter_xss($element['#field_prefix']) : '';
-  $suffix = isset($element['#field_suffix']) ? _webform_filter_xss($element['#field_suffix']) : '';
+  $prefix = isset($element['#field_prefix']) ? '<div class="field-prefix">' . _webform_filter_xss($element['#field_prefix']) . '</div>' : '';
+  $suffix = isset($element['#field_suffix']) ? '<div class="field-suffix">' . _webform_filter_xss($element['#field_suffix']) . '</div>' : '';
   $output = '<div class="control-group">';
   switch ($element['#title_display']) {
     case 'inline':
@@ -198,7 +198,7 @@ function springboard_frontend_webform_element($variables) {
     case 'none':
     case 'attribute':
       // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      $output .= ' ' . $element['#children'] . $suffix . "\n";
       break;
   }
   if (!empty($element['#description'])) {

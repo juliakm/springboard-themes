@@ -67,3 +67,17 @@
 [class*="span"] {
   margin-left:0;
 }
+#webform-component-donation label[for="edit-submitted-donation-other-amount"] {
+  float:left;
+  clear:none;
+  margin-right: 12px;
+  margin-top: 5px;
+}
+#webform-component-donation .field-prefix {
+  float: left;
+  clear: none;
+  margin-top: 5px;
+  margin-right: 4px;
+}
+
+
