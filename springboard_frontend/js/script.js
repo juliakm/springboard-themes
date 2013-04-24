@@ -37,7 +37,7 @@
   		  },
   		  success: function(element) {
     		element.text('OK').addClass('valid').closest('.control-group').removeClass('error').addClass('success');
-  		  } 		  
+  		  }
  		}); 		
  		// Check initial state of form
  		$('.webform-client-form').once(function(){
@@ -61,8 +61,7 @@
 	  	  number: true,
 	  	  minlength:5, 
 	  	  messages: { 
-	    	required: "This field is required", 
-	    	number: "Must be an integer",
+	    	required: "This field is required",
 	    	minlength: "Minimum of 5 characters"
 	  	  }
 		});
@@ -74,7 +73,6 @@
 	  	  maxlength:4, 
 	  	  messages: { 
 	    	required: "This field is required", 
-	    	number: "Must be an integer",
 	    	minlength: "Minimum of 3 characters",
 	    	maxlength: "Maximum of 4 characters"
 	  	  }
@@ -128,6 +126,26 @@
 		    $(this).val($(this).val().replace(/\D/g,''));
 		  }
 	    });
+	    // Ability to override the default message
+	    jQuery.extend(jQuery.validator.messages, {
+    	  required: "This field is required",
+    	  remote: "Please fix this field",
+    	  email: "Enter a valid email address",
+    	  url: "Enter a valid URL",
+    	  date: "Enter a valid date",
+    	  dateISO: "Enter a valid date (ISO)",
+    	  number: "Must be a number", // changed 
+    	  digits: "Enter only digits",
+    	  creditcard: "Enter a valid credit card number",
+    	  equalTo: "Enter the same value again",
+    	  accept: "Enter a value with a valid extension",
+    	  maxlength: jQuery.validator.format("Enter no more than {0} characters"),
+    	  minlength: jQuery.validator.format("Enter at least {0} characters"),
+    	  rangelength: jQuery.validator.format("Enter a value between {0} and {1} characters long"),
+    	  range: jQuery.validator.format("Enter a value between {0} and {1}"),
+    	  max: jQuery.validator.format("Enter a value less than or equal to {0}"),
+    	  min: jQuery.validator.format("Enter a value greater than or equal to {0}")
+	  	});
 	    // Small helper item
 	    $('select').each(function(){
 	      if ($(this).next().is('select')) {

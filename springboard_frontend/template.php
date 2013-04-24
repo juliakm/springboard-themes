@@ -424,7 +424,7 @@ function springboard_frontend_container($variables) {
       $element['#attributes']['id'] = $element['#id'];
     }
     // Add the 'form-wrapper' class.
-    $element['#attributes']['class'][] = 'form-wrapper-asdasdadsasda';
+    $element['#attributes']['class'][] = 'form-wrapper';
   }*/
 
   return $element['#children'];
