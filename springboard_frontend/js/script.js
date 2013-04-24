@@ -27,7 +27,6 @@
 	      // Add regexp	  
 		  return this.optional(element) || /^[0-9]*(\.\d{1,3})*(,\d{1,3})?$/i.test(value);   
 		}, "Enter a valid amount");
-		
 		// Instantiate Form Validation
  		$('.webform-client-form').validate({
  		  onfocusout: function (element) {
@@ -39,7 +38,23 @@
   		  success: function(element) {
     		element.text('OK').addClass('valid').closest('.control-group').removeClass('error').addClass('success');
   		  } 		  
+ 		}); 		
+ 		// Check initial state of form
+ 		$('.webform-client-form').once(function(){
+ 		  if ($(this).validate().checkForm()) {
+        	$('#edit-submit').removeClass('button_disabled').attr('disabled', false);
+    	  } else {
+        	$('#edit-submit').addClass('button_disabled').attr('disabled', true);
+    	  }
  		});
+ 		// Prevent submissions if errors are present
+		$('.webform-client-form').bind('change keyup', function() {
+    	  if ($(this).validate().checkForm()) {
+        	$('#edit-submit').removeClass('button_disabled').attr('disabled', false);
+    	  } else {
+        	$('#edit-submit').addClass('button_disabled').attr('disabled', true);
+    	  }
+		});
  		// Zipcode custom validation rule
 		$('input[name$="[zip]"]').rules("add", { 
 	  	  required: true, 
@@ -73,8 +88,16 @@
 	    	creditcard: "Enter a valid credit card number",
 	  	  }
 		});
+		// Other Amount
 		$('input[name$="[other_amount]"]').rules("add", {
-		  required: true, 
+		  required: {
+            depends: function(element) {
+              if ($('input[type="radio"][name$="[amount]"][value="other"]').is(":checked")) 
+                return true;
+              else 
+                return false;
+            }
+          }, 
 	  	  amount: true,
 	  	  messages: { 
 	    	required: "This field is required", 
