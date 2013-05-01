@@ -446,12 +446,10 @@ function springboard_frontend_status_messages($variables) {
   );
   foreach (drupal_get_messages($display) as $type => $messages) {
     
-    if($type == 'status'){ $type = 'success'; }
-    
     // $status throwing warning as undefined
     // $output .= "<div class=\"alert alert-$status \">\n";
     // Fix and re-add to output below
-    $output .= "<div class=\"alert\">\n";
+    $output .= "<div class=\"alert ".$type."\">\n";
     // bootstrap dismiss button
     $output .= "<button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\n";
     if (!empty($status_heading[$type])) {
