@@ -506,3 +506,11 @@ function springboard_frontend_vertical_tabs($variables) {
   $output .= '<div class="vertical-tabs-panes">' . $element['#children'] . '</div>';
   return $output;
 }
+
+/** 
+ * Overrides hook_form_alter()
+ */
+function springboard_frontend_form_alter(&$form, &$form_state, $form_id) {
+  $form['submitted']['donation']['other_amount']['#attributes']['class'][] = 'input-small';
+  $form['submitted']['billing_information']['zip']['#attributes']['class'][] = 'input-medium';
+}
