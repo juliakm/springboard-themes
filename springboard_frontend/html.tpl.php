@@ -5,6 +5,8 @@
 <!--[if IE 9]>         <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?> xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://developers.facebook.com/schema/" itemscope itemtype="http://schema.org/Article" class="no-js ie ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?> xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://developers.facebook.com/schema/" itemscope itemtype="http://schema.org/Article" class="no-js"> <!--<![endif]-->
   <head profile="<?php print $grddl_profile; ?>">
+    <meta name="HandheldFriendly" content="TRUE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <?php print $head; ?>
     <title><?php print $head_title; ?></title>  
     <?php print $styles; ?>

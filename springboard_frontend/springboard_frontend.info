@@ -15,6 +15,6 @@ stylesheets[all][] = css/bootstrap-responsive.min.css
 stylesheets[all][] = css/styles.css
 
 ;Scripts
-scripts[] = js/script.js
-scripts[] = js/jquery.validate.js
+;scripts[] = js/script.js
+;scripts[] = js/jquery.validate.js
 ;scripts[] = js/bootstrap.min.js
