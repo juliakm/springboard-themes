@@ -46,11 +46,6 @@ function springboard_frontend_preprocess_html(&$variables) {
   }
   $variables['head_title_array'] = $head_title;
   $variables['head_title'] = implode(' | ', $head_title);
-
-  // Populate the page template suggestions.
-  if ($suggestions = theme_get_suggestions(arg(), 'html')) {
-    $variables['theme_hook_suggestions'] = $suggestions;
-  }
 }
 
 /**
@@ -90,11 +85,6 @@ function springboard_frontend_preprocess_page(&$variables) {
 
   if ($node = menu_get_object()) {
     $variables['node'] = $node;
-  }
-
-  // Populate the page template suggestions.
-  if ($suggestions = theme_get_suggestions(arg(), 'page')) {
-    $variables['theme_hook_suggestions'] = $suggestions;
   }
 }
 
