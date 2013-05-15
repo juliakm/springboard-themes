@@ -13,6 +13,10 @@ role :sbqa, 'sb4qa.com', {
   :user => 'admin'
 }
 
+role :sbdev, '50.56.224.78', '50.56.224.9', {
+  :user => 'beanstalk'
+}
+
 set :deploy_via, :remote_cache
 set :copy_exclude, [".git", ".DS_Store"]
 set :scm, :git
