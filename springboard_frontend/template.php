@@ -103,7 +103,7 @@ function springboard_frontend_menu_link__main_menu(array $variables) {
   //unset all the classes
   unset($variables['element']['#attributes']['class']);
 
-  $path = current_path();
+	$path = current_path();
 	$current = menu_get_item();
 	if ($current == $path) {
 		array_unshift($variables['element']['#attributes']['class'], 'active');
@@ -111,10 +111,7 @@ function springboard_frontend_menu_link__main_menu(array $variables) {
 	
   $element = $variables['element'];
 
-  if($variables['element']['#attributes'])
-
   $sub_menu = '';
-  
 
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
