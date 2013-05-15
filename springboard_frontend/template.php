@@ -97,6 +97,33 @@ function springboard_frontend_menu_tree__main_menu($variables) {
 }
 
 /**
+ * Remove the drupal standard classes from the menu, set active on li
+ */
+function springboard_frontend_menu_link__main_menu(array $variables) {
+  //unset all the classes
+  unset($variables['element']['#attributes']['class']);
+
+  $path = current_path();
+	$current = menu_get_item();
+	if ($current == $path) {
+		array_unshift($variables['element']['#attributes']['class'], 'active');
+	}
+	
+  $element = $variables['element'];
+
+  if($variables['element']['#attributes'])
+
+  $sub_menu = '';
+  
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+/**
  * Overrides theme_form_element().
  */
 
