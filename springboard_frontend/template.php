@@ -88,6 +88,14 @@ function springboard_frontend_preprocess_page(&$variables) {
   }
 }
 
+
+/**
+ * Add pills class to D7 main menu
+ */
+function springboard_frontend_menu_tree__main_menu($variables) {
+  return '<ul class="menu nav nav-pills">' . $variables['tree'] . '</ul>';
+}
+
 /**
  * Overrides theme_form_element().
  */
