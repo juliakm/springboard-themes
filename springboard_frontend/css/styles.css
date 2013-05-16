@@ -147,8 +147,8 @@ div.alert {
   text-decoration: none;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-#caroufredsel_wrapper {
-  width:410px;
+.caroufredsel_wrapper {
+  min-width:358px; 
 }
 
 @media screen and (max-width: 767px) {
@@ -156,5 +156,10 @@ div.alert {
     position: relative;
     overflow: hidden;
     width:280px;
+  }
+  .caroufredsel_wrapper {
+    min-width:180px !important;
+    width:180px !important;
+    margin-left:46px !important;
   }
 }
