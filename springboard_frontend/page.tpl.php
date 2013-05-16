@@ -1,7 +1,7 @@
 <header class="clearfix container">
   <?php //print theme_image($logo, $site_name, $site_name); 
               if ($logo) {
-              print '<img src="'. check_url($logo) .'" alt="'. $site_title .'" id="logo" />';
+              print '<a href="/"><img src="'. check_url($logo) .'" alt="'. $site_name .'" id="logo" /></a>';
             } ?>
     <?php print render($page['header']); ?>
 </header>
