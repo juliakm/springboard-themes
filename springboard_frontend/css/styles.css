@@ -176,3 +176,9 @@ div.alert {
 .front h1 {
   display: none;
 }
+.front header.container {
+  margin:50px auto 30px;
+}
+.not-front header.container {
+  margin:50px auto 10px;
+}
