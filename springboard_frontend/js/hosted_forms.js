@@ -18,7 +18,7 @@
           width: 'auto',
           scroll: 1,
           items: {
-            width: 'auto',
+            width: '410px',
             //height: '30%', // optionally resize item-height
             visible: {
               min: 2,
@@ -33,9 +33,9 @@
         $('.view-form-premiums .views-row').click(function(){
           $(this).siblings().removeClass('selected');
           $(this).addClass('selected');          
-          var num_id = parseInt($(this).attr('class').match(/\d+/)); 
-          $('input[name$="[premium_items]"]').attr('checked',false);
-		  $('input[name$="[premium_items]"][value="'+num_id+'"]').attr('checked',true);
+          //var num_id = parseInt($(this).attr('class').match(/\d+/)); 
+          //$('input[name$="[premium_items]"]').attr('checked',false);
+		  //$('input[name$="[premium_items]"][value="'+num_id+'"]').attr('checked',true);
         });
       } // end controls
     });

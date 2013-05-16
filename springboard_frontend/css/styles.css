@@ -94,7 +94,6 @@ div.alert {
 
 /* Premium items */
 .view-form-premiums {
-  width:100%;
   position: relative;
   overflow: hidden;
   width:410px;
@@ -150,4 +149,12 @@ div.alert {
 }
 #caroufredsel_wrapper {
   width:410px;
+}
+
+@media screen and (max-width: 767px) {
+  .view-form-premiums {
+    position: relative;
+    overflow: hidden;
+    width:280px;
+  }
 }
