@@ -108,6 +108,7 @@ div.alert {
   cursor: pointer;
   margin-top: 4px;
   margin-bottom: 4px;
+  position: relative;
 }
 .view-form-premiums .views-row.selected,
 .view-form-premiums .views-row:hover {
@@ -151,6 +152,15 @@ div.alert {
   min-width:358px; 
 }
 
+#selected-icon {
+  width:14px;
+  height:15px;
+  display: block;
+  background: transparent url(../img/input-complete.png) no-repeat 0 0;
+  position: absolute;
+  top:10px;
+  right:10px;
+}
 @media screen and (max-width: 767px) {
   .view-form-premiums {
     position: relative;

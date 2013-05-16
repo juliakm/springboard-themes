@@ -32,7 +32,9 @@
                 
         $('.view-form-premiums .views-row').click(function(){
           $(this).siblings().removeClass('selected');
-          $(this).addClass('selected');          
+          $(this).addClass('selected');    
+          $('#selected-icon').remove();
+          $(this).append('<div id="selected-icon" />');      
           //var num_id = parseInt($(this).attr('class').match(/\d+/)); 
           //$('input[name$="[premium_items]"]').attr('checked',false);
 		  //$('input[name$="[premium_items]"][value="'+num_id+'"]').attr('checked',true);
