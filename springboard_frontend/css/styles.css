@@ -24,6 +24,7 @@ div.alert {
 }
 #edit-submitted-donation-amount .control-group label.option {
   margin-left:4px;
+  float: left;
 }
 .control-group select,
 .control-group input {
@@ -89,4 +90,61 @@ div.alert {
 }
 .webform-client-form input[disabled] {
   background-color: buttonface;
+}
+
+/* Premium items */
+.view-form-premiums {
+  width:100%;
+  position: relative;
+  overflow: hidden;
+  width:410px;
+}
+.view-form-premiums .views-row {
+  width:149px;
+  height: 292px;
+  margin-left:14px;
+  float:left;
+  clear:none;
+  margin-bottom:0;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.view-form-premiums .views-row.selected,
+.view-form-premiums .views-row:hover {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+     -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+       -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+          transition: border linear 0.2s, box-shadow linear 0.2s;
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+#prev.left {
+  left:4px;
+  background-color: #cccccc;
+  color: #000;
+  text-decoration: none;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#next.right {
+  right:4px;
+  background-color: #cccccc;
+  color: #000;
+  text-decoration: none;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }

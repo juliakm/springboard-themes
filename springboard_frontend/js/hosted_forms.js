@@ -5,30 +5,33 @@
       // Adding controls
       if ($('.view-form-premiums')[0]) {
         
-        $('.view-form-premiums .view-content').append('<a id="prev-item" href="#"><<</a><a id="next-item" href="#">>></a>');
-        $('#prev-item, #next-item').click(function(e){
+        $('.view-form-premiums .view-content').append('<a id="prev" class="carousel-control left" href="#">‹</a> <a id="next" class="carousel-control right" href="#">›</a>');
+        
+        $('#prev, #next').click(function(e){
           e.preventDefault();
         });
-                
+        
         // Views test
-        $('.view-form-premiums .view-content .thumbnails').carouFredSel({
+        $('.view-form-premiums .view-content ul').carouFredSel({
           responsive: true,
-          width: '100%',
+          width: 330,
           scroll: 1,
           items: {
-            height: '300',    //    optionally resize item-height
+            width: 'auto',
+            //height: '30%', // optionally resize item-height
             visible: {
-              min: 1,
-              max: 3
+              min: 2,
+              max: 2
             }
           },
-          prev: '#prev-item',
-          next: '#next-item',
+          prev: '#prev',
+          next: '#next',
           auto: false
         });
-        $('.view-form-premiums .views-row').click(function(e){
-          console.log('clicked');
-          //console.log(e);
+                
+        $('.view-form-premiums .views-row').click(function(){
+          $(this).siblings().removeClass('selected');
+          $(this).addClass('selected');
           console.log($(this).index());
         });
       } // end controls
