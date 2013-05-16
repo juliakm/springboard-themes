@@ -2,6 +2,7 @@
   Drupal.behaviors.hostedForms = {
     attach: function (context, settings) {
     
+    $(window).load(function(){     
       // Adding controls
       if ($('.view-form-premiums')[0]) {
         
@@ -14,7 +15,7 @@
         // Views test
         $('.view-form-premiums .view-content ul').carouFredSel({
           responsive: true,
-          width: 330,
+          width: 'auto',
           scroll: 1,
           items: {
             width: 'auto',
@@ -31,10 +32,13 @@
                 
         $('.view-form-premiums .views-row').click(function(){
           $(this).siblings().removeClass('selected');
-          $(this).addClass('selected');
-          console.log($(this).index());
+          $(this).addClass('selected');          
+          var num_id = parseInt($(this).attr('class').match(/\d+/)); 
+          $('input[name$="[premium_items]"]').attr('checked',false);
+		  $('input[name$="[premium_items]"][value="'+num_id+'"]').attr('checked',true);
         });
       } // end controls
+    });
     
     }
   }
