@@ -8,6 +8,7 @@ function springboard_frontend_preprocess_html(&$variables) {
   // Compile a list of classes that are going to be applied to the body element.
   // This allows advanced theming based on context (home page, node of certain type, etc.).
   // Add a class that tells us whether we're on the front page or not.
+  $variables['classes_array'][] = $variables['is_front'] ? 'front' : 'not-front';
   // Add a class that tells us whether the page is viewed by an authenticated user or not.
   $variables['classes_array'][] = $variables['logged_in'] ? 'logged-in' : 'not-logged-in';
 

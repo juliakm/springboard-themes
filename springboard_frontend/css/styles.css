@@ -173,3 +173,6 @@ div.alert {
     margin-left:46px !important;
   }
 }
+.front h1 {
+  display: none;
+}
