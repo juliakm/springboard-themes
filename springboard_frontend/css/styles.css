@@ -173,7 +173,7 @@ div.alert {
     margin-left:46px !important;
   }
 }
-.front h1 {
+.front h1.page-title {
   display: none;
 }
 .front header.container {
