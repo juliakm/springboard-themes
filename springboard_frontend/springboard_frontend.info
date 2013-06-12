@@ -21,4 +21,4 @@ stylesheets[all][] = css/styles.css
 scripts[] = js/jquery-ui.min.js
 scripts[] = js/jquery.carouFredSel-6.2.1-packed.js
 scripts[] = js/hosted_forms.js
-scripts[] = js/webform_easy_edit.js
+;scripts[] = js/webform_easy_edit.js
