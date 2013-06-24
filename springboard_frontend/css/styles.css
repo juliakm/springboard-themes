@@ -255,7 +255,7 @@ div.alert {
   clear: both;
   display: block;
   height: 43px;
-  overflow: hidden;
+  overflow: visible;
 }
 #admin-bar .navbar .navbar-inner.closed {
   padding-left:0;
@@ -282,4 +282,31 @@ div.alert {
 }
 #admin-bar .navbar li.edit {
   display: block;
+}
+.open > .dropdown-menu {
+  display: block;
+}
+.closeUI {
+  width: 20px;
+  height: 18px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+.blockMsg {
+  text-align: left;
+}
+.blockMsg .form-horizontal .controls {
+  margin-left:120px;
+}
+.blockMsg .form-horizontal .control-label {
+  width:100px;
+}
+.blockMsg .form-horizontal .controls textarea {
+  float: left;
+}
+.blockMsg .form-horizontal .controls #class {
+  margin-left:12px;
 }
