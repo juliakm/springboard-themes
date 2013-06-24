@@ -20,7 +20,7 @@ role :sbdev, '50.56.224.78', '50.56.224.9', {
 set :deploy_via, :remote_cache
 set :copy_exclude, [".git", ".DS_Store"]
 set :scm, :git
-set :branch, "7.x-3.x-dev"
+set :branch, "7.x-4.x"
 set :deploy_to, "/var/www/#{application}"
 set :use_sudo, false
 set :keep_releases, 3
