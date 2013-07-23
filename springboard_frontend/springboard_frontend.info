@@ -17,7 +17,7 @@ stylesheets[all][] = css/styles.css
 ;Scripts
 ;scripts[] = js/script.js
 ;scripts[] = js/jquery.validate.js
-;scripts[] = js/bootstrap.min.js
+scripts[] = js/bootstrap.min.js
 scripts[] = js/jquery-ui.min.js
 scripts[] = js/jquery.carouFredSel-6.2.1-packed.js
 scripts[] = js/hosted_forms.js
