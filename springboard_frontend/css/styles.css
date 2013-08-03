@@ -336,11 +336,13 @@ div.alert {
 .blockMsg .form-horizontal .controls textarea {
   float: left;
 }
+.blockMsg .form-horizontal .controls #markup-class,
 .blockMsg .form-horizontal .controls #textfield-class {
   margin-left:12px;
 }
 /* To get height of our forms */
-.hidden-text-form {
+.hidden-text-form,
+.hidden-markup-form {
   visibility: hidden;
   position: absolute;
   display: none;
