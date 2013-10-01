@@ -1,7 +1,7 @@
 name = Springboard Frontend
 description = A stripped-down, responsive, HTML5 and CSS3 theme for Springboard fundraising.
 package = Springboard
-version = 7.x-4.x-dev
+version = 7.x-4.0-beta3.2
 core = 7.x
 
 ;Regions
