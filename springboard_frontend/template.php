@@ -109,7 +109,7 @@ function springboard_frontend_menu_link__main_menu(array $variables) {
 	if ($current == $path) {
 		array_unshift($variables['element']['#attributes']['class'], 'active');
 	}
-	
+
   $element = $variables['element'];
 
   $sub_menu = '';
@@ -138,7 +138,7 @@ function springboard_frontend_form_element($variables) {
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
-  
+
   // If #title is not set, we don't display any label or required marker.
   if (!isset($element['#title'])) {
     $element['#title_display'] = 'none';
@@ -201,7 +201,7 @@ function springboard_frontend_webform_element($variables) {
   if (!isset($element['#title'])) {
     $element['#title_display'] = 'none';
   }
-  
+
   $prefix = isset($element['#field_prefix']) ? '<div class="field-prefix">' . _webform_filter_xss($element['#field_prefix']) . '</div>' : '';
   $suffix = isset($element['#field_suffix']) ? '<div class="field-suffix">' . _webform_filter_xss($element['#field_suffix']) . '</div>' : '';
   $output = '<div class="control-group">';
@@ -232,7 +232,7 @@ function springboard_frontend_webform_element($variables) {
   return $output;
 }
 
-/** 
+/**
  * Overrides theme_form()
  */
 function springboard_frontend_form($variables) {
@@ -248,7 +248,7 @@ function springboard_frontend_form($variables) {
   return '<form' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</form>';
 }
 
-/** 
+/**
  * Overrides theme_fieldset()
  */
 function springboard_frontend_fieldset($variables) {
@@ -272,7 +272,7 @@ function springboard_frontend_fieldset($variables) {
   return $output;
 }
 
-/** 
+/**
  * Overrides theme_checkboxes()
  */
 function springboard_frontend_checkboxes($variables) {
@@ -287,7 +287,7 @@ function springboard_frontend_checkboxes($variables) {
   return '<div' . drupal_attributes($attributes) . '>' . (!empty($element['#children']) ? $element['#children'] : '') . '</div>';
 }
 
-/** 
+/**
  * Overrides theme_date()
  */
 function springboard_frontend_date($variables) {
@@ -304,9 +304,9 @@ function springboard_frontend_date($variables) {
   return '<div' . drupal_attributes($attributes) . '>' . drupal_render_children($element) . '</div>';
 }
 
-/** 
+/**
  * Overrides theme_file()
- */ 
+ */
 function springboard_frontend_file($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'file';
@@ -314,11 +314,11 @@ function springboard_frontend_file($variables) {
   //_form_set_class($element, array('form-file'));
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
-} 
+}
 
-/** 
+/**
  * Overrides theme_password()
- */ 
+ */
 function springboard_frontend_password($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'password';
@@ -327,8 +327,8 @@ function springboard_frontend_password($variables) {
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
- 
-/** 
+
+/**
  * Overrides theme_radio()
  */
 function springboard_frontend_radio($variables) {
@@ -342,9 +342,9 @@ function springboard_frontend_radio($variables) {
   //_form_set_class($element, array('form-radio'));
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
-} 
-  
-/** 
+}
+
+/**
  * Overrides theme_radios()
  */
 function springboard_frontend_radios($variables) {
@@ -363,7 +363,7 @@ function springboard_frontend_radios($variables) {
   return '<div' . drupal_attributes($attributes) . '>' . (!empty($element['#children']) ? $element['#children'] : '') . '</div>';
 }
 
-/** 
+/**
  * Overrides theme_select()
  */
 function springboard_frontend_select($variables) {
@@ -374,7 +374,7 @@ function springboard_frontend_select($variables) {
   return '<select' . drupal_attributes($element['#attributes']) . '>' . form_select_options($element) . '</select>';
 }
 
-/** 
+/**
  * Overrides theme_textarea()
  */
 function springboard_frontend_textarea($variables) {
@@ -390,7 +390,7 @@ function springboard_frontend_textarea($variables) {
   return $output;
 }
 
-/** 
+/**
  * Overrides theme_textfield()
  */
 function springboard_frontend_textfield($variables) {
@@ -418,7 +418,7 @@ function springboard_frontend_textfield($variables) {
   return $output . $extra;
 }
 
-/** 
+/**
  * Overrides theme_button()
  */
 function springboard_frontend_button($variables) {
@@ -434,12 +434,12 @@ function springboard_frontend_button($variables) {
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
-/** 
+/**
  * Overrides theme_container()
  */
 function springboard_frontend_container($variables) {
   $element = $variables['element'];
-  
+
   // Special handling for form elements.
   /*if (isset($element['#array_parents'])) {
     // Assign an html ID.
@@ -468,7 +468,7 @@ function springboard_frontend_status_messages($variables) {
     'warning' => t('Warning message'),
   );
   foreach (drupal_get_messages($display) as $type => $messages) {
-    
+
     // $status throwing warning as undefined
     // $output .= "<div class=\"alert alert-$status \">\n";
     // Fix and re-add to output below
@@ -491,9 +491,9 @@ function springboard_frontend_status_messages($variables) {
     $output .= "</div>\n";
   }
   return $output;
-} 
+}
 
-/** 
+/**
  * Overrides theme_image_button()
  */
 function springboard_frontend_image_button($variables) {
@@ -515,7 +515,7 @@ function springboard_frontend_image_button($variables) {
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
-/** 
+/**
  * Overrides theme_vertical_tabs()
  */
 function springboard_frontend_vertical_tabs($variables) {
@@ -524,6 +524,6 @@ function springboard_frontend_vertical_tabs($variables) {
   drupal_add_library('system', 'drupal.vertical-tabs');
 
   //$output = '<h2 class="element-invisible">' . t('Vertical Tabs') . '</h2>';
-  $output .= '<div class="vertical-tabs-panes">' . $element['#children'] . '</div>';
+  $output = '<div class="vertical-tabs-panes">' . $element['#children'] . '</div>';
   return $output;
 }
