@@ -222,8 +222,7 @@ function springboard_base_form($variables) {
 function springboard_base_fieldset($variables) {
   $element = $variables['element'];
   element_set_attributes($element, array('id'));
-  // Adds class to fieldset elements
-  //_form_set_class($element, array('span6'));
+  _form_set_class($element, array('fieldset'));
 
   $output = '<div' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
