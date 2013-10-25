@@ -77,13 +77,26 @@ function springboard_base_preprocess_page(&$variables) {
   $variables['language'] = $GLOBALS['language'];
   $variables['language']->dir = $GLOBALS['language']->direction ? 'rtl' : 'ltr';
   $variables['logo'] = theme_get_setting('logo');
-  $variables['main_menu'] = theme_get_setting('toggle_main_menu') ? menu_main_menu() : array();
+  
   $variables['secondary_menu'] = theme_get_setting('toggle_secondary_menu') ? menu_secondary_menu() : array();
   $variables['action_links'] = menu_local_actions();
   $variables['site_name'] = (theme_get_setting('toggle_name') ? filter_xss_admin(variable_get('site_name', 'Drupal')) : '');
   $variables['site_slogan'] = (theme_get_setting('toggle_slogan') ? filter_xss_admin(variable_get('site_slogan', '')) : '');
   $variables['tabs'] = menu_local_tabs();
-
+  
+  // Set up main-menu array to clean up page template.
+  $variables['main_menu'] = array(
+    'links' => theme_get_setting('toggle_main_menu') ? menu_main_menu() : array(),
+    'attributes' => array(
+      'id' => 'main-menu-links',
+      'class' => array('nav', 'clearfix'),
+    ),
+    'heading' => array(
+      'text' => t('Main menu'),
+      'level' => 'h2',
+      'class' => array('element-invisible'),
+    ),
+  ); 
   if ($node = menu_get_object()) {
     $variables['node'] = $node;
   }
@@ -494,4 +507,59 @@ function springboard_base_vertical_tabs($variables) {
   //$output = '<h2 class="element-invisible">' . t('Vertical Tabs') . '</h2>';
   $output = '<div class="vertical-tabs-panes">' . $element['#children'] . '</div>';
   return $output;
+}
+
+/**
+ * Overrides theme_menu_tree().
+ * Update classes to work with Bootstrap
+ */
+ 
+function springboard_base_menu_tree($variables) {
+  return '<ul class="nav">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Overrides theme_menu_link().
+ */
+function springboard_base_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    else {
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+      $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+      $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+
+      // Check if this element is nested within another.
+      if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
+        // Generate as dropdown submenu.
+        $element['#attributes']['class'][] = 'dropdown-submenu';
+      }
+      else {
+        // Generate as standard dropdown.
+        $element['#attributes']['class'][] = 'dropdown';
+        $element['#localized_options']['html'] = TRUE;
+        $element['#title'] .= ' <span class="caret"></span>';
+      }
+
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      $element['#localized_options']['attributes']['data-target'] = '#';
+    }
+  }
+  // On primary navigation menu, class 'active' is not set on active menu item.
+  // @see https://drupal.org/node/1896674
+  if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
+    $element['#attributes']['class'][] = 'active';
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }

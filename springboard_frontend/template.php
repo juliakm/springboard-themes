@@ -1,6 +1,15 @@
 <?php
 
 /**
+ * Implements template_preprocess_page().
+ * Remove the main menu from the page template
+ */
+function springboard_frontend_preprocess_page(&$variables) {
+  $variables['main_menu'] = NULL;
+}
+
+
+/**
  * Add pills class to D7 main menu
  */
 function springboard_base_menu_tree__main_menu($variables) {

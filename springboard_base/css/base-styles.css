@@ -2,3 +2,10 @@
 div.alert {
   background-image: none;
 }
+
+/* Remove Drupal list images from menus */
+
+ul.nav li {
+  list-style-image: none;
+  list-style-type: none;
+}

@@ -5,6 +5,9 @@ version = 7.x-4.x-dev
 core = 7.x
 base theme = springboard_base
 
+dependencies[] = springboard_admin
+dependencies[] = jquery_update
+
 ;Regions
 regions[header] = Header
 regions[content] = Content
@@ -14,4 +17,4 @@ regions[footer] = Footer
 stylesheets[all][] = css/styles.css
 
 ;Scripts
-;scripts[] = js/script.js
+scripts[] = js/script.js
