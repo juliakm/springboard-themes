@@ -22,7 +22,6 @@
       $(".content table th:visible:first-child").addClass("first");
       $(".content table th:visible:last-child").addClass("last");
 
-
     } // attach.function
   } // drupal.behaviors
 })(jQuery);

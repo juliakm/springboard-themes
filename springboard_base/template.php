@@ -100,6 +100,15 @@ function springboard_base_preprocess_page(&$variables) {
   if ($node = menu_get_object()) {
     $variables['node'] = $node;
   }
+
+  // Add Font awesome cdn.
+  // http://fortawesome.github.io/Font-Awesome/get-started/
+  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css',
+    array(
+      'type' => 'external',
+    )
+  );
+
 }
 
 /**

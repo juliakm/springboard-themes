@@ -17,13 +17,6 @@ function springboard_backend_preprocess_page(&$variables) {
     )
   );
 
-  // Add font awesome for icons.
-  drupal_add_css(drupal_get_path('theme', 'springboard_backend') . '/css/font-awesome.css', array(
-      'group' => CSS_THEME,
-      'preprocess' => TRUE,
-    ));
-  $vars['styles'] = drupal_get_css();
-
 }
 /**
  * Overrides theme_menu_tree();
