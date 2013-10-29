@@ -32,3 +32,22 @@ function springboard_backend_menu_tree($variables) {
   // Add tab-style class to menus
   return '<ul class="nav nav-tabs">' . $variables['tree'] . '</ul>';
 }
+
+/**
+ * Implements hook_css_alter().
+ */
+function springboard_backend_css_alter(&$css) {
+  $path_system = drupal_get_path('module', 'system');
+
+  // Remove nasty system styles if needed
+  $remove = array(
+    $path_system . '/system.theme.css',
+  );
+
+// Remove stylesheets which match our remove array.
+  foreach ($css as $stylesheet => $options) {
+    if (in_array($stylesheet, $remove)) {
+      unset($css[$stylesheet]);
+    }
+  }
+}
