@@ -16,7 +16,12 @@
   Drupal.behaviors.springboardMisc = {
     attach: function (context, settings) {
 
-    // Misc functions here if needed.
+      // Add first  / last to table rows if needed.
+      $(".content table tr td:visible:first-child").addClass("first");
+      $(".content table tr td:visible:last-child").addClass("last");
+      $(".content table th:visible:first-child").addClass("first");
+      $(".content table th:visible:last-child").addClass("last");
+
 
     } // attach.function
   } // drupal.behaviors
