@@ -8,6 +8,9 @@ function springboard_backend_preprocess_page(&$variables) {
   if (module_exists('springboard_admin')) {
     $variables['main_menu']['links'] = menu_tree('springboard_admin_menu');
   }
+
+
+
 }
 /**
  * Overrides theme_menu_tree();
