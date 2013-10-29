@@ -10,3 +10,14 @@
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
+
+
+(function($) {
+  Drupal.behaviors.springboardMisc = {
+    attach: function (context, settings) {
+
+    // Misc functions here if needed.
+
+    } // attach.function
+  } // drupal.behaviors
+})(jQuery);
