@@ -239,6 +239,49 @@ function springboard_base_form($variables) {
 }
 
 /**
+ * Overrides theme_fieldset()
+ */
+function springboard_base_fieldset($variables) {
+  $element = $variables['element'];
+  // dpm($element);
+
+  $element['#attributes']['class'][] = 'fieldset';
+  element_set_attributes($element, array('id'));
+  _form_set_class($element, array(''));
+  $output = '<div' . drupal_attributes($element['#attributes']) . '>';
+  // build Bootstrap-friendly  header
+  if (!empty($element['#title'])) {
+    $output .= '<div class="panel-heading"><h4 class="panel-title">';
+    if ($element['#collapsible'] == TRUE) {
+      $output .= '<a class="accordion-toggle" data-toggle="collapse" data-parent="' . $element['#id'] . '" href="#' . $element['#id'] . '-body">' . $element['#title'] . '</a>';
+    }
+    else {
+      $output .= $element['#title'];
+    }    
+    $output .= '</h4></div>';
+  }
+  
+  // build Bootstrap-friendly  content wrapper
+  if ($element['#collapsible'] == TRUE) {
+    $output .= '<div id="' . $element['#id'] . '-body" class="panel-collapse collapse in">';
+  }
+  $output .= '<div class="panel-body">';
+
+  if (!empty($element['#description'])) {
+    $output .= '<div class="div-description">' . $element['#description'] . '</div>';
+  }
+  $output .= $element['#children'];
+  if (isset($element['#value'])) {
+    $output .= $element['#value'];
+  }
+  if ($element['#collapsible'] == TRUE) {
+    $output .= '</div>';
+  }
+  $output .= "</div>\n</div>\n";
+  return $output;
+}
+
+/**
  * Overrides theme_checkboxes()
  */
 function springboard_base_checkboxes($variables) {
