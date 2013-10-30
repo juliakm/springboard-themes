@@ -239,29 +239,6 @@ function springboard_base_form($variables) {
 }
 
 /**
- * Overrides theme_fieldset()
- */
-function springboard_base_fieldset($variables) {
-  $element = $variables['element'];
-  element_set_attributes($element, array('id'));
-  _form_set_class($element, array('fieldset'));
-
-  $output = '<div' . drupal_attributes($element['#attributes']) . '>';
-  if (!empty($element['#title'])) {
-    $output .= '<div class="div-title">' . $element['#title'] . '</div>';
-  }
-  if (!empty($element['#description'])) {
-    $output .= '<div class="div-description">' . $element['#description'] . '</div>';
-  }
-  $output .= $element['#children'];
-  if (isset($element['#value'])) {
-    $output .= $element['#value'];
-  }
-  $output .= "</div>\n";
-  return $output;
-}
-
-/**
  * Overrides theme_checkboxes()
  */
 function springboard_base_checkboxes($variables) {
