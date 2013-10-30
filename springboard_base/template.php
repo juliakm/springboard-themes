@@ -4,6 +4,15 @@
  * Implements template_preprocess_html().
  */
 function springboard_base_preprocess_html(&$variables) {
+  // Show a warning message if jQuery Update is not enabled.
+  if (!module_exists('jquery_update') && user_access('administer theme')) {
+    drupal_set_message(t("Please install the !link with version 1.7 of jQuery or higher.", array('!link' => l(t('jQuery Update module'), 'http://drupal.org/project/jquery_update'))), 'warning');
+  }
+  // Show a warning message if jQuery Update is not set to at least version 1.7
+  elseif (module_exists('jquery_update') && version_compare(variable_get('jquery_update_jquery_version', 0), '1.7', '<') && user_access('administer theme')) {
+    drupal_set_message(t("Please enable jQuery version 1.7 or higher in the !link.", array('!link' => l(t('jQuery Update settings'), 'admin/config/development/jquery_update'))), 'warning');
+  }
+
   $variables['classes_array'] = array();
   // Compile a list of classes that are going to be applied to the body element.
   // This allows advanced theming based on context (home page, node of certain type, etc.).
