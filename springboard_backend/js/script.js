@@ -16,11 +16,17 @@
   Drupal.behaviors.springboardMisc = {
     attach: function (context, settings) {
 
-      // Add first  / last to table rows if needed.
+      // Add first  / last.
       $(".content table tr td:visible:first-child").addClass("first");
       $(".content table tr td:visible:last-child").addClass("last");
+      $(".content table tr td a:visible:first-child").addClass("first");
+      $(".content table tr td a:visible:last-child").addClass("last");
       $(".content table th:visible:first-child").addClass("first");
       $(".content table th:visible:last-child").addClass("last");
+
+      // Theme select lists.
+      $('select:not([multiple])').wrap('<div class="select-wrapper"></div>');
+      $('.select-wrapper').append('<div class="arrow"></div> ');
 
     } // attach.function
   } // drupal.behaviors
