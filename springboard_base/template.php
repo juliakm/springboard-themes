@@ -252,9 +252,9 @@ function springboard_base_form($variables) {
  */
 function springboard_base_fieldset($variables) {
   $element = $variables['element'];
-  // dpm($element);
 
   $element['#attributes']['class'][] = 'fieldset';
+  $element_id = isset($element['#id']) ? $element['#id'] : '';
   element_set_attributes($element, array('id'));
   _form_set_class($element, array(''));
   $output = '<div' . drupal_attributes($element['#attributes']) . '>';
@@ -262,7 +262,7 @@ function springboard_base_fieldset($variables) {
   if (!empty($element['#title'])) {
     $output .= '<div class="panel-heading"><h4 class="panel-title">';
     if ($element['#collapsible'] == TRUE) {
-      $output .= '<a class="accordion-toggle" data-toggle="collapse" data-parent="' . $element['#id'] . '" href="#' . $element['#id'] . '-body">' . $element['#title'] . '</a>';
+      $output .= '<a class="accordion-toggle" data-toggle="collapse" data-parent="' . $element_id . '" href="#' . $element_id . '-body">' . $element['#title'] . '</a>';
     }
     else {
       $output .= $element['#title'];
@@ -272,7 +272,7 @@ function springboard_base_fieldset($variables) {
   
   // build Bootstrap-friendly  content wrapper
   if ($element['#collapsible'] == TRUE) {
-    $output .= '<div id="' . $element['#id'] . '-body" class="panel-collapse collapse in">';
+    $output .= '<div id="' . $element_id . '-body" class="panel-collapse collapse in">';
   }
   $output .= '<div class="panel-body">';
 
