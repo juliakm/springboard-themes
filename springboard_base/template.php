@@ -261,7 +261,7 @@ function springboard_base_fieldset($variables) {
   // build Bootstrap-friendly  header
   if (!empty($element['#title'])) {
     $output .= '<div class="panel-heading"><h4 class="panel-title">';
-    if ($element['#collapsible'] == TRUE) {
+    if (isset($element['#collapsible']) && $element['#collapsible'] == TRUE) {
       $output .= '<a class="accordion-toggle" data-toggle="collapse" data-parent="' . $element_id . '" href="#' . $element_id . '-body">' . $element['#title'] . '</a>';
     }
     else {
@@ -271,7 +271,7 @@ function springboard_base_fieldset($variables) {
   }
   
   // build Bootstrap-friendly  content wrapper
-  if ($element['#collapsible'] == TRUE) {
+  if (isset($element['#collapsible']) && $element['#collapsible'] == TRUE) {
     $output .= '<div id="' . $element_id . '-body" class="panel-collapse collapse in">';
   }
   $output .= '<div class="panel-body">';
@@ -283,7 +283,7 @@ function springboard_base_fieldset($variables) {
   if (isset($element['#value'])) {
     $output .= $element['#value'];
   }
-  if ($element['#collapsible'] == TRUE) {
+  if (isset($element['#collapsible']) && $element['#collapsible'] == TRUE) {
     $output .= '</div>';
   }
   $output .= "</div>\n</div>\n";
