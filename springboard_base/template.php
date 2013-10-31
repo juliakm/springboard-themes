@@ -4,6 +4,15 @@
  * Implements template_preprocess_html().
  */
 function springboard_base_preprocess_html(&$variables) {
+  // Show a warning message if jQuery Update is not enabled.
+  if (!module_exists('jquery_update') && user_access('administer theme')) {
+    drupal_set_message(t("Please install the !link with version 1.7 of jQuery or higher.", array('!link' => l(t('jQuery Update module'), 'http://drupal.org/project/jquery_update'))), 'warning');
+  }
+  // Show a warning message if jQuery Update is not set to at least version 1.7
+  elseif (module_exists('jquery_update') && version_compare(variable_get('jquery_update_jquery_version', 0), '1.7', '<') && user_access('administer theme')) {
+    drupal_set_message(t("Please enable jQuery version 1.7 or higher in the !link.", array('!link' => l(t('jQuery Update settings'), 'admin/config/development/jquery_update'))), 'warning');
+  }
+
   $variables['classes_array'] = array();
   // Compile a list of classes that are going to be applied to the body element.
   // This allows advanced theming based on context (home page, node of certain type, etc.).
@@ -100,6 +109,15 @@ function springboard_base_preprocess_page(&$variables) {
   if ($node = menu_get_object()) {
     $variables['node'] = $node;
   }
+
+  // Add Font awesome cdn.
+  // http://fortawesome.github.io/Font-Awesome/get-started/
+  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css',
+    array(
+      'type' => 'external',
+    )
+  );
+
 }
 
 /**
@@ -234,13 +252,30 @@ function springboard_base_form($variables) {
  */
 function springboard_base_fieldset($variables) {
   $element = $variables['element'];
-  element_set_attributes($element, array('id'));
-  _form_set_class($element, array('fieldset'));
+  // dpm($element);
 
+  $element['#attributes']['class'][] = 'fieldset';
+  element_set_attributes($element, array('id'));
+  _form_set_class($element, array(''));
   $output = '<div' . drupal_attributes($element['#attributes']) . '>';
+  // build Bootstrap-friendly  header
   if (!empty($element['#title'])) {
-    $output .= '<div class="div-title">' . $element['#title'] . '</div>';
+    $output .= '<div class="panel-heading"><h4 class="panel-title">';
+    if ($element['#collapsible'] == TRUE) {
+      $output .= '<a class="accordion-toggle" data-toggle="collapse" data-parent="' . $element['#id'] . '" href="#' . $element['#id'] . '-body">' . $element['#title'] . '</a>';
+    }
+    else {
+      $output .= $element['#title'];
+    }    
+    $output .= '</h4></div>';
   }
+  
+  // build Bootstrap-friendly  content wrapper
+  if ($element['#collapsible'] == TRUE) {
+    $output .= '<div id="' . $element['#id'] . '-body" class="panel-collapse collapse in">';
+  }
+  $output .= '<div class="panel-body">';
+
   if (!empty($element['#description'])) {
     $output .= '<div class="div-description">' . $element['#description'] . '</div>';
   }
@@ -248,7 +283,10 @@ function springboard_base_fieldset($variables) {
   if (isset($element['#value'])) {
     $output .= $element['#value'];
   }
-  $output .= "</div>\n";
+  if ($element['#collapsible'] == TRUE) {
+    $output .= '</div>';
+  }
+  $output .= "</div>\n</div>\n";
   return $output;
 }
 
