@@ -1,7 +1,7 @@
 name = Springboard Base
 description = A stripped-down, responsive, HTML5 and CSS3 base theme for Springboard sites.
 package = Springboard
-version = 7.x-4.0-beta4.0.5
+version = 7.x-4.0-beta4.0.6
 core = 7.x
 
 ;Regions
