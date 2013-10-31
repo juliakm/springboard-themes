@@ -32,6 +32,10 @@
         // code goes here
       }
 
+//      if ( $('ul.nav.nav-tabs li a').hasClass("active") ) {
+//        (this).clone().appendTo('#active-menu-item');
+//        }
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);

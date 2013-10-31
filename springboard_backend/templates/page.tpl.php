@@ -1,5 +1,6 @@
-<header class="clearfix container" id="header-wrapper">
+<div id="header-wrapper">
 
+<header class="clearfix container" id="header-inner">
   <div id="top-wrapper">
     <?php if ($logo) : ?>
       <div id="logo-wrapper" class="inline-block">
@@ -18,6 +19,14 @@
   <?php print render($page['header']); ?>
 
 </header>
+
+</div><!--// header-wrapper-->
+
+<div id="active-menu-item-wrapper">
+  <div class="active-menu-item clearfix container">
+    <?php //@TODO either a var or jquery to render the active menu item ?>
+  </div>
+</div>
 
 <div id="main" class="container clearfix">
   <?php print render($title_prefix); ?>
