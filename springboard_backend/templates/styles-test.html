@@ -155,10 +155,10 @@
 </table>
 <strong>Forms</strong>
 <form class="webform-client-form" enctype="multipart/form-data" id="webform-client-form-4" accept-charset="UTF-8" _lpchecked="1">
-<div class="webform-component-fieldset" id="webform-component-fieldset">
-  <div class="div-title">
+<div class="webform-component-fieldset fieldset" id="webform-component-fieldset">
+  <div class="panel-heading"><h4 class="panel-title">
     Fieldset
-  </div>
+  </h4></div>
   <div class="control-group">
     <label for="edit-submitted-fieldset-textfield">Textfield </label>
     <input type="text" id="edit-submitted-fieldset-textfield" name="submitted[fieldset][textfield]" value="" size="60" maxlength="128" class="form-text">
@@ -279,32 +279,34 @@
   </table>
 
 </div>
-<div class="webform-component-fieldset collapsible" id="webform-component-fieldset-collapsible">
-  <div class="div-title">
-    Fieldset Collapsible
-  </div>
-  <div class="fundraiser-payment-fields" id="edit-submitted-fieldset-collapsible-payment-fields-credit">
-    <div class="control-group">
-      <label for="edit-submitted-fieldset-collapsible-payment-fields-credit-card-number">Credit card number </label>
-      <input class="input-large form-text" type="text" id="edit-submitted-fieldset-collapsible-payment-fields-credit-card-number" name="submitted[fieldset_collapsible][payment_fields][credit][card_number]" value="" size="20" maxlength="128">
-    </div>
-    <div class="expiration-date-wrapper clear-block">
+<div class="webform-component-fieldset fieldset collapsible" id="webform-component-fieldset-collapsible">
+  <div class="panel-heading"><h4 class="panel-title">
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="webform-component-fieldset-collapsible" href="#webform-component-fieldset-collapsible-body">Fieldset Collapsible</a>
+  </h4></div>
+  <div id="webform-component-fieldset-collapsible-body" class="panel-collapse in collapse" style="height: auto;"><div class="panel-body">
+    <div class="fundraiser-payment-fields" id="edit-submitted-fieldset-collapsible-payment-fields-credit">
       <div class="control-group">
-        <label for="edit-submitted-fieldset-collapsible-payment-fields-credit-expiration-date-card-expiration-month">Expiration date </label>
-        <select class="input-small form-select" id="edit-submitted-fieldset-collapsible-payment-fields-credit-expiration-date-card-expiration-month" name="submitted[fieldset_collapsible][payment_fields][credit][expiration_date][card_expiration_month]">
-          <option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10" selected="selected">October</option><option value="11">November</option><option value="12">December</option>
-        </select>
-        <select class="input-small form-select" id="edit-submitted-fieldset-collapsible-payment-fields-credit-expiration-date-card-expiration-year" name="submitted[fieldset_collapsible][payment_fields][credit][expiration_date][card_expiration_year]">
-          <option value="2013" selected="selected">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option>
-        </select>
+        <label for="edit-submitted-fieldset-collapsible-payment-fields-credit-card-number">Credit card number </label>
+        <input class="input-large form-text" type="text" id="edit-submitted-fieldset-collapsible-payment-fields-credit-card-number" name="submitted[fieldset_collapsible][payment_fields][credit][card_number]" value="" size="20" maxlength="128">
+      </div>
+      <div class="expiration-date-wrapper clear-block">
+        <div class="control-group">
+          <label for="edit-submitted-fieldset-collapsible-payment-fields-credit-expiration-date-card-expiration-month">Expiration date </label>
+          <select class="input-small form-select" id="edit-submitted-fieldset-collapsible-payment-fields-credit-expiration-date-card-expiration-month" name="submitted[fieldset_collapsible][payment_fields][credit][expiration_date][card_expiration_month]">
+            <option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10" selected="selected">October</option><option value="11">November</option><option value="12">December</option>
+          </select>
+          <select class="input-small form-select" id="edit-submitted-fieldset-collapsible-payment-fields-credit-expiration-date-card-expiration-year" name="submitted[fieldset_collapsible][payment_fields][credit][expiration_date][card_expiration_year]">
+            <option value="2013" selected="selected">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="edit-submitted-fieldset-collapsible-payment-fields-credit-card-cvv">CVV </label>
+        <input class="input-small form-text" type="text" id="edit-submitted-fieldset-collapsible-payment-fields-credit-card-cvv" name="submitted[fieldset_collapsible][payment_fields][credit][card_cvv]" value="" size="6" maxlength="128">
       </div>
     </div>
-    <div class="control-group">
-      <label for="edit-submitted-fieldset-collapsible-payment-fields-credit-card-cvv">CVV </label>
-      <input class="input-small form-text" type="text" id="edit-submitted-fieldset-collapsible-payment-fields-credit-card-cvv" name="submitted[fieldset_collapsible][payment_fields][credit][card_cvv]" value="" size="6" maxlength="128">
-    </div>
-  </div>
-  <input class="fundraiser-payment-methods" type="hidden" name="submitted[fieldset_collapsible][payment_method]" value="credit">
+    <input class="fundraiser-payment-methods" type="hidden" name="submitted[fieldset_collapsible][payment_method]" value="credit">
+  </div></div>
   <div class="control-group">
     <label for="edit-submitted-fieldset-collapsible-select-boxes">Select checkboxes </label>
     <div id="edit-submitted-fieldset-collapsible-select-boxes">
@@ -367,8 +369,8 @@
       <option value="option1">option</option><option value="option2">option</option><option value="option3">option</option><option value="option4">option</option>
     </select>
   </div>
-</div>
-<input class="btn" type="submit" id="edit-submit" name="op" value="Submit">
+
+  <input class="btn" type="submit" id="edit-submit" name="op" value="Submit">
 </form>
 <strong>Primary &amp; Secondary Tabs</strong>
 <ul class="tabs primary">
@@ -410,7 +412,7 @@
 <div class="item-list">
   <ul class="pager">
     <li class="pager-current first">
-      1
+      <a title="Go to page 2" href="/admin/content?page=1">1</a>
     </li>
     <li class="pager-item">
       <a title="Go to page 2" href="/admin/content?page=1">2</a>

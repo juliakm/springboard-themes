@@ -1,6 +1,21 @@
 <?php
 
 /**
+ * Implements template_preprocess_html().
+ */
+function springboard_backend_preprocess_html(&$vars) {
+  // Add to head <meta http-equiv="X-UA-Compatible" content="IE=edge" /> for proper IE rendering.
+  $http_equiv = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'http-equiv' => 'X-UA-Compatible',
+      'content' => 'IE=edge',
+    ),
+  );
+  drupal_add_html_head($http_equiv, 'http_equiv');
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function springboard_backend_preprocess_page(&$variables) {
