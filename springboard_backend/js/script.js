@@ -28,6 +28,10 @@
       $('select:not([multiple])').wrap('<div class="select-wrapper"></div>');
       $('.select-wrapper').append('<div class="arrow"></div> ');
 
+      if ($("td a").length > 1) {
+        // code goes here
+      }
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);

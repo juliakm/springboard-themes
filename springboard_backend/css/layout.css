@@ -1,0 +1,10 @@
+/* layout styles for springboard_backend theme */
+
+.inline-block {
+  display: inline-block;
+}
+
+#logo-wrapper,
+#menu-wrapper {
+  vertical-align: top;
+}
