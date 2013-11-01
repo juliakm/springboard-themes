@@ -22,25 +22,29 @@
 
 </div><!--// header-wrapper-->
 
-<div id="active-menu-item-wrapper">
-  <div class="active-menu-item clearfix container">
-    <?php //@TODO either a var or jquery to render the active menu item ?>
+<div id="page-title-wrapper">
+  <div class="page-title-inner clearfix container">
+    <?php print render($title_prefix); ?>
+    <?php if ($title): ?>
+      <h1 class="page-title"><?php print $title; ?></h1>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
   </div>
 </div>
 
 <div id="main" class="container clearfix">
-  <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
-    <h1 class="page-title"><?php print $title; ?></h1>
+
+  <?php if ($messages): ?>
+    <?php print $messages; ?>
   <?php endif; ?>
-  <?php print render($title_suffix); ?>
-  <?php if ($messages) {
-    print $messages;
-  } ?>
+
   <?php print render($tabs); ?>
+
   <div class="element-invisible"><a id="main-content"></a></div>
   <?php if ($action_links): ?>
-    <ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+    <ul class="action-links"><?php print render($action_links); ?></ul>
+  <?php endif; ?>
+
   <?php print render($page['content']); ?>
 </div><!-- /main -->
 <footer id="footer" class="clearfix region container">
