@@ -46,10 +46,12 @@ function springboard_backend_menu_tree($variables) {
  */
 function springboard_backend_css_alter(&$css) {
   $path_system = drupal_get_path('module', 'system');
+  $path_views = drupal_get_path('module', 'views');
 
-  // Remove nasty system styles if needed
+  // Remove misc styles if needed.
   $remove = array(
     $path_system . '/system.theme.css',
+    $path_views .  '/css/views.css',
   );
 
 // Remove stylesheets which match our remove array.
