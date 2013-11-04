@@ -28,11 +28,6 @@
       $('select:not([multiple])').wrap('<div class="select-wrapper"></div>');
       $('.select-wrapper').append('<div class="arrow"></div> ');
 
-      //@TODO, multiple links in a table cell.
-      if ($("td a").length > 1) {
-        // code goes here
-      }
-
       //@TODO, fade messages on close.
 //      $('.alert.warning .close').click(function () {
 //        $('.alert.warning').fadeOut( "slow", function() {
