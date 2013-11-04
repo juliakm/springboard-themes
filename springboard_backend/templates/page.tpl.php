@@ -1,6 +1,6 @@
 <div id="header-wrapper">
 
-<header class="clearfix" id="header-inner">
+<header class="clearfix container" id="header-inner">
   <div id="top-wrapper">
     <?php if ($logo) : ?>
       <div id="logo-wrapper" class="inline-block">

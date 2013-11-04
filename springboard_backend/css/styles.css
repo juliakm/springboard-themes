@@ -58,12 +58,6 @@ h1.page-title {
   background: #085685 url("../images/bg-swoosh.png") no-repeat center center;
 }
 
-#header-inner {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-
 /* main menu */
 
 li.expanded,
@@ -517,6 +511,12 @@ td a.first {
     display: block;
   }
 
+  .nav-tabs>li>a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
   .inline-block {
     display: block;
   }
@@ -524,6 +524,11 @@ td a.first {
   #top-wrapper,
   #page-title-wrapper {
     height: auto;
+  }
+
+  #header-inner {
+    width: 100%;
+    margin: 0 auto;
   }
 
 
