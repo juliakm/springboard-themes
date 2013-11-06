@@ -29,9 +29,8 @@
       $('.select-wrapper').append('<div class="arrow"></div> ');
 
       //@TODO, fade messages on close.
-//      $('.alert.warning .close').click(function () {
-//        $('.alert.warning').fadeOut( "slow", function() {
-//        });
+//      $('.alert.warning button').click(function () {
+//        $(this).closest('div').fadeOut(900);
 //      });
 
       // Remove Boostrap button class.
