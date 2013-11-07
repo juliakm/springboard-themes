@@ -49,4 +49,5 @@
 </div><!-- /main -->
 <footer id="footer" class="clearfix region container">
   <?php print render($page['footer']); ?>
+  <?php print $footer_menu; ?>
 </footer>

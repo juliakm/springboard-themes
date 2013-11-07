@@ -22,6 +22,17 @@ function springboard_backend_preprocess_page(&$variables) {
   // Override menu settings and display the springboard admin menu as the main menu
   if (module_exists('springboard_admin')) {
     $variables['main_menu']['links'] = menu_tree('springboard_admin_menu');
+    
+    // menu_tree() is the best available option for rendering menu links, but 
+    // isn't flexible for changing the HTML/Classes in different contexts.
+    // So, use a regex to change the classes on the menu for the footer. 
+    $variables['footer_menu'] = drupal_render($variables['main_menu']);
+    // change the wrapping ul's class so drop-down js isn't applied
+    $variables['footer_menu'] = preg_replace('/class="nav nav-tabs"/', '/class="nav nav-expanded"/', $variables['footer_menu']);
+    // change sub-ul's class so drop-down styling isn't applied
+    $variables['footer_menu'] = preg_replace('/class="dropdown-menu "/', '/class="child-menu"/', $variables['footer_menu']);
+    // change sub li's class so drop-down styling isn't applied
+    $variables['footer_menu'] = preg_replace('/dropdown/', '', $variables['footer_menu']);
   }
 
   // Open sans font.
