@@ -561,7 +561,6 @@ function springboard_base_menu_tree($variables) {
 function springboard_base_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
-
   if ($element['#below']) {
     // Prevent dropdown functions from being added to management menu so it
     // does not affect the navbar module.
@@ -598,5 +597,7 @@ function springboard_base_menu_link(array $variables) {
     $element['#attributes']['class'][] = 'active';
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  // add an ID based on the mlid to each item for individualized styles
+  $element['#attributes']['id'] = 'mlid-' . $element['#original_link']['mlid'];
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
