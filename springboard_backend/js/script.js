@@ -33,6 +33,10 @@
 //        $(this).closest('div').fadeOut(900);
 //      });
 
+//      $('.accordion-toggle').once(function() {
+//        $(this).prepend('<i class="icon-fixed-width accordion-toggle-icon">&#xf0dd;</i>');
+//      });
+
       // Remove Boostrap button class.
       $('input').removeClass('btn');
 
