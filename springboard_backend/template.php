@@ -63,8 +63,7 @@ function springboard_backend_css_alter(&$css) {
   // Remove misc styles if needed.
   $remove = array(
     $path_system . '/system.theme.css',
-
-    $path_views .  '/css/views.css',
+    $path_views . '/css/views.css',
     //$path_token .  '/token.css',
   );
 

@@ -150,7 +150,7 @@ function springboard_base_form_element($variables) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-      $output .= ' ' . $prefix  . $element['#children'] . $suffix . "\n";
+      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
 
     case 'after':
@@ -352,7 +352,7 @@ function springboard_base_password($variables) {
 function springboard_base_radio($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'radio';
-  element_set_attributes($element, array('id', 'name','#return_value' => 'value'));
+  element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
 
   if (isset($element['#return_value']) && $element['#value'] !== FALSE && $element['#value'] == $element['#return_value']) {
     $element['#attributes']['checked'] = 'checked';
@@ -490,7 +490,7 @@ function springboard_base_status_messages($variables) {
     // $status throwing warning as undefined
     // $output .= "<div class=\"alert alert-$status \">\n";
     // Fix and re-add to output below
-    $output .= "<div class=\"alert ".$type."\">\n";
+    $output .= "<div class=\"alert " . $type . "\">\n";
     // bootstrap dismiss button
     $output .= "<button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\n";
     if (!empty($status_heading[$type])) {

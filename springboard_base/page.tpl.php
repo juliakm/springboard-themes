@@ -1,5 +1,5 @@
 <header class="clearfix container">
-  <?php if ($logo) { print '<a href="/"><img src="'. check_url($logo) .'" alt="'. $site_name .'" id="logo" /></a>'; } ?>
+  <?php if ($logo) : print '<a href="/"><img src="'. check_url($logo) .'" alt="'. $site_name .'" id="logo" /></a>'; endif; ?>
   <?php print render($main_menu); ?>
   <?php print render($page['header']); ?>
 </header>
