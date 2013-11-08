@@ -28,7 +28,7 @@ function springboard_backend_preprocess_page(&$variables) {
     // So, use a regex to change the classes on the menu for the footer. 
     $variables['footer_menu'] = drupal_render($variables['main_menu']);
     // change the wrapping ul's class so drop-down js isn't applied
-    $variables['footer_menu'] = preg_replace('/class="nav nav-tabs"/', '/class="nav nav-expanded"/', $variables['footer_menu']);
+    $variables['footer_menu'] = preg_replace('/class="nav nav-tabs"/', '/class="nav nav-footer"/', $variables['footer_menu']);
     // change sub-ul's class so drop-down styling isn't applied
     $variables['footer_menu'] = preg_replace('/class="dropdown-menu "/', '/class="child-menu"/', $variables['footer_menu']);
     // change sub li's class so drop-down styling isn't applied
