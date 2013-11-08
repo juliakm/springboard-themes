@@ -16,6 +16,24 @@
   Drupal.behaviors.springboardMisc = {
     attach: function (context, settings) {
 
+      // Set ul depths for better theming.
+      $('#footer ul, #menu-wrapper ul').each(function() {
+        var depth = $(this).parents('ul').length;
+        $(this).addClass('ul-depth-' + depth);
+      });
+
+      // Set ul > li depths for better theming.
+      $('ul.nav li').each(function() {
+        var depth = $(this).parents('li').length;
+        $(this).addClass('li-depth-' + depth);
+      });
+
+      // Set li > a depths for better theming.
+      $('ul.nav li a').each(function() {
+        var depth = $(this).parents('ul').length;
+        $(this).addClass('lia-depth-' + depth);
+      });
+
       // Add first  / last classes.
       $(".content table tr td:visible:first-child").addClass("first");
       $(".content table tr td:visible:last-child").addClass("last");
@@ -33,9 +51,8 @@
 //        $(this).closest('div').fadeOut(900);
 //      });
 
-//      $('.accordion-toggle').once(function() {
-//        $(this).prepend('<i class="icon-fixed-width accordion-toggle-icon">&#xf0dd;</i>');
-//      });
+      // Remove the nav carets.
+      $('.nav .caret').remove();
 
       // Remove Boostrap button class.
       $('input').removeClass('btn');

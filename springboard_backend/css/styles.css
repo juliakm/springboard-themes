@@ -55,7 +55,12 @@ h1.page-title {
 
 #page-title-wrapper {
   height: 50px;
-  background: #085685 url("../images/bg-swoosh.png") no-repeat center center;
+  background: #085685 url("../images/bg-header.png") no-repeat center center;
+}
+
+#footer-wrapper {
+  min-height: 475px;
+  background: #085685 url("../images/bg-footer.png") no-repeat bottom center;
 }
 
 /* main menu */
@@ -126,6 +131,41 @@ li.leaf {
 .nav-tabs > .active > a:focus {
   color: #fff;
   border: none;
+}
+
+/* Footer menu */
+
+ul.nav.nav-footer {
+  margin-top: 90px;
+}
+
+ul.nav.nav-footer ul {
+  margin: 0;
+}
+
+ul.nav.nav-footer a {
+  color: #fefefe;
+}
+
+ul.nav.nav-footer li.li-depth-0 {
+  display: inline-block;
+  vertical-align: top;
+  width: 13.4%;
+}
+
+ul.nav.nav-footer li.li-depth-1 {
+  margin-top: 5px;
+}
+
+ul.nav.nav-footer li a.lia-depth-1 {
+  font-size: 1.3em;
+}
+
+ul.nav.nav-footer li.level-2 {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  margin-top: 10px;
 }
 
 /* Messages */
