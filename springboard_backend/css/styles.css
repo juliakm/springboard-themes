@@ -60,7 +60,7 @@ h1.page-title {
 
 #footer-wrapper {
   min-height: 475px;
-  background: #085685 url("../images/bg-footer.png") no-repeat bottom center;
+  background: #085685 url("../images/bg-footer.png") repeat-x bottom center;
 }
 
 /* main menu */
