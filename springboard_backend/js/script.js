@@ -51,7 +51,7 @@
 //        $(this).closest('div').fadeOut(900);
 //      });
 
-      // Remove the nav carets.
+      // Remove the nav caret.
       $('.nav .caret').remove();
 
       // Remove Boostrap button class.
