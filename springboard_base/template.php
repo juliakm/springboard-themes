@@ -56,6 +56,25 @@ function springboard_base_preprocess_html(&$variables) {
   }
   $variables['head_title_array'] = $head_title;
   $variables['head_title'] = implode(' | ', $head_title);
+
+  // Add an ie 10 and 11 classes for better theming.
+  // Note, @cc_on did not seem to work for ie11 even changing doc mode and class to '11'.
+  $inline_script = <<<EOL
+  <!--[if !IE]><!--><script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
+        document.documentElement.className+=' ie10';
+      }
+    var isIE11 = !!navigator.userAgent.match(/Trident\/7\./)
+    if (isIE11 == true) {
+    document.documentElement.className += ' ie11';
+  }
+  </script><!--<![endif]-->
+EOL;
+  $element = array(
+    '#type' => 'markup',
+    '#markup' => $inline_script,
+  );
+  drupal_add_html_head($element, 'javascript');
+
 }
 
 /**
