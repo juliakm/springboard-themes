@@ -58,13 +58,13 @@ function springboard_backend_menu_tree($variables) {
 function springboard_backend_css_alter(&$css) {
   $path_system = drupal_get_path('module', 'system');
   $path_views = drupal_get_path('module', 'views');
- // $path_token = drupal_get_path('module', 'token');
+  $path_webform = drupal_get_path('module', 'webform');
 
   // Remove misc styles if needed.
   $remove = array(
     $path_system . '/system.theme.css',
     $path_views . '/css/views.css',
-    //$path_token .  '/token.css',
+    $path_webform .  '/css/webform.css',
   );
 
 // Remove stylesheets which match our remove array.

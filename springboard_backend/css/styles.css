@@ -245,11 +245,48 @@ div.status button.close {
 
 /* Form elements */
 
-input,
-button,
 select,
-textarea {
+button,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
   font-family: 'Open Sans', sans-serif;
+  color: #043b5c;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  height: 32px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0;
 }
 
 #edit-submit,
@@ -332,8 +369,12 @@ a.accordion-toggle:before {
   color: #333;
 }
 
+.panel-heading {
+  margin-bottom: 20px;
+}
+
 .panel-collapse .panel-body {
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   padding: 40px;
   border: 1px solid #dfdfdf;
   -webkit-border-radius: 6px;
@@ -393,11 +434,26 @@ a.accordion-toggle.collapsed:before {
   height: 40px;
   -webkit-appearance: none;
   overflow: hidden;
-  padding: 8px;
+  padding: 6px 8px 8px 8px;
   width: 150%;
   margin-bottom: 0;
   position: relative;
   z-index: 1;
+}
+
+.webform-datepicker .control-group {
+  display: inline-block;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.webform-datepicker .control-group .select-wrapper {
+  width: 100%;
+}
+
+.webform-datepicker input[type="image"] {
+  position: relative;
+  top: -24px;
 }
 
 /* Lists */
