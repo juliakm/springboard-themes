@@ -155,7 +155,8 @@ ul.nav.nav-footer a:hover {
 ul.nav.nav-footer li.li-depth-0 {
   display: inline-block;
   vertical-align: top;
-  width: 15.9%;
+  width: 32.76%;
+  margin-bottom: 16px;
 }
 
 ul.nav.nav-footer li.first.li-depth-0 {
@@ -284,7 +285,7 @@ input[type="checkbox"] {
 
 #edit-submit,
 #edit-preview {
-  margin-right: 10px;
+  margin: 10px 10px 0 0;
 }
 
 .field-prefix {
@@ -758,7 +759,16 @@ ul.tabs.secondary li a.active {
   background: #c5c4c4;
 }
 
-/* Media queries */
+/* Media queries -- these should order last. */
+
+/* match bootstraps wide setting */
+@media (min-width: 1200px) {
+
+  ul.nav.nav-footer li.li-depth-0 {
+    width: 15.9%;
+  }
+
+} /* end min 1200px media query */
 
 @media (max-width: 768px) {
 
@@ -799,9 +809,23 @@ ul.tabs.secondary li a.active {
     padding-left: 12px;
   }
 
+  ul.nav.nav-footer li.li-depth-0 {
+    width: 99%;
+    margin-left: 20px;
+    margin-bottom: 26px;
+  }
+
+  ul.nav.nav-footer li.li-depth-0.home {
+    margin-left: 0;
+  }
+
+  ul.nav.nav-footer {
+    margin-top: 20px;
+  }
+
 } /* end 768px media query */
 
-@media only screen and (min-width:369px) and (max-width: 979px)  {
+@media only screen and (min-width:769px) and (max-width: 979px)  {
 
   .nav-tabs>li>a {
     padding-right: 4px;
@@ -809,9 +833,7 @@ ul.tabs.secondary li a.active {
     font-size: .9em;
   }
 
-  ul.nav.nav-footer li.li-depth-0 {
-    width: 32.76%;
-    margin-bottom: 32px;
-  }
 
 } /* end 769 - 979px media query */
+
+
