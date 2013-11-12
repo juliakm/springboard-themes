@@ -11,7 +11,6 @@
   } // drupal.behaviors
 })(jQuery);
 
-
 (function($) {
   Drupal.behaviors.springboardMisc = {
     attach: function (context, settings) {
@@ -34,7 +33,7 @@
         $(this).addClass('lia-depth-' + depth);
       });
 
-      // Add first  / last classes.
+      // Add first  / last classes for better theming.
       $(".content table tr td:visible:first-child").addClass("first");
       $(".content table tr td:visible:last-child").addClass("last");
       $(".content table tr td a:visible:first-child").addClass("first");
@@ -46,15 +45,15 @@
       $('select:not([multiple])').wrap('<div class="select-wrapper"></div>');
       $('.select-wrapper').append('<div class="arrow"></div> ');
 
-      //@TODO, fade messages on close.
+      //@TODO, fade messages on close?
 //      $('.alert.warning button').click(function () {
 //        $(this).closest('div').fadeOut(900);
 //      });
 
-      // Move the footer home link to the end on the right.
+      // Move the footer home link to the end.
       $('.nav-footer li.home').appendTo('.nav-footer li.options ul');
 
-      // Remove the nav caret.
+      // Remove the nav caret from menus.
       $('.nav .caret').remove();
 
       // Remove Boostrap button class.

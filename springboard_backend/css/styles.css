@@ -154,7 +154,7 @@ ul.nav.nav-footer a {
 }
 
 ul.nav.nav-footer a:hover {
-  text-decoration: underlines;
+  text-decoration: underline;
 }
 
 ul.nav.nav-footer li.li-depth-0 {
@@ -162,6 +162,10 @@ ul.nav.nav-footer li.li-depth-0 {
   vertical-align: top;
   width: 32.16%;
   margin-bottom: 16px;
+}
+
+.ie8 ul.nav.nav-footer li.li-depth-0 {
+  width: 24%;
 }
 
 ul.nav.nav-footer li.first.li-depth-0 {
@@ -349,7 +353,6 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 .button:hover,
 ul.tabs.primary li a:hover {
-  background: #056eaa;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA1NmVhYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTY3OTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -moz-linear-gradient(top,  #056eaa 0%, #0a6799 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#056eaa), color-stop(100%,#0a6799));
@@ -357,14 +360,26 @@ ul.tabs.primary li a:hover {
   background: -o-linear-gradient(top,  #056eaa 0%,#0a6799 100%);
   background: -ms-linear-gradient(top,  #056eaa 0%,#0a6799 100%);
   background: linear-gradient(to bottom,  #056eaa 0%,#0a6799 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#056eaa', endColorstr='#0a6799',GradientType=0 );
   text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .ie8 input[type="submit"],
 .ie8 input[type="button"],
-.ie8 input[type="reset"] {
+.ie8 input[type="reset"],
+.ie8 .button,
+.ie8 ul.tabs.primary li a {
   background: #3182b2;
+}
+
+.ie8 input[type="submit"]:hover,
+.ie8 input[type="button"]:hover,
+.ie8 input[type="reset"]:hover,
+.ie8 .button:hover,
+.ie8 ul.tabs.primary li a:hover {
+  background: #056eaa;
 }
 
 /* Get rid or button borders for ie 9 - 11, they don't render well with gradients and radius corners */
