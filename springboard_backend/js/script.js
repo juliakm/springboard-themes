@@ -51,6 +51,9 @@
 //        $(this).closest('div').fadeOut(900);
 //      });
 
+      // Move the footer home link to the end on the right.
+      $('.nav-footer li.home').appendTo('.nav-footer li.options ul');
+
       // Remove the nav caret.
       $('.nav .caret').remove();
 
