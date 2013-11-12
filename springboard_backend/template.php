@@ -60,9 +60,10 @@ function springboard_backend_css_alter(&$css) {
   $path_views = drupal_get_path('module', 'views');
   $path_webform = drupal_get_path('module', 'webform');
 
-  // Remove misc styles if needed.
+  // Remove misc styles that get in the way rather than having to override them.
   $remove = array(
     $path_system . '/system.theme.css',
+    $path_system . '/system.menus.css',
     $path_views . '/css/views.css',
     $path_webform .  '/css/webform.css',
   );
