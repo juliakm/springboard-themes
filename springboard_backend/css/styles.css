@@ -55,7 +55,12 @@ h1.page-title {
 
 #page-title-wrapper {
   height: 50px;
-  background: #085685 url("../images/bg-swoosh.png") no-repeat center center;
+  background: #085685 url("../images/bg-header.png") no-repeat center center;
+}
+
+#footer-wrapper {
+  min-height: 475px;
+  background: #085685 url("../images/bg-footer.png") repeat-x bottom center;
 }
 
 /* main menu */
@@ -128,6 +133,59 @@ li.leaf {
   border: none;
 }
 
+/* Footer menu */
+
+ul.nav.nav-footer {
+  margin-top: 90px;
+}
+
+ul.nav.nav-footer ul {
+  margin: 0;
+}
+
+ul.nav.nav-footer a {
+  color: #fefefe;
+}
+
+ul.nav.nav-footer a:hover {
+  text-decoration: underlines;
+}
+
+ul.nav.nav-footer li.li-depth-0 {
+  display: inline-block;
+  vertical-align: top;
+  width: 14.76%;
+}
+
+ul.nav.nav-footer li.first.li-depth-0 {
+  width: 7%;
+}
+
+ul.nav.nav-footer li.li-depth-1 {
+  margin-top: 5px;
+  padding-right: 30px;
+}
+
+ul.nav.nav-footer li.li-depth-1 a {
+  font-weight: normal;
+  font-size: .9em;
+}
+
+ul.nav.nav-footer li a.lia-depth-1 {
+  font-size: 1.3em;
+}
+
+ul.nav.nav-footer li a.lia-depth-1:hover {
+  background: none;
+}
+
+ul.nav.nav-footer li.level-2 {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  margin-top: 10px;
+}
+
 /* Messages */
 
 div.alert {
@@ -187,11 +245,48 @@ div.status button.close {
 
 /* Form elements */
 
-input,
-button,
 select,
-textarea {
+button,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
   font-family: 'Open Sans', sans-serif;
+  color: #043b5c;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  height: 32px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0;
 }
 
 #edit-submit,
@@ -227,7 +322,8 @@ input[type="reset"] {
 
 input[type="submit"],
 input[type="button"],
-input[type="reset"] {
+input[type="reset"],
+.button {
   background: -moz-linear-gradient(top, #3182b2 0%, #0265a0 100%, #7db9e8 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3182b2), color-stop(100%, #0265a0), color-stop(100%, #7db9e8));
   background: -webkit-linear-gradient(top, #3182b2 0%, #0265a0 100%, #7db9e8 100%);
@@ -247,6 +343,28 @@ input[type="reset"] {
 .ie8 input[type="button"],
 .ie8 input[type="reset"] {
   background: #3182b2;
+}
+
+.view-header .button,
+.button-create {
+  padding: 7px 10px 7px 22px;
+}
+
+.view-header .button:hover,
+.button-create:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.view-header a.button:before {
+  content: "\f067";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: relative;
+  left: -12px;
+  color: #fff;
 }
 
 label.option {
@@ -272,6 +390,26 @@ a.accordion-toggle:before {
   position: relative;
   top: 6px;
   color: #333;
+}
+
+.panel-heading {
+  margin-bottom: 20px;
+}
+
+.panel-collapse .panel-body {
+  margin: 0 0 20px 0;
+  padding: 40px;
+  border: 1px solid #dfdfdf;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #f5fbfe;
+}
+
+.panel-collapse.closed {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 a.accordion-toggle.collapsed:before {
@@ -319,11 +457,26 @@ a.accordion-toggle.collapsed:before {
   height: 40px;
   -webkit-appearance: none;
   overflow: hidden;
-  padding: 8px;
+  padding: 6px 8px 8px 8px;
   width: 150%;
   margin-bottom: 0;
   position: relative;
   z-index: 1;
+}
+
+.webform-datepicker .control-group {
+  display: inline-block;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.webform-datepicker .control-group .select-wrapper {
+  width: 100%;
+}
+
+.webform-datepicker input[type="image"] {
+  position: relative;
+  top: -24px;
 }
 
 /* Lists */

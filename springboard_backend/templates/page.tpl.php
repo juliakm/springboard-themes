@@ -44,7 +44,10 @@
 
   <?php print render($page['content']); ?>
 </div><!-- /main -->
+
+<div id="footer-wrapper">
 <footer id="footer" class="clearfix region container">
   <?php print render($page['footer']); ?>
   <?php print $footer_menu; ?>
 </footer>
+</div>
