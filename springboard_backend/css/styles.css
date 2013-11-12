@@ -155,17 +155,15 @@ ul.nav.nav-footer a:hover {
 ul.nav.nav-footer li.li-depth-0 {
   display: inline-block;
   vertical-align: top;
-  width: 16.2%;
+  width: 15.9%;
 }
 
 ul.nav.nav-footer li.first.li-depth-0 {
-  /*width: 7%;*/
   margin-top: 10px;
 }
 
 ul.nav.nav-footer li.li-depth-1 {
   margin-top: 5px;
-  /*padding-right: 30px;*/
 }
 
 ul.nav.nav-footer li.li-depth-1 a {
@@ -179,10 +177,6 @@ ul.nav.nav-footer li a.lia-depth-1 {
 
 ul.nav.nav-footer li a.lia-depth-1:hover {
   background: none;
-}
-
-ul.nav.nav-footer li.li-depth-0:not(:first-child) {
-  /*padding-left: 10px;*/
 }
 
 /* Messages */
