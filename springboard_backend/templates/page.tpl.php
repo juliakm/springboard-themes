@@ -37,9 +37,6 @@
   <?php if ($messages): ?>
     <?php print $messages; ?>
   <?php endif; ?>
-
-  <?php print render($tabs); ?>
-
   <div class="element-invisible"><a id="main-content"></a></div>
   <?php if ($action_links): ?>
     <ul class="action-links"><?php print render($action_links); ?></ul>
@@ -47,7 +44,10 @@
 
   <?php print render($page['content']); ?>
 </div><!-- /main -->
+
+<div id="footer-wrapper">
 <footer id="footer" class="clearfix region container">
   <?php print render($page['footer']); ?>
   <?php print $footer_menu; ?>
 </footer>
+</div>

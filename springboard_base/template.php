@@ -56,6 +56,25 @@ function springboard_base_preprocess_html(&$variables) {
   }
   $variables['head_title_array'] = $head_title;
   $variables['head_title'] = implode(' | ', $head_title);
+
+  // Add an ie 10 and 11 classes for better theming.
+  // Note, @cc_on did not seem to work for ie11 even changing doc mode and class to '11'.
+  $inline_script = <<<EOL
+  <!--[if !IE]><!--><script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
+        document.documentElement.className+=' ie10';
+      }
+    var isIE11 = !!navigator.userAgent.match(/Trident\/7\./)
+    if (isIE11 == true) {
+    document.documentElement.className += ' ie11';
+  }
+  </script><!--<![endif]-->
+EOL;
+  $element = array(
+    '#type' => 'markup',
+    '#markup' => $inline_script,
+  );
+  drupal_add_html_head($element, 'javascript');
+
 }
 
 /**
@@ -150,7 +169,7 @@ function springboard_base_form_element($variables) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-      $output .= ' ' . $prefix  . $element['#children'] . $suffix . "\n";
+      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
 
     case 'after':
@@ -352,7 +371,7 @@ function springboard_base_password($variables) {
 function springboard_base_radio($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'radio';
-  element_set_attributes($element, array('id', 'name','#return_value' => 'value'));
+  element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
 
   if (isset($element['#return_value']) && $element['#value'] !== FALSE && $element['#value'] == $element['#return_value']) {
     $element['#attributes']['checked'] = 'checked';
@@ -490,7 +509,7 @@ function springboard_base_status_messages($variables) {
     // $status throwing warning as undefined
     // $output .= "<div class=\"alert alert-$status \">\n";
     // Fix and re-add to output below
-    $output .= "<div class=\"alert ".$type."\">\n";
+    $output .= "<div class=\"alert " . $type . "\">\n";
     // bootstrap dismiss button
     $output .= "<button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\n";
     if (!empty($status_heading[$type])) {
@@ -561,6 +580,12 @@ function springboard_base_menu_tree($variables) {
 function springboard_base_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
+
+  // Add a menu name as a class.
+  $name_id = strtolower(strip_tags($element['#title']));
+  $pattern = '/[^a-z]+/ ';
+  $menu_name = preg_replace($pattern, '', $name_id);
+
   if ($element['#below']) {
     // Prevent dropdown functions from being added to management menu so it
     // does not affect the navbar module.
@@ -599,5 +624,6 @@ function springboard_base_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   // add an ID based on the mlid to each item for individualized styles
   $element['#attributes']['id'] = 'mlid-' . $element['#original_link']['mlid'];
+  $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $menu_name;
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
