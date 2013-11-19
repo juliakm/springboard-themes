@@ -294,8 +294,15 @@ input[type="checkbox"] {
   margin: 0;
 }
 
+input[type="checkbox"] {
+  margin: 0;
+  position: relative;
+  top: 2px;
+}
+
 #edit-submit,
-#edit-preview {
+#edit-preview,
+#edit-delete {
   margin: 10px 10px 0 0;
 }
 
