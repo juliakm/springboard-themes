@@ -306,6 +306,10 @@ input[type="checkbox"] {
   margin: 10px 10px 0 0;
 }
 
+.fundraiser_submit_message img {
+  margin-right: 6px;
+}
+
 .field-prefix {
   display: inline-block;
   margin-right: 4px;
@@ -806,7 +810,11 @@ ul.tabs.secondary li a.active {
 }
 
 .ie8 .pager li.pager-current > a,
-.ie8 .pager li.pager-current > span {
+.ie8 .pager li.pager-current > span,
+.pager li > a:hover,
+.pager li > span:hover,
+ul.tabs.secondary li a:hover,
+ul.tabs.secondary li a.active {
   background: #c5c4c4;
 }
 
