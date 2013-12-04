@@ -74,12 +74,12 @@ h2 {
 }
 
 .springboard-pane {
-  width: 44.7%;
+  width: 99%;
   vertical-align: top;
 }
 
 .springboard-pane.odd {
-  margin-left: 8%;
+  margin-left: 0;
 }
 
 .springboard-pane .button.add-button {
@@ -415,6 +415,7 @@ ul.tabs.primary li a:hover {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  color: #fff;
 }
 
 .ie8 input[type="submit"],
@@ -514,6 +515,11 @@ a.accordion-toggle:before {
   margin: 0;
   padding: 0;
   border: none;
+}
+
+.fieldset.collapsible .panel-title a {
+  color: #333;
+  font-weight: 400;
 }
 
 a.accordion-toggle.collapsed:before {
@@ -715,7 +721,7 @@ th {
 }
 
 th {
-  padding: 12px;
+  padding: 16px 12px;
   vertical-align: middle;
   color: #FFF;
   background: -moz-linear-gradient(top, #143c54 0%, #08314b 100%, #7db9e8 100%);
@@ -726,7 +732,8 @@ th {
   background: linear-gradient(to bottom, #143C54 0%, #08314B 100%, #7DB9E8 100%);
   text-align: left;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .ie8 th {
@@ -817,7 +824,7 @@ td .control-group {
 .pager li > span,
 ul.tabs.secondary li a {
   display: inline-block;
-  padding: 5px 14px;
+  padding: 5px 12px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -869,6 +876,15 @@ ul.tabs.secondary li a.active {
 
   ul.nav.nav-footer li.li-depth-0 {
     width: 15.9%;
+  }
+
+  .springboard-pane {
+    width: 44.7%;
+    vertical-align: top;
+  }
+
+  .springboard-pane.odd {
+    margin-left: 8%;
   }
 
 } /* end min 1200px media query */
