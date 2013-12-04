@@ -59,6 +59,10 @@
       // Remove Boostrap button class.
       $('input').removeClass('btn');
 
+      // Add odd / even to springboard panes
+      $(".springboard-pane:visible:even").addClass("even");
+      $(".springboard-pane:visible:odd").addClass("odd");
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
