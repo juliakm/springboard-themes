@@ -9,9 +9,13 @@
 
 ?>
 <?php if (!empty($title)) : ?><div class="views-group <?php print(drupal_html_class($title)); ?>"><?php endif; ?>
+<ul class="no-list-bg">
 <?php foreach ($rows as $id => $row): ?>
-  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
+  <li<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
     <?php print $row; ?>
-  </div>
+  </li>
 <?php endforeach; ?>
-<?php if (!empty($title)) : ?></div><?php endif; ?>
+</ul>
+<?php if (!empty($title)) : ?>
+  </div>
+<?php endif; ?>

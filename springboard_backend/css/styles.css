@@ -97,16 +97,6 @@ div.springboard-pane p {
   padding: 6px;
 }
 
-.view .view-content td a {
-  text-transform: capitalize;
-}
-
-.view.view-sbv-forms.view-id-sbv_forms.view-display-id-block .more-link, .view.view-sbv-forms.view-id-sbv_forms.view-display-id-block_1 .more-link {
-  text-align: center;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
 /* main menu */
 
 /* uncomment for theming */
@@ -233,7 +223,8 @@ ul.nav.nav-footer li a.lia-depth-1:hover {
 
 /* Messages */
 
-div.alert {
+div.alert,
+.views-group {
   color: #fff;
   text-shadow: none;
   border: none;
@@ -272,7 +263,8 @@ div.warning button.close {
   color: #edc380;
 }
 
-div.error {
+div.error,
+.views-group.critical {
   background-color: #da675d;
 }
 
@@ -280,7 +272,8 @@ div.error button.close {
   color: #da675d;
 }
 
-div.status {
+div.status,
+.views-group.info {
   background-color: #58a8a9;
 }
 
@@ -520,6 +513,7 @@ a.accordion-toggle:before {
 .fieldset.collapsible .panel-title a {
   color: #333;
   font-weight: 400;
+  font-size: 22px;
 }
 
 a.accordion-toggle.collapsed:before {
@@ -867,6 +861,44 @@ ul.tabs.secondary li a.active {
 ul.tabs.secondary li a:hover,
 ul.tabs.secondary li a.active {
   background: #c5c4c4;
+}
+
+/* Views */
+
+.view .view-content td a {
+  text-transform: capitalize;
+}
+
+.view.view-sbv-forms.view-id-sbv_forms.view-display-id-block .more-link,
+.view.view-sbv-forms.view-id-sbv_forms.view-display-id-block_1 .more-link {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.views-group {
+  padding: 12px 35px 12px 30px;
+  margin-bottom: 10px;
+}
+
+.views-group a {
+  color: #fff;
+}
+
+.content .views-group ul li:before {
+  content: "";
+}
+
+.content .views-group ul li {
+  left: 0;
+}
+
+.content .views-group ul li {
+  margin-bottom: 8px;
+}
+
+.content .views-group ul li.views-row-last {
+  margin-bottom: 0;
 }
 
 /* Media queries -- these should order last. */
