@@ -73,9 +73,10 @@ h2 {
   padding-top: 2px;
 }
 
-.springboard-pane {
-  width: 99%;
+.springboard-column {
+  display: inline-block;
   vertical-align: top;
+  width: 99%;
 }
 
 .springboard-pane.odd {
@@ -901,6 +902,10 @@ ul.tabs.secondary li a.active {
   margin-bottom: 0;
 }
 
+div.springboard-pane {
+  display: block;
+}
+
 /* Media queries -- these should order last. */
 
 /* match bootstraps wide setting */
@@ -910,12 +915,11 @@ ul.tabs.secondary li a.active {
     width: 15.9%;
   }
 
-  .springboard-pane {
+  .springboard-column {
     width: 44.7%;
-    vertical-align: top;
   }
 
-  .springboard-pane.odd {
+  .springboard-column.sb-col-right {
     margin-left: 8%;
   }
 
