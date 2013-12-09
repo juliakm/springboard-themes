@@ -553,6 +553,10 @@ a.accordion-toggle:before {
   margin-bottom: 5px;
 }
 
+.fieldset label {
+  color: #7e7e7e;
+}
+
 a.accordion-toggle.collapsed:before {
   background-position: 0 -36px;
 }
