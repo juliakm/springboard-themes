@@ -49,5 +49,16 @@
 <footer id="footer" class="clearfix region container">
   <?php print render($page['footer']); ?>
   <?php print $footer_menu; ?>
+
+  <div id="copyright">
+    <p>
+      <?php print t('Copyright'); ?>
+      <?php print date('Y'); ?>
+      <?php print t('Jackson River'); ?>
+      <span class="copyright-pipe"> | </span>
+      <?php print t('All Rights Reserved'); ?>
+    </p>
+  </div>
+
 </footer>
 </div>
