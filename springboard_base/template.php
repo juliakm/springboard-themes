@@ -267,49 +267,6 @@ function springboard_base_form($variables) {
 }
 
 /**
- * Overrides theme_fieldset()
- */
-function springboard_base_fieldset($variables) {
-  $element = $variables['element'];
-
-  $element['#attributes']['class'][] = 'fieldset';
-  $element_id = isset($element['#id']) ? $element['#id'] : '';
-  element_set_attributes($element, array('id'));
-  _form_set_class($element, array(''));
-  $output = '<div' . drupal_attributes($element['#attributes']) . '>';
-  // build Bootstrap-friendly  header
-  if (!empty($element['#title'])) {
-    $output .= '<div class="panel-heading"><h4 class="panel-title">';
-    if (isset($element['#collapsible']) && $element['#collapsible'] == TRUE) {
-      $output .= '<a class="accordion-toggle" data-toggle="collapse" data-parent="' . $element_id . '" href="#' . $element_id . '-body">' . $element['#title'] . '</a>';
-    }
-    else {
-      $output .= $element['#title'];
-    }    
-    $output .= '</h4></div>';
-  }
-  
-  // build Bootstrap-friendly  content wrapper
-  if (isset($element['#collapsible']) && $element['#collapsible'] == TRUE) {
-    $output .= '<div id="' . $element_id . '-body" class="panel-collapse collapse in">';
-  }
-  $output .= '<div class="panel-body">';
-
-  if (!empty($element['#description'])) {
-    $output .= '<div class="div-description">' . $element['#description'] . '</div>';
-  }
-  $output .= $element['#children'];
-  if (isset($element['#value'])) {
-    $output .= $element['#value'];
-  }
-  if (isset($element['#collapsible']) && $element['#collapsible'] == TRUE) {
-    $output .= '</div>';
-  }
-  $output .= "</div>\n</div>\n";
-  return $output;
-}
-
-/**
  * Overrides theme_checkboxes()
  */
 function springboard_base_checkboxes($variables) {
@@ -471,24 +428,6 @@ function springboard_base_button($variables) {
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
-/**
- * Overrides theme_container()
- */
-function springboard_base_container($variables) {
-  $element = $variables['element'];
-
-  // Special handling for form elements.
-  /*if (isset($element['#array_parents'])) {
-    // Assign an html ID.
-    if (!isset($element['#attributes']['id'])) {
-      $element['#attributes']['id'] = $element['#id'];
-    }
-    // Add the 'form-wrapper' class.
-    $element['#attributes']['class'][] = 'form-wrapper';
-  }*/
-
-  return $element['#children'];
-}
 
 /**
  * Overrdies theme_status_messages().
@@ -550,19 +489,6 @@ function springboard_base_image_button($variables) {
   }
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
-}
-
-/**
- * Overrides theme_vertical_tabs()
- */
-function springboard_base_vertical_tabs($variables) {
-  $element = $variables['element'];
-  // Add required JavaScript and Stylesheet.
-  drupal_add_library('system', 'drupal.vertical-tabs');
-
-  //$output = '<h2 class="element-invisible">' . t('Vertical Tabs') . '</h2>';
-  $output = '<div class="vertical-tabs-panes">' . $element['#children'] . '</div>';
-  return $output;
 }
 
 /**
