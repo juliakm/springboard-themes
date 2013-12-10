@@ -522,9 +522,22 @@ a.accordion-toggle:before {
   margin-bottom: 20px;
 }
 
+.fieldset.collapsible .fieldset.collapsible .panel-heading {
+  margin-bottom: 0;
+}
+
 .panel-collapse .panel-body {
   margin: 0 26px 20px 26px;
-  padding: 40px;
+  padding: 10px 20px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.panel-body .panel-body {
+  margin: 0 26px 20px 26px;
+  padding: 20px;
+
   border: 1px solid #dfdfdf;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -561,11 +574,6 @@ a.accordion-toggle.collapsed:before {
   background-position: 0 -36px;
 }
 
-.fieldset.collapsible .fieldset.collapsible {
-  padding: 6px 20px 10px 10px;
-  margin-bottom: 10px;
-}
-
 .fieldset.collapsible .fieldset.collapsible .panel-collapse .panel-body {
   margin: inherit;
   padding: inherit;
@@ -574,6 +582,20 @@ a.accordion-toggle.collapsed:before {
   -moz-border-radius: 0;
   border-radius: 0;
   background: inherit;
+  margin: 30px 26px 20px 26px;
+  padding: 20px;
+  border: 1px solid #dfdfdf;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #f5fbfe;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.fieldset.collapsible .fieldset.collapsible {
+  padding: 6px 20px 10px 0;
+  margin-bottom: 10px;
+  border-bottom: none;
 }
 
 .select-wrapper {
