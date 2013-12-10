@@ -26,6 +26,15 @@ function springboard_base_preprocess_html(&$variables) {
     $variables['classes_array'][] = drupal_html_class('node-type-' . $node->type);
   }
 
+  // Add node edit / add classes.
+  if(arg(0) == 'node' && arg(2) == 'edit') {
+    $variables['classes_array'][] = 'page-node-edit';
+  }
+
+  if(arg(0) == 'node' && arg(1) == 'add') {
+    $variables['classes_array'][] = 'page-node-add';
+  }
+
   // RDFa allows annotation of XHTML pages with RDF data, while GRDDL provides
   // mechanisms for extraction of this RDF content via XSLT transformation
   // using an associated GRDDL profile.

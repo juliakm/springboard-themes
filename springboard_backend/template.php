@@ -13,7 +13,15 @@ function springboard_backend_preprocess_html(&$vars) {
     ),
   );
   drupal_add_html_head($http_equiv, 'http_equiv');
-}
+
+// Add a class if it's a springboard page.
+  $path = drupal_get_path_alias();
+  $pattern = "admin/springboard/*\nadmin/springboard";
+  if (drupal_match_path($path, $pattern)) {
+    $vars['classes_array'][] = 'page-springboard';
+  }
+
+  }
 
 /**
  * Implements template_preprocess_page().
@@ -75,3 +83,16 @@ function springboard_backend_css_alter(&$css) {
     }
   }
 }
+
+///**
+// * Override or insert variables into the node template.
+// */
+//function springboard_backend_preprocess_node(&$vars, $hook, $node) {
+//  // Global node.
+// // $node = $vars['node'];
+//  $node = menu_get_object ();
+//
+//  if(arg(0) == 'node' && arg(2) == 'edit') {
+//    $vars['classes_array'][] = 'node-edit-add';
+//  }
+//}

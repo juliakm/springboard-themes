@@ -714,6 +714,62 @@ ul.tabs.secondary li a.active {
   text-decoration: none;
 }
 
+/* Vertical tabs */
+
+.vertical-tabs {
+  background: #fefefe;
+}
+
+.vertical-tabs ul.vertical-tabs-list {
+  border-top: none;
+}
+
+.vertical-tabs ul.vertical-tabs-list li {
+  margin: 0 6px 8px 0;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+div.vertical-tabs {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.vertical-tabs ul.vertical-tabs-list li.first {
+  /*border-top: none;*/
+}
+
+.vertical-tabs ul.vertical-tabs-list li.selected {
+  margin-right: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0;
+}
+
+.vertical-tabs ul.vertical-tabs-list li:before {
+  content: '';
+  background: url("../images/sprite.png") 4px -88px no-repeat;
+  position: absolute;
+  height: 17px;
+  width: 30px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.vertical-tabs ul.vertical-tabs-list li.selected:before {
+  background: url("../images/sprite.png") 4px -70px no-repeat;
+}
+
+.vertical-tabs ul.vertical-tabs-list li a {
+  padding: 6px 6px 6px 30px;
+}
+
 /* Lists */
 
 .content ul {
@@ -725,13 +781,13 @@ ul.tabs.secondary li a.active {
   margin-bottom: 14px;
 }
 
-.content ul li {
+.page-springboard .content ul li {
   list-style: none;
   position: relative;
   left: 26px;
 }
 
-.content ul li:before {
+.page-springboard .content ul li:before {
   content: "\f00c";
   font-family: FontAwesome;
   font-style: normal;
