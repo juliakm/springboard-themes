@@ -83,16 +83,3 @@ function springboard_backend_css_alter(&$css) {
     }
   }
 }
-
-///**
-// * Override or insert variables into the node template.
-// */
-//function springboard_backend_preprocess_node(&$vars, $hook, $node) {
-//  // Global node.
-// // $node = $vars['node'];
-//  $node = menu_get_object ();
-//
-//  if(arg(0) == 'node' && arg(2) == 'edit') {
-//    $vars['classes_array'][] = 'node-edit-add';
-//  }
-//}
