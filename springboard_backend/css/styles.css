@@ -726,6 +726,17 @@ a.accordion-toggle.collapsed:before {
   top: -24px;
 }
 
+html.js input.form-autocomplete {
+  background-image: url('../images/sprite.png');
+  background-repeat: no-repeat;
+  background-position: 100% -138px;
+}
+
+html.js input.throbbing {
+  background-image: url('../images/throbber.gif');
+  background-position: 96% 10px;
+}
+
 /* Primary / secondary tabs */
 
 ul.tabs.primary {
@@ -862,6 +873,7 @@ div.vertical-tabs {
 
 .vertical-tabs ul.vertical-tabs-list li a {
   padding: 6px 6px 6px 30px;
+  width: 150px;
 }
 
 .vertical-tabs ul.vertical-tabs-list li a:hover,
