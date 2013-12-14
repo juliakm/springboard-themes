@@ -893,13 +893,15 @@ div.vertical-tabs {
   margin-bottom: 14px;
 }
 
-.page-springboard .content ul li {
+.page-springboard .content ul li,
+.page-node-view .content ul li {
   list-style: none;
   position: relative;
   left: 26px;
 }
 
-.page-springboard .content ul li:before {
+.page-springboard .content ul li:before,
+.page-node-view .content ul li:before {
   content: "\f00c";
   font-family: FontAwesome;
   font-style: normal;
