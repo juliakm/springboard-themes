@@ -726,6 +726,17 @@ a.accordion-toggle.collapsed:before {
   top: -24px;
 }
 
+html.js input.form-autocomplete {
+  background-image: url('../images/sprite.png');
+  background-repeat: no-repeat;
+  background-position: 100% -138px;
+}
+
+html.js input.throbbing {
+  background-image: url('../images/throbber.gif');
+  background-position: 96% 10px;
+}
+
 /* Primary / secondary tabs */
 
 ul.tabs.primary {
@@ -862,6 +873,7 @@ div.vertical-tabs {
 
 .vertical-tabs ul.vertical-tabs-list li a {
   padding: 6px 6px 6px 30px;
+  width: 150px;
 }
 
 .vertical-tabs ul.vertical-tabs-list li a:hover,
@@ -881,13 +893,15 @@ div.vertical-tabs {
   margin-bottom: 14px;
 }
 
-.page-springboard .content ul li {
+.page-springboard .content ul li,
+.page-node-view .content ul li {
   list-style: none;
   position: relative;
   left: 26px;
 }
 
-.page-springboard .content ul li:before {
+.page-springboard .content ul li:before,
+.page-node-view .content ul li:before {
   content: "\f00c";
   font-family: FontAwesome;
   font-style: normal;
@@ -1155,7 +1169,32 @@ div.springboard-pane {
 
 /* Media queries -- these should order last. */
 
-/* match bootstraps wide setting */
+/* Override Booststrap's if needed. */
+@media (max-width: 979px) and (min-width: 768px) {
+
+ .container {
+    width: 800px;
+  }
+
+}
+
+/* Special media query for the dashboard. */
+@media (min-width: 900px) {
+
+  .springboard-column.sb-col-left {
+    width: 64%;
+  }
+
+  .springboard-column.sb-col-right {
+    width: 31%;
+    margin-left: 4%;
+  }
+
+}
+
+/* end min 900px media query */
+
+/* Match bootstraps 'wide' setting. */
 @media (min-width: 1200px) {
 
   ul.nav.nav-footer li.li-depth-0 {
@@ -1166,8 +1205,13 @@ div.springboard-pane {
     width: 44.7%;
   }
 
+  .springboard-column.sb-col-left {
+    width: 53.7%;
+  }
+
   .springboard-column.sb-col-right {
-    margin-left: 8%;
+    width: 43.2%;
+    margin-left: 3%;
   }
 
   input,
