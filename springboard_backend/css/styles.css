@@ -78,6 +78,7 @@ h4.panel-title {
 
 #main {
   padding-top: 20px;
+  min-height: 500px
 }
 
 #page-title-wrapper {
@@ -128,6 +129,42 @@ h4.panel-title {
 div.springboard-pane p {
   padding: 6px;
 }
+
+
+/* sync-status dashboard */
+
+.springboard-sf-status .sf-status {
+  background: #fefefe;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.springboard-sf-status ul li,
+.springboard-sf-status .sf-status {
+  border-bottom: solid 1px #e8e7e2;
+}
+
+.springboard-sf-status ul li:last-child {
+  border-bottom: none;
+}
+
+.springboard-sf-status a.button,
+.sf-notconncected {
+  font-weight: 800;
+}
+
+.sf-notconncected {
+  margin-bottom: 5px;
+}
+
+.sf-notconncected,
+.successes {
+  color: #58a8a9;
+}
+
+
 
 /* main menu */
 
@@ -199,6 +236,12 @@ ul.nav-tabs {
 .nav-tabs > .active > a:focus {
   color: #fff;
   border: none;
+}
+
+/* other tools nav */
+
+.nav-tabs .othertools a {
+  background: #1f95db;
 }
 
 /* Footer menu */
@@ -473,6 +516,44 @@ ul.tabs.primary li a:hover {
   border: none;
 }
 
+/* Search fields */
+
+.views-widget .control-group .form-text {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9;
+  margin-bottom: 0;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  width: 150px;
+}
+
+/* GA field formatting */
+
+#edit-springboard-ga-trans .control-group,
+#edit-springboard-ga-item .control-group {
+  width: 50%;
+  display: inline-block; 
+}
+
+#edit-springboard-ga-trans .control-group,
+#edit-springboard-ga-item .control-group {
+  width: 50%;
+  display: inline-block; 
+}
+
+#edit-springboard-ga-trans .control-group input[type="text"],
+#edit-springboard-ga-trans .control-group .description,
+#edit-springboard-ga-item .control-group input[type="text"],
+#edit-springboard-ga-item .control-group .description {
+  width: 95%; 
+}
+
+
+
+
 /* forms > fieldsets */
 
 fieldset {
@@ -736,6 +817,13 @@ html.js input.throbbing {
   background-image: url('../images/throbber.gif');
   background-position: 96% 10px;
 }
+
+#edit-start-date .control-group,
+#edit-end-date .control-group {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 
 /* Primary / secondary tabs */
 
@@ -1167,6 +1255,35 @@ div.springboard-pane {
   display: block;
 }
 
+
+/* Views Filters */
+
+#views-exposed-form-sbv-forms-page-1 div.views-exposed-widget,
+#views-exposed-form-sbv-forms-page-2 div.views-exposed-widget {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#views-exposed-form-sbv-forms-page-1 #edit-title-wrapper,
+#views-exposed-form-sbv-forms-page-2 #edit-title-wrapper,
+#views-exposed-form-sbv-forms-page-1 #edit-field-fundraiser-internal-name-value-wrapper,
+#views-exposed-form-sbv-forms-page-2 #edit-field-fundraiser-internal-name-value-wrapper {
+  width: 410px;
+}
+
+#views-exposed-form-sbv-forms-page-1 #edit-title-wrapper .views-operator,
+#views-exposed-form-sbv-forms-page-2 #edit-title-wrapper .views-operator,
+#views-exposed-form-sbv-forms-page-1 #edit-field-fundraiser-internal-name-value-wrapper .views-operator,
+#views-exposed-form-sbv-forms-page-2 #edit-field-fundraiser-internal-name-value-wrapper .views-operator {
+  float: left;
+}
+
+#views-exposed-form-sbv-forms-page-1 input[type="submit"],
+#views-exposed-form-sbv-forms-page-2 input[type="submit"] {
+  margin-top: 30px;
+  padding: 5px 6px;
+}
+
 /* Media queries -- these should order last. */
 
 /* Override Booststrap's if needed. */
@@ -1182,12 +1299,12 @@ div.springboard-pane {
 @media (min-width: 900px) {
 
   .springboard-column.sb-col-left {
-    width: 64%;
+    width: 65%;
   }
 
   .springboard-column.sb-col-right {
-    width: 31%;
-    margin-left: 4%;
+    width: 32%;
+    margin-left: 2%;
   }
 
 }
@@ -1206,12 +1323,12 @@ div.springboard-pane {
   }
 
   .springboard-column.sb-col-left {
-    width: 53.7%;
+    width: 54.7%;
   }
 
   .springboard-column.sb-col-right {
-    width: 43.2%;
-    margin-left: 3%;
+    width: 44.2%;
+    margin-left: 1%;
   }
 
   input,
@@ -1222,6 +1339,20 @@ div.springboard-pane {
 }
 
 /* end min 1200px media query */
+
+
+/* if under 1199px media query */
+
+@media (max-width: 1199px) {
+
+  #footer-wrapper {
+    background-size: cover;
+  }
+  
+}
+
+/* end under 1199px media query */
+
 
 @media (max-width: 768px) {
 
@@ -1322,8 +1453,8 @@ div.springboard-pane {
     width: 80%;
   }
 
+
+
 }
 
 /* end 769 - 979px media query */
-
-
