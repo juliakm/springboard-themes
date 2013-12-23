@@ -168,11 +168,13 @@ div.springboard-pane p {
   color: #58a8a9;
 }
 
-.springboard-sf-status .sf-status a.button {
+.springboard-sf-status .sf-status a.button,
+.springboard-sf-status .sf-status input[type="submit"]:before {
   padding: 7px 10px 7px 22px;
 }
 
-.springboard-sf-status .sf-status a.button:before {
+.springboard-sf-status .sf-status a.button:before,
+.springboard-sf-status .sf-status input[type="submit"]:before {
   content: "\e030";
   font-family: FontAwesome;
   font-style: normal;
