@@ -552,7 +552,7 @@ function springboard_base_menu_link(array $variables) {
 
       // Set dropdown trigger element to # to prevent inadvertant page loading
       // when a submenu link is clicked.
-      $element['#localized_options']['attributes']['data-target'] = '#';
+      $element['#localized_options']['attributes']['data-target'] = $element['#href'];
     }
   }
   // On primary navigation menu, class 'active' is not set on active menu item.
