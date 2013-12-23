@@ -137,8 +137,9 @@ div.springboard-pane p {
   background: #fefefe;
   padding-top: 10px;
   padding-right: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   padding-left: 20px;
+  margin-bottom: 15px;
 }
 
 .springboard-sf-status ul li,
@@ -151,15 +152,18 @@ div.springboard-pane p {
 }
 
 .springboard-sf-status a.button,
-.sf-notconncected {
+.sf-notconncected,
+.sf-connected {
   font-weight: 800;
 }
 
-.sf-notconncected {
+.sf-notconncected,
+.sf-connected {
   margin-bottom: 5px;
 }
 
 .sf-notconncected,
+.sf-connected,
 .successes {
   color: #58a8a9;
 }
@@ -187,6 +191,10 @@ ul.nav-tabs {
 .dropdown-menu {
   margin: 0;
 }
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+} /* Force nav to expand dropdowns on hover */
 
 .dropdown-menu > li > a {
   margin-left: 3px;
