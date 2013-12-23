@@ -72,6 +72,7 @@ function springboard_backend_css_alter(&$css) {
   $remove = array(
     $path_system . '/system.theme.css',
     $path_system . '/system.menus.css',
+    $path_system . '/system.messages.css',
     $path_views . '/css/views.css',
     $path_webform .  '/css/webform.css',
   );
