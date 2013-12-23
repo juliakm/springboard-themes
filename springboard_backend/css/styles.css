@@ -168,7 +168,20 @@ div.springboard-pane p {
   color: #58a8a9;
 }
 
+.springboard-sf-status .sf-status a.button {
+  padding: 7px 10px 7px 22px;
+}
 
+.springboard-sf-status .sf-status a.button:before {
+  content: "\e030";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: relative;
+  left: -12px;
+  color: #fff;
+}
 
 /* main menu */
 
@@ -248,7 +261,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 /* other tools nav */
 
-.nav-tabs .othertools a {
+.nav-tabs .othertools a.lia-depth-1 {
   background: #1f95db;
 }
 
@@ -531,11 +544,37 @@ ul.tabs.primary li a:hover {
   padding-right: 4px \9;
   padding-left: 14px;
   padding-left: 4px \9;
-  margin-bottom: 0;
+  margin: 0px 3px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
   width: 150px;
+}
+
+/* 	Search fields for email and page templates  */
+
+.view-sbv-email-templates #edit-keys-wrapper,
+.view-sbv-page-templates #edit-keys-wrapper {
+  float: left;
+}
+
+.view-sbv-email-templates #edit-keys-wrapper label,
+.view-sbv-page-templates #edit-keys-wrapper label {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.view-sbv-email-templates .views-exposed-widget.views-submit-button,
+.view-sbv-page-templates .views-exposed-widget.views-submit-button {
+  padding-top: 28px;
+}
+
+.view-sbv-email-templates .views-exposed-widget.views-submit-button input[type="submit"],
+.view-sbv-page-templates .views-exposed-widget.views-submit-button input[type="submit"] {
+  padding: 7px 10px 7px 10px;
 }
 
 /* GA field formatting */
@@ -1270,6 +1309,15 @@ div.springboard-pane {
 #views-exposed-form-sbv-forms-page-2 div.views-exposed-widget {
   display: inline-block;
   vertical-align: top;
+}
+
+#views-exposed-form-sbv-forms-page-1 div.views-exposed-widget#edit-type-1-wrapper {
+  width: 450px
+}
+
+#views-exposed-form-sbv-forms-page-1 div.views-exposed-widget#edit-type-1-wrapper .views-operator {
+  float: left;
+  margin-right: 5px;
 }
 
 #views-exposed-form-sbv-forms-page-1 #edit-title-wrapper,
