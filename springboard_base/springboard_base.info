@@ -17,3 +17,7 @@ stylesheets[all][] = css/base-styles.css
 ;Scripts
 scripts[] = js/bootstrap.min.js
 scripts[] = js/jquery-ui.min.js
+
+;Theme Settings
+settings[default_logo] = 0
+
