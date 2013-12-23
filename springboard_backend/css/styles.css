@@ -643,9 +643,14 @@ fieldset fieldset a.fieldset-title:before {
   content: "\f0d7";
   font-family: FontAwesome;
   background: none;
-  font-size: 1em;
+  font-size: .95em;
   top: 0px;
   left: 8px;
+  padding-right: 2px;
+}
+
+fieldset fieldset a.fieldset-title {
+  font-size: 18px;
 }
 
 fieldset  fieldset.collapsed a.fieldset-title:before {
