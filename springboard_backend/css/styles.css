@@ -145,6 +145,7 @@ div.springboard-pane p {
 .springboard-sf-status ul li,
 .springboard-sf-status .sf-status {
   border-bottom: solid 1px #e8e7e2;
+  padding-bottom: 10px;
 }
 
 .springboard-sf-status ul li:last-child {
@@ -169,12 +170,12 @@ div.springboard-pane p {
 }
 
 .springboard-sf-status .sf-status a.button,
-.springboard-sf-status .sf-status input[type="submit"]:before {
+.springboard-sf-status .sf-status #edit-submit:before {
   padding: 7px 10px 7px 22px;
 }
 
 .springboard-sf-status .sf-status a.button:before,
-.springboard-sf-status .sf-status input[type="submit"]:before {
+.springboard-sf-status .sf-status #edit-submit:before {
   content: "\e030";
   font-family: FontAwesome;
   font-style: normal;
