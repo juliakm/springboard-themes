@@ -170,12 +170,12 @@ div.springboard-pane p {
 }
 
 .springboard-sf-status .sf-status a.button,
-.springboard-sf-status .sf-status #edit-submit:before {
+.springboard-sf-status .sf-status #edit-submit {
   padding: 7px 10px 7px 22px;
 }
 
 .springboard-sf-status .sf-status a.button:before,
-.springboard-sf-status .sf-status #edit-submit:before {
+.springboard-sf-status .sf-status #springboard-dashboard-queue:before {
   content: "\f01e";
   font-family: FontAwesome;
   font-style: normal;
