@@ -155,7 +155,7 @@ div.springboard-pane p {
 .springboard-sf-status a.button,
 .sf-notconncected,
 .sf-connected {
-  font-weight: 800;
+  font-weight: normal;
 }
 
 .sf-notconncected,
@@ -176,7 +176,7 @@ div.springboard-pane p {
 
 .springboard-sf-status .sf-status a.button:before,
 .springboard-sf-status .sf-status #edit-submit:before {
-  content: "\e030";
+  content: "\f01e";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
