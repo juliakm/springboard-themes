@@ -171,7 +171,7 @@ div.springboard-pane p {
 
 .springboard-sf-status .sf-status a.button,
 .springboard-sf-status .sf-status #edit-submit {
-  padding: 7px 10px 7px 22px;
+  padding: 7px 10px 7px 30px;
 }
 
 .springboard-sf-status .sf-status a.button:before,
@@ -182,7 +182,8 @@ div.springboard-pane p {
   font-weight: normal;
   text-decoration: inherit;
   position: relative;
-  left: -12px;
+  left: 20px;
+  top: 7px;
   color: #fff;
 }
 
