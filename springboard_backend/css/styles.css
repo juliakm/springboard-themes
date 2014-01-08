@@ -851,6 +851,7 @@ a.accordion-toggle.collapsed:before {
 
 .select-wrapper {
   border: 1px solid #dfdfdf;
+  display: block;
   overflow: hidden;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
