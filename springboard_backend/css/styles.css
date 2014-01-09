@@ -821,6 +821,10 @@ a.accordion-toggle:before {
   color: #7e7e7e;
 }
 
+fieldset.collapsible .fieldset-legend .fieldset-title {
+  white-space: nowrap;
+}
+
 a.accordion-toggle.collapsed:before {
   background-position: 0 -36px;
 }
