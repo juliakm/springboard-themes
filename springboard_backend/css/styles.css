@@ -250,6 +250,14 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   border: none;
 }
 
+/* ie8-ie10 */
+
+.ie10 .nav-tabs > li > a span.caret,
+.ie9 .nav-tabs > li > a span.caret,
+.ie8 .nav-tabs > li > a span.caret {
+  display: none;
+}
+
 /* ie8 */
 .ie8 .nav-tabs > li > a:hover,
 .ie8 .nav-tabs > li > a.active {
