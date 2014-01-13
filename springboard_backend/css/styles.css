@@ -934,6 +934,9 @@ html.js input.throbbing {
   margin-right: 10px;
 }
 
+.control-group .description {
+  font-weight: lighter;
+}
 
 /* Primary / secondary tabs */
 
