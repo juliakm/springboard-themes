@@ -939,6 +939,12 @@ html.js input.throbbing {
   font-weight: lighter;
 }
 
+.control-group label:first-child {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 25px;
+}
+
 /* Primary / secondary tabs */
 
 ul.tabs.primary {
