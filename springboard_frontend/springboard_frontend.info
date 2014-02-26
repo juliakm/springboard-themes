@@ -13,9 +13,3 @@ regions[footer] = Footer
 ;Stylesheets
 stylesheets[all][] = css/styles.css
 
-;Scripts
-;scripts[] = js/script.js
-;scripts[] = js/jquery.validate.min.js
-scripts[] = js/jquery.carouFredSel-6.2.1-packed.js
-scripts[] = js/hosted_forms.js
-;scripts[] = js/webform_easy_edit.js
