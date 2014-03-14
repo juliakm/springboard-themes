@@ -9,10 +9,10 @@
     <h1 class="page-title"><?php print $title; ?></h1>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
-  <?php if($messages){ print $messages; } ?>
-  <?php print render($tabs); ?>        
-  <div class="element-invisible"><a id="main-content"></a></div>   
-  <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?> 
+  <?php if ($messages){ print $messages; } ?>
+  <?php print render($tabs); ?>
+  <div class="element-invisible"><a id="main-content"></a></div>
+  <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
   <?php print render($page['content']); ?>
 </div><!-- /main -->
 <footer id="footer" class="clearfix region container">

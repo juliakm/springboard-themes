@@ -27,15 +27,15 @@ function springboard_base_preprocess_html(&$variables) {
   }
 
   // Add node edit / add / view classes.
-  if(arg(0) == 'node' && arg(2) == 'edit') {
+  if (arg(0) == 'node' && arg(2) == 'edit') {
     $variables['classes_array'][] = 'page-node-edit';
   }
 
-  if(arg(0) == 'node' && arg(1) == 'add') {
+  if (arg(0) == 'node' && arg(1) == 'add') {
     $variables['classes_array'][] = 'page-node-add';
   }
 
-  if(arg(0) == 'node' && arg(2) === null) {
+  if (arg(0) == 'node' && arg(2) === null) {
     $variables['classes_array'][] = 'page-node-view';
   }
 
@@ -111,20 +111,20 @@ function springboard_base_preprocess_page(&$variables) {
   if (isset($variables['page']['sidebar_second']) && !empty($variables['page']['sidebar_second'])) {
     $variables['layout'] = ($variables['layout'] == 'first') ? 'both' : 'second';
   }
-  
+
   $variables['base_path'] = base_path();
   $variables['front_page'] = url();
   $variables['feed_icons'] = drupal_get_feeds();
   $variables['language'] = $GLOBALS['language'];
   $variables['language']->dir = $GLOBALS['language']->direction ? 'rtl' : 'ltr';
   $variables['logo'] = theme_get_setting('logo');
-  
+
   $variables['secondary_menu'] = theme_get_setting('toggle_secondary_menu') ? menu_secondary_menu() : array();
   $variables['action_links'] = menu_local_actions();
   $variables['site_name'] = (theme_get_setting('toggle_name') ? filter_xss_admin(variable_get('site_name', 'Drupal')) : '');
   $variables['site_slogan'] = (theme_get_setting('toggle_slogan') ? filter_xss_admin(variable_get('site_slogan', '')) : '');
   $variables['tabs'] = menu_local_tabs();
-  
+
   // Set up main-menu array to clean up page template.
   $variables['main_menu'] = array(
     'links' => theme_get_setting('toggle_main_menu') ? menu_main_menu() : array(),
@@ -137,7 +137,7 @@ function springboard_base_preprocess_page(&$variables) {
       'level' => 'h2',
       'class' => array('element-invisible'),
     ),
-  ); 
+  );
   if ($node = menu_get_object()) {
     $variables['node'] = $node;
   }
@@ -508,7 +508,7 @@ function springboard_base_image_button($variables) {
  * Overrides theme_menu_tree().
  * Update classes to work with Bootstrap
  */
- 
+
 function springboard_base_menu_tree($variables) {
   return '<ul class="nav">' . $variables['tree'] . '</ul>';
 }
