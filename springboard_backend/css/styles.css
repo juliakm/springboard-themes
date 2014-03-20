@@ -938,11 +938,21 @@ a.accordion-toggle.collapsed:before {
 }
 
 #edit-timezone .select-wrapper {
-  width: 520px;
+  width: 560px;
+}
+
+#edit-options .select-wrapper {
+  width: 330px;
+}
+
+.exposed-filters .filters.form-wrapper {
+  padding-left: 20px;
 }
 
 .container-inline div,
-.container-inline label {
+.container-inline label,
+.webform-container-inline div,
+.webform-container-inline div.form-item {
   display: block;
 }
 
