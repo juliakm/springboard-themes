@@ -12,8 +12,8 @@
 })(jQuery);
 
 (function($) {
-  Drupal.behaviors.springboardMisc = {
-    attach: function (context, settings) {
+    Drupal.behaviors.springboardMisc = {
+        attach: function (context, settings) {
 
       // Set ul depths for better theming.
       $('#footer ul, #menu-wrapper ul').each(function() {
@@ -32,6 +32,15 @@
         var depth = $(this).parents('ul').length;
         $(this).addClass('lia-depth-' + depth);
       });
+
+          // Add numbering to DSR groups.
+          $('#edit-start-date .control-group').each(function (i) {
+            $(this).addClass("grp-" + i);
+          });
+
+          $('#edit-end-date .control-group').each(function (i) {
+            $(this).addClass("grp-" + i);
+          });
 
       // Add first  / last classes for better theming.
       $(".content table tr td:visible:first-child").addClass("first");

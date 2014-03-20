@@ -210,7 +210,7 @@ ul.nav-tabs {
 }
 
 ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
+  display: block;
 } /* Force nav to expand dropdowns on hover */
 
 .dropdown-menu > li > a {
@@ -595,24 +595,21 @@ ul.tabs.primary li a:hover {
 #edit-springboard-ga-trans .control-group,
 #edit-springboard-ga-item .control-group {
   width: 50%;
-  display: inline-block; 
+  display: inline-block;
 }
 
 #edit-springboard-ga-trans .control-group,
 #edit-springboard-ga-item .control-group {
   width: 50%;
-  display: inline-block; 
+  display: inline-block;
 }
 
 #edit-springboard-ga-trans .control-group input[type="text"],
 #edit-springboard-ga-trans .control-group .description,
 #edit-springboard-ga-item .control-group input[type="text"],
 #edit-springboard-ga-item .control-group .description {
-  width: 95%; 
+  width: 95%;
 }
-
-
-
 
 /* forms > fieldsets */
 
@@ -898,17 +895,55 @@ a.accordion-toggle.collapsed:before {
 }
 
 .select-wrapper select.input-small,
-.select-wrapper select {
+.select-wrapper select,
+.exposed-filters select.form-select {
+  width: 14em;
   background: transparent;
   border: 0px;
   height: 40px;
   -webkit-appearance: none;
   overflow: hidden;
   padding: 6px 8px 8px 8px;
-  width: 150%;
+  width: 118%;
   margin-bottom: 0;
   position: relative;
   z-index: 1;
+}
+
+/* field specific selects */
+
+#edit-fundraiser-sustainers .select-wrapper {
+  width: 500px;
+}
+
+#edit-form-layouts .select-wrapper {
+  width: 284px;
+}
+
+#page-wrappers-wrapper-options .select-wrapper {
+  width: 384px;
+}
+
+#salesforce-donation-settings .select-wrapper {
+  width: 318px;
+}
+
+#dsr-filter-form .grp-0 .select-wrapper,
+#dsr-filter-form .grp-2 .select-wrapper{
+  width: 96px;
+}
+
+#dsr-filter-form .grp-1 .select-wrapper {
+  width: 76px;
+}
+
+#edit-timezone .select-wrapper {
+  width: 520px;
+}
+
+.container-inline div,
+.container-inline label {
+  display: block;
 }
 
 .webform-datepicker .control-group {
@@ -1425,7 +1460,7 @@ div.springboard-pane {
 /* Override Booststrap's if needed. */
 @media (max-width: 979px) and (min-width: 768px) {
 
- .container {
+  .container {
     width: 800px;
   }
 
@@ -1476,7 +1511,6 @@ div.springboard-pane {
 
 /* end min 1200px media query */
 
-
 /* if under 1199px media query */
 
 @media (max-width: 1199px) {
@@ -1484,11 +1518,10 @@ div.springboard-pane {
   #footer-wrapper {
     background-size: cover;
   }
-  
+
 }
 
 /* end under 1199px media query */
-
 
 @media (max-width: 768px) {
 
@@ -1560,6 +1593,11 @@ div.springboard-pane {
     width: 80%;
   }
 
+  .select-wrapper {
+    /* override all */
+    width: 90% !important;
+  }
+
 }
 
 /* end 768px media query */
@@ -1588,8 +1626,6 @@ div.springboard-pane {
   input[type="color"] {
     width: 80%;
   }
-
-
 
 }
 
