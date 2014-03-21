@@ -189,11 +189,6 @@ div.springboard-pane p {
 
 /* main menu */
 
-/* uncomment for theming */
-.dropdown-menu {
-  /*display: block !important;*/
-}
-
 li.expanded,
 li.collapsed,
 li.leaf {
@@ -957,6 +952,11 @@ a.accordion-toggle.collapsed:before {
 
 .exposed-filters .filters.form-wrapper {
   padding-left: 20px;
+}
+
+#edit-sbp-state .select-wrapper,
+#edit-sbp-country .select-wrapper {
+  width: 400px;
 }
 
 .container-inline div,
