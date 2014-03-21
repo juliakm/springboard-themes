@@ -264,6 +264,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   background: #1671a6;
 }
 
+html.js.ie9 fieldset.collapsible div.fieldset-wrapper {
+  position: relative;
+  top: 20px;
+  padding-bottom: 20px;
+}
+
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
@@ -929,7 +935,7 @@ a.accordion-toggle.collapsed:before {
 }
 
 #dsr-filter-form .grp-0 .select-wrapper,
-#dsr-filter-form .grp-2 .select-wrapper{
+#dsr-filter-form .grp-2 .select-wrapper {
   width: 96px;
 }
 
@@ -943,6 +949,10 @@ a.accordion-toggle.collapsed:before {
 
 #edit-options .select-wrapper {
   width: 330px;
+}
+
+#dsr-filter-form .select-wrapper select {
+  width: 138%;
 }
 
 .exposed-filters .filters.form-wrapper {
@@ -1427,7 +1437,6 @@ ul.tabs.secondary li a.active {
 div.springboard-pane {
   display: block;
 }
-
 
 /* Views Filters */
 

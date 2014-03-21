@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!--[if IE 8]><html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"> <![endif]-->
   <head profile="<?php print $grddl_profile; ?>">
     <meta name="HandheldFriendly" content="TRUE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
@@ -6,7 +8,7 @@
     <title><?php print $head_title; ?></title>  
     <?php print $styles; ?>
     <?php print $scripts; ?>
-    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
   <body class="<?php print $classes; ?>" <?php print $attributes;?>>
     <div id="skip-link">
