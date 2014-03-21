@@ -84,12 +84,3 @@ function springboard_backend_css_alter(&$css) {
     }
   }
 }
-
-function springboard_backend_form_alter(&$form, &$form_state, $form_id) {
-
-//  dsm($form_id);
-//  dsm($form);
-
-}
-
-
