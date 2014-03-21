@@ -68,6 +68,9 @@
       // Remove Boostrap button class.
       $('input').removeClass('btn');
 
+      // Put focus on username field on login form.
+      $("#user-login #edit-name").focus();
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
