@@ -597,12 +597,7 @@ ul.tabs.primary li a:hover {
 #edit-springboard-ga-item .control-group {
   width: 50%;
   display: inline-block;
-}
-
-#edit-springboard-ga-trans .control-group,
-#edit-springboard-ga-item .control-group {
-  width: 50%;
-  display: inline-block;
+  vertical-align: top;
 }
 
 #edit-springboard-ga-trans .control-group input[type="text"],
@@ -1615,6 +1610,11 @@ div.springboard-pane {
   .select-wrapper {
     /* override all */
     width: 90% !important;
+  }
+
+  #edit-springboard-ga-trans .control-group,
+  #edit-springboard-ga-item .control-group {
+    width: 99%;
   }
 
 }
