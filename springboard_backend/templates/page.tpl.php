@@ -4,7 +4,7 @@
   <div id="top-wrapper">
     <?php if ($logo) : ?>
       <div id="logo-wrapper" class="inline-block">
-        <a href="/admin/springboard">
+        <a href="/springboard">
           <img src="<?php print check_url($logo); ?>" alt="<?php print $site_name; ?>" id="logo" title="<?php print $site_name; ?>"/>
         </a>
       </div>
