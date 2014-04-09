@@ -735,9 +735,18 @@ fieldset fieldset .fieldset-wrapper {
   border-bottom: 2px solid #eaeaea;
 }
 
-fieldset .fieldset-wrapper {
+fieldset .fieldset-wrapper,
+.webform-submission-info-text {
   padding: 0 26px 0 26px;
   margin-top: 20px;
+}
+
+.webform-submission-edit .span6 {
+  width: 100%;
+}
+
+.webform-submission-info {
+  padding: 0 0 10px 0;
 }
 
 fieldset fieldset .fieldset-wrapper {
@@ -994,6 +1003,12 @@ a.accordion-toggle.collapsed:before {
 .webform-datepicker input[type="image"] {
   position: relative;
   top: -24px;
+}
+
+ul.links.inline.webform-submission-actions {
+  float: none;
+  clear: both;
+  margin: 0;
 }
 
 html.js input.form-autocomplete {

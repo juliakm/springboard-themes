@@ -54,11 +54,6 @@
       $('select:not([multiple])').wrap('<div class="select-wrapper"></div>');
       $('.select-wrapper').append('<div class="arrow"></div> ');
 
-      //@TODO, fade messages on close?
-//      $('.alert.warning button').click(function () {
-//        $(this).closest('div').fadeOut(900);
-//      });
-
       // Move the footer home link to the end.
       $('.nav-footer li.home').appendTo('.nav-footer li.options ul');
 
@@ -70,6 +65,9 @@
 
       // Put focus on username field on login form.
       $("#user-login #edit-name").focus();
+
+      // Wrap in fieldset-legend to match others.
+      $('fieldset.webform-submission-info legend').wrapInner('<span class="fieldset-legend"></span>');
 
     } // attach.function
   } // drupal.behaviors

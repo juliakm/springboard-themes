@@ -4,7 +4,8 @@
  * Implements template_preprocess_html().
  */
 function springboard_backend_preprocess_html(&$vars) {
-  // Add to head <meta http-equiv="X-UA-Compatible" content="IE=edge" /> for proper IE rendering.
+
+// Add to head <meta http-equiv="X-UA-Compatible" content="IE=edge" /> for proper IE rendering.
   $http_equiv = array(
     '#tag' => 'meta',
     '#attributes' => array(
@@ -14,14 +15,26 @@ function springboard_backend_preprocess_html(&$vars) {
   );
   drupal_add_html_head($http_equiv, 'http_equiv');
 
-// Add a class if it's a springboard page.
+  // Define the URL path.
   $path = drupal_get_path_alias();
-  $pattern = "admin/springboard/*\nadmin/springboard";
+
+// Add a class if it's a springboard page.
+  $pattern = "springboard/*\nspringboard";
   if (drupal_match_path($path, $pattern)) {
     $vars['classes_array'][] = 'page-springboard';
   }
 
+  // Add classes for webform submissions pages for better theming.
+
+  if (arg(0) == "node" && arg(2) == "submission" && arg(4) == 'edit') {
+    $vars['classes_array'][] = 'webform-submission-edit';
   }
+
+  if (arg(0) == "node" && arg(2) == "submission" && arg(4) == NULL) {
+    $vars['classes_array'][] = 'webform-submission-view';
+  }
+
+}
 
 /**
  * Implements template_preprocess_page().
@@ -30,10 +43,10 @@ function springboard_backend_preprocess_page(&$variables) {
   // Override menu settings and display the springboard admin menu as the main menu
   if (module_exists('springboard_admin')) {
     $variables['main_menu']['links'] = menu_tree('springboard_admin_menu');
-    
-    // menu_tree() is the best available option for rendering menu links, but 
+
+    // menu_tree() is the best available option for rendering menu links, but
     // isn't flexible for changing the HTML/Classes in different contexts.
-    // So, use a regex to change the classes on the menu for the footer. 
+    // So, use a regex to change the classes on the menu for the footer.
     $variables['footer_menu'] = drupal_render($variables['main_menu']);
     // change the wrapping ul's class so drop-down js isn't applied
     $variables['footer_menu'] = preg_replace('/class="nav nav-tabs"/', '/class="nav nav-footer"/', $variables['footer_menu']);
