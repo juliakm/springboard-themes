@@ -640,6 +640,11 @@ fieldset {
   background: #fff;
 }
 
+.ie9 fieldset {
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
 fieldset fieldset {
   padding: 9px 0;
   border-bottom: none;
@@ -662,7 +667,15 @@ fieldset a.fieldset-title:active {
 }
 
 legend {
+  margin: 0 0 6px 0;
   border: none;
+  line-height: inherit;
+  position: relative;
+  top: 4px;
+}
+
+.ie9 legend {
+  top: -4px;
 }
 
 a.fieldset-title {
