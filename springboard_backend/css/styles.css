@@ -472,6 +472,10 @@ ul.tabs.primary li a,
   filter: none;
 }
 
+#edit-cancel {
+  margin: 0 0 10px 10px;
+}
+
 .view th img {
   left: 10px;
   position: relative;
