@@ -1364,6 +1364,29 @@ td .control-group {
   margin-bottom: 0;
 }
 
+table.sticky-enabled.tableheader-processed.sticky-table th img {
+  position: relative;
+  top: -2px;
+  margin: 0 0 0px 10px;
+}
+
+.webform-results-wrapper {
+  position: relative;
+}
+
+.webform-results-inner {
+  overflow-x: scroll;
+  overflow-y: visible;
+  max-width: 100%;
+}
+
+.webform-results-wrapper th .th-wrapper {
+  overflow: hidden;
+  width: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* Pagers */
 
 .content ul.pager {
