@@ -1388,6 +1388,24 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   white-space: nowrap;
 }
 
+.webform-results-download #edit-range-range-type .form-item {
+  margin: 0 0 4px 0;
+}
+
+.webform-results-download #edit-range-range-type .form-item input{
+  display: inline-block;
+}
+
+.webform-results-download #edit-range-range-type .form-item .control-group {
+  display: inline-block;
+}
+
+.webform-results-download .form-item-range-range-type.webform-container-inline {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 /* Pagers */
 
 .content ul.pager {

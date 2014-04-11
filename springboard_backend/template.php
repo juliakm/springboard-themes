@@ -35,7 +35,11 @@ function springboard_backend_preprocess_html(&$vars) {
   }
 
   if (arg(0) == "node" && arg(2) == "webform-results" && arg(3) == 'table') {
-    $vars['classes_array'][] = 'webform-results';
+    $vars['classes_array'][] = 'webform-results-table';
+  }
+
+  if (arg(0) == "node" && arg(2) == "webform-results" && arg(3) == 'download') {
+    $vars['classes_array'][] = 'webform-results-download';
   }
 
 
