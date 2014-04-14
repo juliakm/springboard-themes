@@ -536,7 +536,7 @@ function springboard_base_menu_link(array $variables) {
       unset($element['#below']['#theme_wrappers']);
       $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
       $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-      $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+      $element['#localized_options']['attributes']['data-toggle'] = 'sb-dropdown';
 
       // Check if this element is nested within another.
       if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
@@ -547,7 +547,6 @@ function springboard_base_menu_link(array $variables) {
         // Generate as standard dropdown.
         $element['#attributes']['class'][] = 'dropdown';
         $element['#localized_options']['html'] = TRUE;
-        $element['#title'] .= ' <span class="caret"></span>';
       }
 
       // Set dropdown trigger element to # to prevent inadvertant page loading
