@@ -7,6 +7,7 @@ base theme = springboard_base
 
 ;Regions
 regions[header] = Header
+regions[mobile_header] = Mobile Header
 regions[content] = Content
 regions[first_aux] = First Auxiliary
 regions[second_aux] = Second Auxiliary
