@@ -607,6 +607,10 @@ ul.tabs.primary li a:hover,
   float: left;
 }
 
+#edit-keys-wrapper .views-widget {
+  margin: 0 10px 0 0;
+}
+
 .view-sbv-email-templates #edit-keys-wrapper label,
 .view-sbv-page-templates #edit-keys-wrapper label {
   font-size: 14px;
@@ -651,7 +655,9 @@ fieldset {
   background: #fff;
 }
 
+.ie8 fieldset,
 .ie9 fieldset,
+.ie10 fieldset,
 .ie11 fieldset {
   margin-bottom: 6px;
   margin-top: 0;
@@ -716,9 +722,11 @@ fieldset fieldset legend .fieldset-legend {
   margin-left: 26px;
 }
 
+.ie8 .fieldset-legend,
 .ie11 .fieldset-legend {
   top: 10px;
 }
+
 
 a.fieldset-title:before {
   content: '';
@@ -1429,8 +1437,8 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
 }
 
 .webform-submission-navigation {
-  text-align: left;
   margin-bottom: 6px;
+  text-align: left;
 }
 
 .ie11 .webform-submission-navigation {
@@ -1477,7 +1485,7 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   line-height: 20px;
 }
 
-/* Pagers */
+/* Pagers / secondary tabs */
 
 .content ul.pager {
   margin-bottom: 12px;
@@ -1528,6 +1536,11 @@ ul.tabs.secondary li a.active {
   background: linear-gradient(to bottom, #c5c4c4 0%, #cdcdcd 100%, #7db9e8 100%);
   border: 1px solid #c5c4c4;
   color: #fefefe;
+}
+
+.ie8 ul.tabs.secondary li a,
+.ie9 ul.tabs.secondary li a {
+  background: #fcfcfc;
 }
 
 .ie8 .pager li.pager-current > a,
@@ -1618,7 +1631,7 @@ div.springboard-pane {
 
 #views-exposed-form-sbv-forms-page-1 input[type="submit"],
 #views-exposed-form-sbv-forms-page-2 input[type="submit"] {
-  margin-top: 46px;
+  margin-top: 50px;
   padding: 5px 6px;
 }
 
