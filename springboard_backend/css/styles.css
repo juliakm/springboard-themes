@@ -1458,6 +1458,7 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   overflow-x: scroll;
   overflow-y: visible;
   max-width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 .webform-results-wrapper th .th-wrapper {
