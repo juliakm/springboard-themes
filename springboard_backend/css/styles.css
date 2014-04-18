@@ -613,16 +613,15 @@ ul.tabs.primary li a:hover,
 
 .view-sbv-email-templates #edit-keys-wrapper label,
 .view-sbv-page-templates #edit-keys-wrapper label {
-  font-size: 14px;
-  font-weight: normal;
-  text-transform: capitalize;
   color: #333;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 14px;
   font-family: 'Open Sans', sans-serif;
 }
 
-.view-sbv-email-templates .views-exposed-widget.views-submit-button,
-.view-sbv-page-templates .views-exposed-widget.views-submit-button {
-  padding-top: 46px;
+.springboard-templates .view .views-exposed-widget.views-submit-button {
+  padding-top: 28px;
 }
 
 .view-sbv-email-templates .views-exposed-widget.views-submit-button input[type="submit"],
@@ -784,6 +783,10 @@ fieldset .fieldset-wrapper,
 
 fieldset fieldset .fieldset-wrapper {
   margin-top: 4px;
+}
+
+.fieldset-description {
+  padding: 12px 0;
 }
 
 .view-header .button,
@@ -1067,16 +1070,14 @@ html.js input.throbbing {
   font-weight: lighter;
 }
 
-label {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-top: 18px;
-}
-
 .control-group label:first-child {
   font-weight: bold;
   font-size: 1.2em;
   margin-top: 25px;
+}
+
+.fieldset-wrapper label:first-child {
+  margin-top: 36px;
 }
 
 .webform-submission-view .control-group label:first-child {
@@ -1436,6 +1437,12 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   margin: 7px 0;
 }
 
+.webform-submission-edit label {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 18px;
+}
+
 .webform-submission-navigation {
   margin-bottom: 6px;
   text-align: left;
@@ -1484,6 +1491,10 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
+}
+
+.webform-results-download fieldset#edit-range .fieldset-wrapper {
+  margin: 34px 0 10px 0;
 }
 
 /* Pagers / secondary tabs */
@@ -1632,7 +1643,7 @@ div.springboard-pane {
 
 #views-exposed-form-sbv-forms-page-1 input[type="submit"],
 #views-exposed-form-sbv-forms-page-2 input[type="submit"] {
-  margin-top: 50px;
+  margin-top: 32px;
   padding: 5px 6px;
 }
 
