@@ -24,7 +24,7 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'page-springboard';
   }
 
-  // Add classes for webform submissions pages for better theming.
+  // Add classes to various pages for better theming.
 
   if (arg(0) == "node" && arg(2) == "submission" && arg(4) == 'edit') {
     $vars['classes_array'][] = 'webform-submission-edit';
@@ -42,6 +42,9 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'webform-results-download';
   }
 
+  if (arg(0) == "springboard" && arg(1) == "templates") {
+    $vars['classes_array'][] = 'springboard-templates';
+  }
 
 }
 

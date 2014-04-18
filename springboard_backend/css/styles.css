@@ -10,6 +10,7 @@ body {
 }
 
 /* Headings */
+
 h1,
 h2,
 h3,
@@ -52,7 +53,7 @@ h4.panel-title {
   outline: -webkit-focus-ring-color auto 0;
 }
 
-/* sections / wrappers / layout */
+/* sections / wrappers / layout elements */
 
 #header-wrapper {
   background: #0086d6;
@@ -190,7 +191,7 @@ body #block-system-main {
   color: #fff;
 }
 
-/* main menu */
+/* Main menu */
 
 li.expanded,
 li.collapsed,
@@ -207,9 +208,10 @@ ul.nav-tabs {
   margin: 0;
 }
 
+/* Force nav to expand dropdowns on hover */
 ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block;
-} /* Force nav to expand dropdowns on hover */
+}
 
 .dropdown-menu > li > a {
   margin-left: 3px;
@@ -275,7 +277,7 @@ html.js.ie9 fieldset.collapsible div.fieldset-wrapper {
   border: none;
 }
 
-/* other tools nav */
+/* Other tools nav */
 
 .nav-tabs .othertools a.lia-depth-1 {
   background: #1f95db;
@@ -397,7 +399,7 @@ div.status button.close {
 /* Form elements */
 
 .form-actions.form-wrapper {
-  padding: 10px 20px 10px 0;
+  padding: 10px 20px 0 0;
 }
 
 .form-actions {
@@ -598,7 +600,7 @@ ul.tabs.primary li a:hover,
   width: 150px;
 }
 
-/* 	Search fields for email and page templates  */
+/* Search fields for email and page templates  */
 
 .view-sbv-email-templates #edit-keys-wrapper,
 .view-sbv-page-templates #edit-keys-wrapper {
@@ -616,7 +618,7 @@ ul.tabs.primary li a:hover,
 
 .view-sbv-email-templates .views-exposed-widget.views-submit-button,
 .view-sbv-page-templates .views-exposed-widget.views-submit-button {
-  padding-top: 28px;
+  padding-top: 46px;
 }
 
 .view-sbv-email-templates .views-exposed-widget.views-submit-button input[type="submit"],
@@ -649,7 +651,8 @@ fieldset {
   background: #fff;
 }
 
-.ie9 fieldset {
+.ie9 fieldset,
+.ie11 fieldset {
   margin-bottom: 6px;
   margin-top: 0;
 }
@@ -713,6 +716,10 @@ fieldset fieldset legend .fieldset-legend {
   margin-left: 26px;
 }
 
+.ie11 .fieldset-legend {
+  top: 10px;
+}
+
 a.fieldset-title:before {
   content: '';
   background: url("../images/sprite.png") no-repeat;
@@ -765,23 +772,6 @@ fieldset .fieldset-wrapper,
 .webform-submission-info-text {
   padding: 0 26px 0 26px;
   margin-top: 20px;
-}
-
-.webform-submission-edit .span6 {
-  width: 100%;
-}
-
-.webform-submission-edit  div#right {
-  display: none;
-}
-
-.webform-submission-navigation {
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.webform-submission-info {
-  padding: 0 0 10px 0;
 }
 
 fieldset fieldset .fieldset-wrapper {
@@ -840,10 +830,6 @@ a.accordion-toggle:before {
   margin-bottom: 20px;
 }
 
-.fieldset.collapsible .fieldset.collapsible .panel-heading {
-  margin-bottom: 0;
-}
-
 .panel-collapse .panel-body {
   margin: 0 26px 20px 26px;
   padding: 10px 20px;
@@ -861,6 +847,10 @@ a.accordion-toggle:before {
   border-radius: 6px;
   background: #f5fbfe;
   border-bottom: 2px solid #eaeaea;
+}
+
+.fieldset.collapsible .fieldset.collapsible .panel-heading {
+  margin-bottom: 0;
 }
 
 .fieldset.collapsible .panel-title a.accordion-toggle {
@@ -918,6 +908,8 @@ a.accordion-toggle.collapsed:before {
   margin-bottom: 10px;
   border-bottom: none;
 }
+
+/* Selects lists */
 
 .select-wrapper {
   border: 1px solid #dfdfdf;
@@ -1065,6 +1057,12 @@ html.js input.throbbing {
 
 .control-group .description {
   font-weight: lighter;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 18px;
 }
 
 .control-group label:first-child {
@@ -1231,6 +1229,10 @@ div.vertical-tabs {
 .content ol li,
 .content ul li {
   margin-bottom: 14px;
+}
+
+.content ul li.resend {
+  padding-left: 0;
 }
 
 .page-springboard .content ul li,
@@ -1406,6 +1408,37 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   position: relative;
   top: -2px;
   margin: 0 0 0px 10px;
+}
+
+/* Webform results area */
+
+.webform-submission-edit .span6 {
+  width: 100%;
+}
+
+.webform-submission-edit  div#right {
+  display: none;
+}
+
+.webform-submission-edit #donation-form-column-wrapper #left fieldset {
+  margin-right: 0;
+}
+
+.webform-submission-edit .webform-submission-info-text div {
+  margin: 7px 0;
+}
+
+.webform-submission-navigation {
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.ie11 .webform-submission-navigation {
+  margin-bottom: 24px;
+}
+
+.webform-submission-info {
+  padding: 0 0 10px 0;
 }
 
 .webform-results-wrapper {
@@ -1585,7 +1618,7 @@ div.springboard-pane {
 
 #views-exposed-form-sbv-forms-page-1 input[type="submit"],
 #views-exposed-form-sbv-forms-page-2 input[type="submit"] {
-  margin-top: 30px;
+  margin-top: 46px;
   padding: 5px 6px;
 }
 
