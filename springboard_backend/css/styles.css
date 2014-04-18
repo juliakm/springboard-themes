@@ -287,7 +287,7 @@ html.js.ie9 fieldset.collapsible div.fieldset-wrapper {
 /* Footer menu */
 
 ul.nav.nav-footer {
-  margin-top: 90px;
+  padding-top: 90px;
 }
 
 ul.nav.nav-footer ul {
@@ -484,11 +484,6 @@ ul.tabs.primary li a,
   filter: none;
 }
 
-#edit-cancel,
-#edit-actions-cancel {
-  margin: 0 0 10px 10px;
-}
-
 .view th img {
   left: 10px;
   position: relative;
@@ -546,7 +541,6 @@ ul.tabs.primary li a:hover,
 #edit-actions #edit-cancel,
 #edit-actions-cancel {
   display: inline-block;
-  margin: 10px 10px 0 0;
   vertical-align: top;
   font-weight: normal;
   font-size: 14px;
@@ -554,7 +548,9 @@ ul.tabs.primary li a:hover,
   line-height: 20px;
 }
 
-input#edit-actions-submit {
+input[type="submit"],
+#edit-actions #edit-cancel,
+#edit-actions-cancel {
   margin: 10px 10px 10px 0;
 }
 
