@@ -74,6 +74,14 @@
         $(this).wrapInner('<div class="th-wrapper"></div>');
       });
 
+      // Add a body class for SF connection status.
+        if ($('.sf-status p').hasClass('sf-connected')){
+          $('body').addClass('sf-connected-dashboard');
+        }
+      else {
+          $('body').addClass('sf-not-connected-dashboard');
+        }
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);

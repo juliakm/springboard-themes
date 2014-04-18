@@ -178,17 +178,34 @@ body #block-system-main {
   padding: 7px 10px 7px 30px;
 }
 
-.springboard-sf-status .sf-status a.button:before,
-.springboard-sf-status .sf-status #springboard-dashboard-queue:before {
-  content: "\f01e";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
+.sf-connected-dashboard .springboard-sf-status .sf-status a.button:before,
+.sf-connected-dashboard .springboard-sf-status .sf-status #springboard-dashboard-queue:before {
   position: relative;
+  top: 18px;
   left: 20px;
-  top: 7px;
   color: #fff;
+  content: "\f01e";
+  text-decoration: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-family: FontAwesome;
+}
+
+.sf-not-connected-dashboard .springboard-sf-status .sf-status a.button {
+  display: inline-block;
+  padding: 7px 10px 7px 30px;
+}
+
+.sf-not-connected-dashboard .springboard-sf-status .sf-status a.button:before {
+  position: relative;
+  top: 0;
+  left: -18px;
+  color: #fff;
+  content: "\f01e";
+  text-decoration: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-family: FontAwesome;
 }
 
 /* Main menu */
@@ -1659,6 +1676,15 @@ div.springboard-pane {
 #views-exposed-form-sbv-forms-page-2 input[type="submit"] {
   margin-top: 32px;
   padding: 5px 6px;
+}
+
+.ie8 .springboard-column.sb-col-left {
+  width: 65%;
+}
+
+.ie8 .springboard-column.sb-col-right {
+  width: 32%;
+  margin-left: 2%;
 }
 
 /* Media queries -- these should order last. */
