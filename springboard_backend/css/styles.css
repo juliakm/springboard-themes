@@ -1724,6 +1724,12 @@ div.springboard-pane {
     border-radius: 0;
   }
 
+  li.expanded,
+  li.collapsed,
+  li.leaf {
+    padding: 0.28em 0 0 0;
+  }
+
   .inline-block {
     display: block;
   }
