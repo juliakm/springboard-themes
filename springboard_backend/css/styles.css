@@ -130,6 +130,9 @@ div.springboard-pane p {
   padding: 6px;
 }
 
+body #block-system-main {
+  margin-bottom: 20px;
+}
 
 /* sync-status dashboard */
 
@@ -394,7 +397,13 @@ div.status button.close {
 /* Form elements */
 
 .form-actions.form-wrapper {
-  padding: 19px 20px 20px 0;
+  padding: 10px 20px 10px 0;
+}
+
+.form-actions {
+  padding: 19px 20px 20px;
+  margin: 10px 0;
+  border-top: none;
 }
 
 select,
@@ -762,6 +771,15 @@ fieldset .fieldset-wrapper,
   width: 100%;
 }
 
+.webform-submission-edit  div#right {
+  display: none;
+}
+
+.webform-submission-navigation {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
 .webform-submission-info {
   padding: 0 0 10px 0;
 }
@@ -1053,6 +1071,10 @@ html.js input.throbbing {
   font-weight: bold;
   font-size: 1.2em;
   margin-top: 25px;
+}
+
+.webform-submission-view .control-group label:first-child {
+  margin-top: 12px;
 }
 
 /* Primary / secondary tabs */
