@@ -478,12 +478,14 @@ input[type="button"],
 input[type="reset"],
 .button,
 ul.tabs.primary li a,
-#edit-actions #edit-cancel {
+#edit-actions #edit-cancel,
+#edit-actions-cancel {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMxODJiMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMjY1YTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjN2RiOWU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
   filter: none;
 }
 
-#edit-cancel {
+#edit-cancel,
+#edit-actions-cancel {
   margin: 0 0 10px 10px;
 }
 
@@ -498,7 +500,8 @@ input[type="button"],
 input[type="reset"],
 .button,
 ul.tabs.primary li a,
-#edit-actions #edit-cancel {
+#edit-actions #edit-cancel,
+#edit-actions-cancel {
   margin: 0 0 10px 0;
   padding: 4px 6px;
   border: 1px solid #01598e;
@@ -520,7 +523,8 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 .button:hover,
 ul.tabs.primary li a:hover,
-#edit-actions #edit-cancel:hover {
+#edit-actions #edit-cancel:hover,
+#edit-actions-cancel:hover {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -539,7 +543,8 @@ ul.tabs.primary li a:hover,
 #edit-submit,
 #edit-preview,
 #edit-delete,
-#edit-actions #edit-cancel {
+#edit-actions #edit-cancel,
+#edit-actions-cancel {
   display: inline-block;
   margin: 10px 10px 0 0;
   vertical-align: top;
@@ -549,12 +554,17 @@ ul.tabs.primary li a:hover,
   line-height: 20px;
 }
 
+input#edit-actions-submit {
+  margin: 10px 10px 10px 0;
+}
+
 .ie8 input[type="submit"],
 .ie8 input[type="button"],
 .ie8 input[type="reset"],
 .ie8 .button,
 .ie8 ul.tabs.primary li a,
-.ie8 #edit-actions #edit-cancel {
+.ie8 #edit-actions #edit-cancel,
+.ie8 #edit-actions-cancel {
   background: #3182b2;
 }
 
@@ -563,7 +573,8 @@ ul.tabs.primary li a:hover,
 .ie8 input[type="reset"]:hover,
 .ie8 .button:hover,
 .ie8 ul.tabs.primary li a:hover,
-.ie8 #edit-actions #edit-cancel:hover {
+.ie8 #edit-actions #edit-cancel:hover,
+.ie8 #edit-actions-cancel:hover {
   background: #056eaa;
 }
 
@@ -582,7 +593,10 @@ ul.tabs.primary li a:hover,
 .ie11 .button,
 .ie9 #edit-actions #edit-cancel,
 .ie10 #edit-actions #edit-cancel,
-.ie11 #edit-actions #edit-cancel {
+.ie11 #edit-actions #edit-cancel,
+.ie9 #edit-actions-cancel,
+.ie10 #edit-actions-cancel,
+.ie11 #edit-actions-cancel {
   border: none;
 }
 
