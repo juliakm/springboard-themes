@@ -89,7 +89,7 @@ h4.panel-title {
 
 #footer-wrapper {
   min-height: 475px;
-  background: #085685 url("../images/bg-footer.png") no-repeat bottom center;
+  background: #085685 url("../images/bg-footer.png") no-repeat 50% 50%;
 }
 
 #copyright p {
@@ -286,7 +286,7 @@ html.js.ie9 fieldset.collapsible div.fieldset-wrapper {
 
 /* Footer menu */
 
-ul.nav.nav-footer {
+footer#footer {
   padding-top: 90px;
 }
 
@@ -310,7 +310,11 @@ ul.nav.nav-footer li.li-depth-0 {
 }
 
 .ie8 ul.nav.nav-footer li.li-depth-0 {
-  width: 24%;
+  width: 140px;
+}
+
+.ie8 ul.nav.nav-footer li.li-depth-0.donationforms {
+  width: 170px;
 }
 
 ul.nav.nav-footer li.first.li-depth-0 {
