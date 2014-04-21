@@ -51,8 +51,12 @@
       $(".content table th:visible:last-child").addClass("last");
 
       // Theme select lists, add a wrapper.
-      $('select:not([multiple])').wrap('<div class="select-wrapper"></div>');
-      $('.select-wrapper').append('<div class="arrow"></div> ');
+      $('select:not([multiple])').each(function () {
+        $(this).once(function () {
+          $(this).wrap('<div class="select-wrapper"></div>');
+          $('.select-wrapper').append('<div class="arrow"></div> ');
+        });
+      });
 
       // Move the footer home link to the end.
       $('.nav-footer li.home').appendTo('.nav-footer li.options ul');
