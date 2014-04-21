@@ -89,7 +89,16 @@ h4.panel-title {
 
 #footer-wrapper {
   min-height: 475px;
-  background: #085685 url("../images/bg-footer.png") no-repeat 50% 50%;
+  background: #085685 url("../images/bg-footer.png") no-repeat top center;
+}
+
+#copyright {
+  position: relative;
+  top: -10px;
+}
+
+.ie8 #copyright {
+  top: -30px;
 }
 
 #copyright p {
@@ -189,6 +198,10 @@ body #block-system-main {
   font-weight: normal;
   font-style: normal;
   font-family: FontAwesome;
+}
+
+form#springboard-dashboard-queue {
+  margin: 0;
 }
 
 .sf-not-connected-dashboard .springboard-sf-status .sf-status a.button {
@@ -321,17 +334,9 @@ ul.nav.nav-footer a:hover {
 
 ul.nav.nav-footer li.li-depth-0 {
   display: inline-block;
-  vertical-align: top;
-  width: 32.16%;
   margin-bottom: 16px;
-}
-
-.ie8 ul.nav.nav-footer li.li-depth-0 {
-  width: 140px;
-}
-
-.ie8 ul.nav.nav-footer li.li-depth-0.donationforms {
-  width: 170px;
+  width: 32.16%;
+  vertical-align: top;
 }
 
 ul.nav.nav-footer li.first.li-depth-0 {
@@ -355,6 +360,20 @@ ul.nav.nav-footer li a.lia-depth-1:hover {
   background: none;
   text-decoration: underline;
 }
+
+.ie8 ul.nav.nav-footer li.li-depth-0 {
+  width: 140px;
+}
+
+.ie8 ul.nav.nav-footer li.li-depth-0.donationforms {
+  width: 170px;
+}
+
+.ie8 ul.nav.nav-footer li.li-depth-0.othertools {
+  position: relative;
+  top: -20px;
+}
+
 
 /* Messages */
 
@@ -1839,6 +1858,10 @@ div.springboard-pane {
   #edit-springboard-ga-trans .control-group,
   #edit-springboard-ga-item .control-group {
     width: 99%;
+  }
+
+  #copyright {
+    padding-left: 20px;
   }
 
 }
