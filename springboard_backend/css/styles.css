@@ -1023,10 +1023,16 @@ a.accordion-toggle.collapsed:before {
   z-index: 1;
 }
 
-/* field specific selects */
+/* Field specific selects */
 
 #edit-fundraiser-sustainers .select-wrapper {
   width: 500px;
+}
+
+#fundraiser-payment-methods .select-wrapper {
+  width: 300px;
+  position: relative;
+  top: -8px;
 }
 
 #edit-form-layouts .select-wrapper {
@@ -1128,6 +1134,10 @@ html.js input.throbbing {
 
 .fieldset-wrapper label:first-child {
   margin-top: 36px;
+}
+
+.page-node-edit .control-group label:first-child {
+  margin-top: inherit;
 }
 
 .webform-submission-view .control-group label:first-child {
