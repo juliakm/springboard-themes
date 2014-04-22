@@ -1707,6 +1707,10 @@ div.springboard-pane {
   padding: 5px 6px;
 }
 
+.dashboard {
+  min-width: inherit;
+}
+
 .ie8 .springboard-column.sb-col-left {
   width: 65%;
 }
@@ -1728,7 +1732,7 @@ div.springboard-pane {
 }
 
 /* Special media query for the dashboard. */
-@media (min-width: 900px) {
+@media (min-width: 990px) {
 
   .springboard-column.sb-col-left {
     width: 65%;
@@ -1737,6 +1741,14 @@ div.springboard-pane {
   .springboard-column.sb-col-right {
     width: 32%;
     margin-left: 2%;
+  }
+
+}
+
+@media (max-width: 989px) {
+
+  .springboard-column {
+    width: 99%;
   }
 
 }
@@ -1872,6 +1884,10 @@ div.springboard-pane {
 
   #copyright {
     padding-left: 20px;
+  }
+
+  h1.page-title {
+    margin-left: 14px;
   }
 
 }
