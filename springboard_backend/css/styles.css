@@ -525,9 +525,7 @@ ul.tabs.primary li a,
 }
 
 .view th img {
-  left: 10px;
-  position: relative;
-  top: -2px;
+  padding: 0 0px 2px 6px;
 }
 
 input[type="submit"],
@@ -592,6 +590,10 @@ input[type="submit"],
 #edit-actions #edit-cancel,
 #edit-actions-cancel {
   margin: 10px 10px 10px 0;
+}
+
+input#edit-submit-donors {
+  margin: 30px 0 0 14px;
 }
 
 .ie8 input[type="submit"],
@@ -1311,6 +1313,7 @@ div.vertical-tabs {
   left: 26px;
 }
 
+/* fontawesome list style */
 .page-springboard .content ul li:before,
 .page-node-view .content ul li:before {
   content: "\f00c";
@@ -1323,8 +1326,10 @@ div.vertical-tabs {
   color: #ccc;
 }
 
+/* no fontawesome */
 .content ul.tabs li:before,
-.content ul.pager li:before {
+.content ul.pager li:before,
+.content .donor-table-view .view-content ul li:before  {
   content: "";
 }
 
@@ -1393,6 +1398,10 @@ th {
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
+}
+
+body:not(.springboard-dashboard) th {
+  white-space: nowrap;
 }
 
 .ie8 th {
@@ -1477,6 +1486,14 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   position: relative;
   top: -2px;
   margin: 0 0 0px 10px;
+}
+
+.donor-table-view .views-field.views-field-nothing.last a {
+  padding: 0;
+}
+
+.donor-table-view th.views-field-sbp-first-name a {
+  white-space: nowrap;
 }
 
 /* Webform results area */
@@ -1630,6 +1647,14 @@ ul.tabs.secondary li a.active {
   text-transform: capitalize;
 }
 
+.view .view-content td.views-field-mail a {
+  text-transform: inherit;
+  overflow: hidden;
+  width: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .view.view-sbv-forms.view-id-sbv_forms.view-display-id-block .more-link,
 .view.view-sbv-forms.view-id-sbv_forms.view-display-id-block_1 .more-link,
 .view-sbv-soap-errors .more-link {
@@ -1674,7 +1699,8 @@ div.springboard-pane {
 /* Views Filters */
 
 #views-exposed-form-sbv-forms-page-1 div.views-exposed-widget,
-#views-exposed-form-sbv-forms-page-2 div.views-exposed-widget {
+#views-exposed-form-sbv-forms-page-2 div.views-exposed-widget,
+.donor-table-view div.views-exposed-widget {
   display: inline-block;
   vertical-align: top;
 }
@@ -1718,17 +1744,6 @@ div.springboard-pane {
 .ie8 .springboard-column.sb-col-right {
   width: 32%;
   margin-left: 2%;
-}
-
-/* Media queries -- these should order last. */
-
-/* Override Booststrap's if needed. */
-@media (max-width: 979px) and (min-width: 768px) {
-
-  .container {
-    width: 800px;
-  }
-
 }
 
 /* Special media query for the dashboard. */
@@ -1888,6 +1903,23 @@ div.springboard-pane {
 
   h1.page-title {
     margin-left: 14px;
+  }
+
+  .view.view-sbv-forms {
+    position: relative;
+    margin: 0 0 20px 0;
+  }
+
+  .view-sbv-forms .view-content {
+    padding-top: 2px;
+    overflow-x: scroll;
+    overflow-y: visible;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .springboard-pane .button.add-button {
+     float: none;
   }
 
 }
