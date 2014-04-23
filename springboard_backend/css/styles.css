@@ -1733,8 +1733,9 @@ div.springboard-pane {
   padding: 5px 6px;
 }
 
-.dashboard {
-  min-width: inherit;
+#main .view {
+  position: relative;
+  margin: 0 0 20px 0;
 }
 
 .ie8 .springboard-column.sb-col-left {
@@ -1750,11 +1751,11 @@ div.springboard-pane {
 @media (min-width: 990px) {
 
   .springboard-column.sb-col-left {
-    width: 65%;
+    width: 67%;
   }
 
   .springboard-column.sb-col-right {
-    width: 32%;
+    width: 31%;
     margin-left: 2%;
   }
 
@@ -1764,6 +1765,22 @@ div.springboard-pane {
 
   .springboard-column {
     width: 99%;
+  }
+
+  .view .view-content {
+    padding-top: 2px;
+    overflow-x: auto;
+    overflow-y: visible;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dashboard {
+    min-width: inherit;
+  }
+
+  .springboard-pane .button.add-button {
+    float: none;
   }
 
 }
@@ -1905,19 +1922,6 @@ div.springboard-pane {
     margin-left: 14px;
   }
 
-  .view.view-sbv-forms {
-    position: relative;
-    margin: 0 0 20px 0;
-  }
-
-  .view-sbv-forms .view-content {
-    padding-top: 2px;
-    overflow-x: scroll;
-    overflow-y: visible;
-    max-width: 100%;
-    -webkit-overflow-scrolling: touch;
-  }
-
   .springboard-pane .button.add-button {
      float: none;
   }
@@ -1929,9 +1933,9 @@ div.springboard-pane {
 @media only screen and (min-width: 769px) and (max-width: 979px) {
 
   .nav-tabs > li > a {
-    padding-right: 4px;
-    padding-left: 4px;
-    font-size: .9em;
+    padding-right: 3px;
+    padding-left: 3px;
+    font-size: .85em;
   }
 
   input[type="text"],
