@@ -241,7 +241,7 @@ li.leaf {
   padding: 0.28em 0.26em 0 0;
 }
 
-ul.nav-tabs {
+#menu-wrapper ul.nav-tabs {
   border-bottom: none;
   margin: 0;
 }
@@ -262,7 +262,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   border-radius: 4px;
 }
 
-.nav-tabs > li > a {
+#menu-wrapper .nav-tabs > li > a {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwNDA2NiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMTNlNjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjN2RiOWU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
   background: -moz-linear-gradient(top, #004066 0%, #013e63 100%, #7db9e8 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #004066), color-stop(100%, #013e63), color-stop(100%, #7db9e8));
@@ -274,13 +274,13 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   border: none;
 }
 
-.ie8 .nav-tabs > li > a {
+.ie8 #menu-wrapper .nav-tabs > li > a {
   background: #004066;
 }
 
-.nav-tabs > li > a:hover,
-.nav-tabs > li > a.active,
-.nav-tabs > li.expanded.active-trail a.lia-depth-1 {
+#menu-wrapper .nav-tabs > li > a:hover,
+#menu-wrapper .nav-tabs > li > a.active,
+#menu-wrapper .nav-tabs > li.expanded.active-trail a.lia-depth-1 {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE2NzFhNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMTVjOTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjN2RiOWU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
   background: -moz-linear-gradient(top, #1671a6 0%, #015c91 100%, #7db9e8 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1671a6), color-stop(100%, #015c91), color-stop(100%, #7db9e8));
@@ -290,14 +290,6 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   background: linear-gradient(to bottom, #1671a6 0%, #015c91 100%, #7db9e8 100%);
   color: #e9eef3;
   border: none;
-}
-
-/* ie8-ie10 */
-
-.ie10 .nav-tabs > li > a span.caret,
-.ie9 .nav-tabs > li > a span.caret,
-.ie8 .nav-tabs > li > a span.caret {
-  display: none;
 }
 
 /* ie8 */
@@ -312,16 +304,16 @@ html.js.ie9 fieldset.collapsible div.fieldset-wrapper {
   padding-bottom: 20px;
 }
 
-.nav-tabs > .active > a,
-.nav-tabs > .active > a:hover,
-.nav-tabs > .active > a:focus {
+#menu-wrapper .nav-tabs > .active > a,
+#menu-wrapper .nav-tabs > .active > a:hover,
+#menu-wrapper .nav-tabs > .active > a:focus {
   color: #fff;
   border: none;
 }
 
 /* Other tools nav */
 
-.nav-tabs .othertools a.lia-depth-1 {
+#menu-wrapper .nav-tabs .othertools a.lia-depth-1 {
   background: #1f95db;
   margin-top: -1px;
 }
@@ -1819,7 +1811,7 @@ div.springboard-pane {
   margin-left: 2%;
 }
 
-/* Special media query for the dashboard. */
+
 @media (min-width: 990px) {
 
   .springboard-column.sb-col-left {
@@ -1833,6 +1825,22 @@ div.springboard-pane {
 
 }
 
+/* if under 1199px media query */
+
+@media (max-width: 1199px) {
+
+  #footer-wrapper {
+    background-size: cover;
+  }
+
+  table#fundraiser-payment-methods input[type="text"] {
+    width: 70px;
+  }
+
+}
+
+/* end under 1199px media query */
+
 @media (max-width: 989px) {
 
   .springboard-column {
@@ -1841,9 +1849,9 @@ div.springboard-pane {
 
   .view .view-content,
   #webform-emails-form {
-    padding-top: 2px;
     overflow-x: auto;
     overflow-y: visible;
+    padding-top: 2px;
     max-width: 100%;
     -webkit-overflow-scrolling: touch;
   }
@@ -1854,6 +1862,59 @@ div.springboard-pane {
 
   .springboard-pane .button.add-button {
     float: none;
+  }
+
+  .vertical-tabs ul.vertical-tabs-list {
+    position: relative;
+    float: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 90%;
+    border-top: none;
+    list-style: none;
+    list-style-image: none;
+  }
+
+  textarea {
+    width: 96%;
+  }
+
+  .vertical-tabs ul.vertical-tabs-list:before {
+    display: block;
+    padding: 6px 0 10px 8px;
+    width: 100%;
+    height: 20px;
+    content: 'Select a tab and then edit below';
+    font-weight: bold;
+  }
+
+  div.vertical-tabs {
+    margin: 0;
+    border: none;
+  }
+
+  .vertical-tabs ul.vertical-tabs-list li,
+  .vertical-tabs ul.vertical-tabs-list li.selected {
+    margin: 0 6px 8px 0;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    min-height: 34px;
+    margin-left: 8px;
+  }
+
+  .vertical-tabs ul.vertical-tabs-list li a {
+    padding: 6px 6px 6px 30px;
+    width: 100%;
+  }
+
+  .vertical-tabs-panes  fieldset .fieldset-wrapper {
+    padding: 0;
+  }
+
+  table#fundraiser-payment-methods input[type="text"] {
+    width: 100px;
   }
 
 }
@@ -1889,18 +1950,6 @@ div.springboard-pane {
 
 /* end min 1200px media query */
 
-/* if under 1199px media query */
-
-@media (max-width: 1199px) {
-
-  #footer-wrapper {
-    background-size: cover;
-  }
-
-}
-
-/* end under 1199px media query */
-
 @media (max-width: 768px) {
 
   body {
@@ -1908,18 +1957,22 @@ div.springboard-pane {
   }
 
   #main {
-    padding: 20px 20px 0 20px;
+    padding: 20px 0 0 0;
   }
 
-  .nav-tabs > li {
+  #menu-wrapper .nav-tabs > li {
     width: 100%;
     display: block;
   }
 
-  .nav-tabs > li > a {
+  #menu-wrapper .nav-tabs > li > a {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+  }
+
+  body #block-system-main {
+    margin: 10px;
   }
 
   li.expanded,
@@ -2005,7 +2058,7 @@ div.springboard-pane {
 
 @media only screen and (min-width: 769px) and (max-width: 979px) {
 
-  .nav-tabs > li > a {
+  #menu-wrapper .nav-tabs > li > a {
     padding-right: 3px;
     padding-left: 3px;
     font-size: .85em;
