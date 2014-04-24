@@ -144,6 +144,10 @@ body #block-system-main {
   margin-bottom: 20px;
 }
 
+#block-system-main .content {
+  position: relative;
+}
+
 /* sync-status dashboard */
 
 .springboard-sf-status .sf-status {
@@ -997,6 +1001,10 @@ a.accordion-toggle.collapsed:before {
   width: 43%;
 }
 
+#webform-emails-form .select-wrapper {
+  width: 400px;
+}
+
 .ie8 .select-wrapper {
   background: #fefefe;
 }
@@ -1767,7 +1775,8 @@ div.springboard-pane {
     width: 99%;
   }
 
-  .view .view-content {
+  .view .view-content,
+  #webform-emails-form {
     padding-top: 2px;
     overflow-x: auto;
     overflow-y: visible;
@@ -1906,7 +1915,7 @@ div.springboard-pane {
 
   .select-wrapper {
     /* override all */
-    width: 90% !important;
+    width: 97% !important;
   }
 
   #edit-springboard-ga-trans .control-group,
