@@ -55,6 +55,14 @@ h4.panel-title {
 
 /* sections / wrappers / layout elements */
 
+/* default IE8 to 1170 */
+.ie8 .container,
+.ie8 .navbar-static-top .container,
+.ie8 .navbar-fixed-top .container,
+.ie8 .navbar-fixed-bottom .container {
+  width: 1170px;
+}
+
 #header-wrapper {
   background: #0086d6;
 }
@@ -620,6 +628,10 @@ input#edit-submit-donors {
   background: #056eaa;
 }
 
+ul.tabs.primary li.active a:hover {
+  background: #fcfcfc;
+}
+
 /* Get rid or button borders for ie 9 - 11, they don't render well with gradients and radius corners */
 .ie9 input[type="submit"],
 .ie10 input[type="submit"],
@@ -730,6 +742,11 @@ html.js fieldset.collapsed {
   border-bottom-width: 2px;
 }
 
+html.js fieldset.collapsed#edit-help {
+  height: inherit;
+  margin-bottom: 0;
+}
+
 .fieldset-wrapper {
   padding: 26px 26px 0 26px;
 }
@@ -771,10 +788,11 @@ fieldset fieldset legend .fieldset-legend {
   font-weight: 400;
   font-size: 22px;
   position: relative;
-  top: 24px;
+  top: 34px;
   height: 25px;
   display: block;
   margin-left: 26px;
+  padding-bottom: 20px;
 }
 
 .ie8 .fieldset-legend,
@@ -782,6 +800,10 @@ fieldset fieldset legend .fieldset-legend {
   top: 10px;
 }
 
+.ie9 .fieldset-legend {
+  top: 20px;
+  padding-bottom: 0;
+}
 
 a.fieldset-title:before {
   content: '';
@@ -842,7 +864,7 @@ fieldset fieldset .fieldset-wrapper {
 }
 
 .fieldset-description {
-  padding: 12px 0;
+  padding: 2px 0;
 }
 
 .view-header .button,
@@ -1001,7 +1023,8 @@ a.accordion-toggle.collapsed:before {
   width: 43%;
 }
 
-#webform-emails-form .select-wrapper {
+#webform-emails-form .select-wrapper,
+#views-exposed-form-donors-page #edit-sbp-state-value-wrapper .select-wrapper {
   width: 400px;
 }
 
@@ -1040,7 +1063,7 @@ a.accordion-toggle.collapsed:before {
 }
 
 #fundraiser-payment-methods .select-wrapper {
-  width: 300px;
+  width: 280px;
   position: relative;
   top: -8px;
 }
@@ -1055,6 +1078,18 @@ a.accordion-toggle.collapsed:before {
 
 #salesforce-donation-settings .select-wrapper {
   width: 318px;
+}
+
+#fundraiser-payment-methods .tabledrag-hide select {
+  width: 100px;
+}
+
+#fundraiser-payment-methods .tabledrag-hide .select-wrapper {
+  width: 56px;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  padding-right: 10px;
 }
 
 #dsr-filter-form .grp-0 .select-wrapper,
@@ -1139,12 +1174,12 @@ html.js input.throbbing {
 .control-group label:first-child {
   font-weight: bold;
   font-size: 1.2em;
-  margin-top: 25px;
+  /*margin-top: 25px;*/
 }
 
-.fieldset-wrapper label:first-child {
-  margin-top: 36px;
-}
+/*.fieldset-wrapper label:first-child {*/
+  /*margin-top: 36px;*/
+/*}*/
 
 .page-node-edit .control-group label:first-child {
   margin-top: inherit;
@@ -1378,6 +1413,10 @@ table {
   margin: 10px 0;
 }
 
+fieldset table {
+  width: 99%;
+}
+
 tr.even,
 tr.odd {
   border-bottom: none;
@@ -1504,6 +1543,16 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   white-space: nowrap;
 }
 
+table#fundraiser-payment-methods td {
+  vertical-align: top;
+  padding-top: 20px;
+}
+
+table#fundraiser-payment-methods input[type="text"]{
+  position: relative;
+  top: -6px;
+}
+
 /* Webform results area */
 
 .webform-submission-edit .span6 {
@@ -1579,7 +1628,22 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
 }
 
 .webform-results-download fieldset#edit-range .fieldset-wrapper {
-  margin: 34px 0 10px 0;
+  margin: 20px 0 10px 0;
+}
+
+.form-item-redirect.webform-container-inline .control-group {
+  margin-top: 10px;
+}
+
+#edit-redirect-url,
+#edit-enforce-total-limit-yes,
+#edit-enforce-limit-yes {
+  margin: 0 4px 0 0;
+}
+
+.form-item-enforce-total-limit,
+.form-item-enforce-limit {
+  font-size: 14px;
 }
 
 /* Pagers / secondary tabs */
