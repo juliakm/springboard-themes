@@ -55,21 +55,21 @@ function springboard_backend_preprocess_html(&$vars) {
 /**
  * Implements template_preprocess_page().
  */
-function springboard_backend_preprocess_page(&$variables) {
+function springboard_backend_preprocess_page(&$vars) {
   // Override menu settings and display the springboard admin menu as the main menu
   if (module_exists('springboard_admin')) {
-    $variables['main_menu']['links'] = menu_tree('springboard_admin_menu');
+    $vars['main_menu']['links'] = menu_tree('springboard_admin_menu');
 
     // menu_tree() is the best available option for rendering menu links, but
     // isn't flexible for changing the HTML/Classes in different contexts.
     // So, use a regex to change the classes on the menu for the footer.
-    $variables['footer_menu'] = drupal_render($variables['main_menu']);
+    $vars['footer_menu'] = drupal_render($vars['main_menu']);
     // change the wrapping ul's class so drop-down js isn't applied
-    $variables['footer_menu'] = preg_replace('/class="nav nav-tabs"/', '/class="nav nav-footer"/', $variables['footer_menu']);
+    $vars['footer_menu'] = preg_replace('/class="nav nav-tabs"/', '/class="nav nav-footer"/', $vars['footer_menu']);
     // change sub-ul's class so drop-down styling isn't applied
-    $variables['footer_menu'] = preg_replace('/class="dropdown-menu "/', '/class="child-menu"/', $variables['footer_menu']);
+    $vars['footer_menu'] = preg_replace('/class="dropdown-menu "/', '/class="child-menu"/', $vars['footer_menu']);
     // change sub li's class so drop-down styling isn't applied
-    $variables['footer_menu'] = preg_replace('/dropdown/', '', $variables['footer_menu']);
+    $vars['footer_menu'] = preg_replace('/dropdown/', '', $vars['footer_menu']);
   }
 
   // Open sans font.
@@ -80,13 +80,24 @@ function springboard_backend_preprocess_page(&$variables) {
     )
   );
 
+// Set a var for springboard home page.
+  if (arg(0) == "springboard" && arg(1) == NULL) {
+    $vars['sb_dashboard'] = '';
+  }
+
+// Set a var for the logged in user.
+  global $user;
+  if ($user->uid) {
+    $vars['the_user'] = $user->name;
+  }
+
 }
 /**
  * Overrides theme_menu_tree();
  */
-function springboard_backend_menu_tree($variables) {
+function springboard_backend_menu_tree($vars) {
   // Add tab-style class to menus
-  return '<ul class="nav nav-tabs">' . $variables['tree'] . '</ul>';
+  return '<ul class="nav nav-tabs">' . $vars['tree'] . '</ul>';
 }
 
 /**
@@ -129,14 +140,14 @@ function springboard_backend_css_alter(&$css) {
  * @param $pager_count
  *   The number of results to be shown per page.
  */
-function springboard_backend_webform_results_table($variables) {
+function springboard_backend_webform_results_table($vars) {
   drupal_add_library('webform', 'admin');
 
-  $node = $variables['node'];
-  $components = $variables['components'];
-  $submissions = $variables['submissions'];
-  $total_count = $variables['total_count'];
-  $pager_count = $variables['pager_count'];
+  $node = $vars['node'];
+  $components = $vars['components'];
+  $submissions = $vars['submissions'];
+  $total_count = $vars['total_count'];
+  $pager_count = $vars['pager_count'];
 
   $header = array();
   $rows = array();
