@@ -25,14 +25,14 @@
 <div id="page-title-wrapper">
   <div class="page-title-inner clearfix container">
     <div class="row-fluid">
-      <div class="span4">
+      <div class="span8">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
           <h1 class="page-title"><?php print $title; ?></h1>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
       </div>
-      <div id="user-welcome" class="span8">
+      <div id="user-welcome" class="span4">
         <?php if (isset($sb_dashboard)): ?>
           <h2><?php print t('Welcome back,'); ?> <?php print $the_user; ?></h2>
         <?php endif; ?>
