@@ -34,7 +34,7 @@
       </div>
       <div id="user-welcome" class="span8">
         <?php if (isset($sb_dashboard)): ?>
-          <h2><?php print t('Welcome back'); ?> <?php print $the_user; ?></h2>
+          <h2><?php print t('Welcome back,'); ?> <?php print $the_user; ?></h2>
         <?php endif; ?>
       </div>
     </div>
