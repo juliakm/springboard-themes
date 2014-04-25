@@ -32,11 +32,19 @@
         <?php endif; ?>
         <?php print render($title_suffix); ?>
       </div>
+
+      <?php if (isset($is_loggedin) && (isset($sb_dashboard))): ?>
       <div id="user-welcome" class="span4">
-        <?php if (isset($sb_dashboard)): ?>
-          <h2><?php print t('Welcome back,'); ?> <?php print $the_user; ?></h2>
-        <?php endif; ?>
+          <h2><?php print t('Welcome back,'); ?> <a href="<?php print $user_id; ?>"><?php print $the_user; ?>.</a></h2>
       </div>
+      <?php endif; ?>
+
+      <?php if (isset($not_loggedin) && (isset($sb_dashboard))): ?>
+        <div id="user-welcome" class="span4">
+          <h2><a href="/user"><?php print t('Please login'); ?></a></h2>
+        </div>
+      <?php endif; ?>
+
     </div>
   </div>
 </div>

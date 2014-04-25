@@ -85,10 +85,15 @@ function springboard_backend_preprocess_page(&$vars) {
     $vars['sb_dashboard'] = '';
   }
 
-// Set a var for the logged in user.
+// Set vars for the logged in user and id / not logged in.
   global $user;
   if ($user->uid) {
+    $vars['is_loggedin'] = '';
     $vars['the_user'] = $user->name;
+    $vars['user_id'] = '/user/' . $user->uid;
+  }
+  else {
+    $vars['not_loggedin'] = '';
   }
 
 }

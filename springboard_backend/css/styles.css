@@ -56,6 +56,14 @@ h4.panel-title {
   margin: 5px 0 0 0;
 }
 
+#user-welcome h2 a {
+  color: #b4e3ff;
+}
+
+#user-welcome h2 a:hover {
+  color: #53bfff;
+}
+
 :focus {
   outline: -webkit-focus-ring-color auto 0;
 }
@@ -141,6 +149,8 @@ h4.panel-title {
 
 .springboard-pane .button.add-button {
   float: right;
+  position: relative;
+  z-index: 200;
 }
 
 .springboard-dashboard-customize {
