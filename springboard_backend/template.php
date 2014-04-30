@@ -201,3 +201,12 @@ function springboard_backend_webform_results_table($vars) {
   $output .= '</div>';
   return $output;
 }
+
+
+function springboard_backend_preprocess_views_exposed_form(&$vars, $hook) {
+
+  // Change the apply button in views exposed filters to "go".
+    $vars['form']['submit']['#value'] = t('Go');
+    unset($vars['form']['submit']['#printed']);
+    $vars['button'] = drupal_render($vars['form']['submit']);
+}
