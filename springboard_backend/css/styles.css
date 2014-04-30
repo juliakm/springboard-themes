@@ -1381,13 +1381,29 @@ div.vertical-tabs {
 /* no fontawesome */
 .content ul.tabs li:before,
 .content ul.pager li:before,
-.content .donor-table-view .view-content ul li:before  {
+.content .donor-table-view .view-content ul li:before,
+.content ul.dropdown-menu.views-widget-dropdown li:before {
   content: "";
 }
 
 .content ul li i {
   position: absolute;
   left: -26px;
+}
+
+.page-springboard .content ul.dropdown-menu.views-widget-dropdown li {
+  left: inherit;
+  margin-bottom: inherit;
+  text-align: left;
+}
+
+ul.dropdown-menu.views-widget-dropdown li a {
+  margin-left: 3px;
+  padding: 4px 12px;
+}
+
+#top-widgets-wrapper {
+  text-align: right;
 }
 
 /* Blockquotes */
