@@ -1460,6 +1460,23 @@ body:not(.springboard-dashboard) th {
   white-space: nowrap;
 }
 
+td pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
+  width: 111px;
+  font-size: 10px;
+}
+
+td.views-field.views-field-sobject pre {
+  width: 220px;
+}
+
 .ie8 th {
   background: #143c54;
 }
@@ -1779,9 +1796,7 @@ div.springboard-pane {
 
 /* Views Filters */
 
-#views-exposed-form-sbv-forms-page-1 div.views-exposed-widget,
-#views-exposed-form-sbv-forms-page-2 div.views-exposed-widget,
-.donor-table-view div.views-exposed-widget {
+.views-exposed-widget {
   display: inline-block;
   vertical-align: top;
 }

@@ -86,6 +86,13 @@
           $('body').addClass('sf-not-connected-dashboard');
         }
 
+      // Add pre wrappers to td cells with code.
+      $('td.views-field.views-field-message, td.views-field.views-field-error-code').each(function () {
+        if($.trim($(this).text()).length !== 0) {
+          $(this).wrapInner('<pre class="td-code"></pre>');
+        }
+      });
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
