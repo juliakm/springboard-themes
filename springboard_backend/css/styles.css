@@ -1473,12 +1473,20 @@ td pre {
   white-space: -moz-pre-wrap;
   white-space: -hp-pre-wrap;
   word-wrap: break-word;
-  width: 111px;
+  width: 110px;
   font-size: 10px;
+  padding: 3px;
+  margin: 3px 0 5px 0;
+  line-height: 15px;
 }
 
 td.views-field.views-field-sobject pre {
-  width: 220px;
+  width: 180px;
+}
+
+.views-field-error-code pre.td-code {
+  width: 50px;
+  text-align: center;
 }
 
 .ie8 th {
@@ -1804,6 +1812,11 @@ div.springboard-pane {
   padding-top: 2px;
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
+}
+
+.view-salesforce-log-item .view-content td {
+  font-size: 12px;
+  padding: 4px 14px;
 }
 
 /* Views Filters */
