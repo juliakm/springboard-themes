@@ -96,6 +96,26 @@
       // Remove empty pre tags that were rendered by drupal.
       $("pre:empty").remove();
 
+      // Preparing for floatThead.
+      // @todo - look in to using a preprocess for some of these?
+
+      // Remove unwanted tableclasses, we'll use floatThead specific ones.
+      $("table").removeClass('sticky-enabled').removeClass('tableheader-processed').removeClass('sticky-table');
+
+      // Remove the unneeded hidden table that drupal put in.
+      $("table.sticky-header").remove();
+
+      // Instantiate floatThead if the script is present.
+      if($().floatThead) {
+        // @todo make the class below more global. right now this works on /admin/reports/salesforce/item
+        var $table = $('.view-salesforce-log-item table.views-table');
+        $table.floatThead({
+          scrollContainer: function ($table) {
+            return $table.closest('.view-content');
+          }
+        });
+      }
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);

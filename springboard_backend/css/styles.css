@@ -1420,10 +1420,23 @@ blockquote {
 /***** Tables *****/
 
 table {
-  width: 100%;
+  width: 900px;
   border-collapse: separate;
   border-spacing: 0px;
   margin: 10px 0;
+  max-width: inherit;
+}
+
+.wrapper, .view-content {
+  width: 100%;
+  height: 600px;
+  overflow: auto;
+  position: relative;
+}
+
+table {
+  max-width: none;
+  border-style: none;
 }
 
 fieldset table {
@@ -1473,7 +1486,7 @@ td pre {
   white-space: -moz-pre-wrap;
   white-space: -hp-pre-wrap;
   word-wrap: break-word;
-  width: 110px;
+  /*width: 110px;*/
   font-size: 10px;
   padding: 3px;
   margin: 3px 0 5px 0;
@@ -1485,7 +1498,7 @@ td.views-field.views-field-sobject pre {
 }
 
 .views-field-error-code pre.td-code {
-  width: 50px;
+  width: 110px;
   text-align: center;
 }
 
@@ -1806,13 +1819,13 @@ div.springboard-pane {
   display: block;
 }
 
-.view-salesforce-log-item .view-content {
-  overflow-x: auto;
-  overflow-y: visible;
-  padding-top: 2px;
-  max-width: 100%;
-  -webkit-overflow-scrolling: touch;
-}
+/*.view-salesforce-log-item .view-content {*/
+  /*overflow-x: auto;*/
+  /*overflow-y: visible;*/
+  /*padding-top: 2px;*/
+  /*max-width: 100%;*/
+  /*-webkit-overflow-scrolling: touch;*/
+/*}*/
 
 .view-salesforce-log-item .view-content td {
   font-size: 12px;
@@ -1854,10 +1867,10 @@ div.springboard-pane {
   padding: 5px 6px;
 }
 
-#main .view {
-  position: relative;
-  margin: 0 0 20px 0;
-}
+/*#main .view {*/
+  /*position: relative;*/
+  /*margin: 0 0 20px 0;*/
+/*}*/
 
 .ie8 .springboard-column.sb-col-left {
   width: 65%;
@@ -1904,14 +1917,14 @@ div.springboard-pane {
     width: 99%;
   }
 
-  .view .view-content,
-  #webform-emails-form {
-    overflow-x: auto;
-    overflow-y: visible;
-    padding-top: 2px;
-    max-width: 100%;
-    -webkit-overflow-scrolling: touch;
-  }
+  /*.view .view-content,*/
+  /*#webform-emails-form {*/
+    /*overflow-x: auto;*/
+    /*overflow-y: visible;*/
+    /*padding-top: 2px;*/
+    /*max-width: 100%;*/
+    /*-webkit-overflow-scrolling: touch;*/
+  /*}*/
 
   .dashboard {
     min-width: inherit;

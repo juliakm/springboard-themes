@@ -50,6 +50,10 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'springboard-dashboard';
   }
 
+
+  // Load JQuery UI.
+  drupal_add_library('system', 'ui');
+
 }
 
 /**
@@ -75,6 +79,20 @@ function springboard_backend_preprocess_page(&$vars) {
   // Open sans font.
   // Usage: font-family: 'Open Sans', sans-serif;
   drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
+    array(
+      'type' => 'external',
+    )
+  );
+
+  // Add underscore.js, floatThead works much better in combo with this.
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js',
+    array(
+      'type' => 'external',
+    )
+  );
+
+  // Add jquery.floatThead-slim.js cdn. (slim is if you have underscore).
+  drupal_add_js(' //cdnjs.cloudflare.com/ajax/libs/floatthead/1.2.7/jquery.floatThead-slim.js',
     array(
       'type' => 'external',
     )
