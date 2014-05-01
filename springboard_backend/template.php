@@ -50,10 +50,6 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'springboard-dashboard';
   }
 
-
-  // Load JQuery UI.
-  drupal_add_library('system', 'ui');
-
 }
 
 /**
@@ -83,6 +79,11 @@ function springboard_backend_preprocess_page(&$vars) {
       'type' => 'external',
     )
   );
+
+  // @todo - possibly create a condtional so the below three only load on pages with tables.
+
+  // Load JQuery UI.
+  drupal_add_library('system', 'ui');
 
   // Add underscore.js, floatThead works much better in combo with this.
   drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js',
