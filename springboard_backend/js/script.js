@@ -107,11 +107,11 @@
 
       // Instantiate floatThead if the script is present.
       if($().floatThead) {
-        var $table = $('.springboard-inner table');
+        var $table = $('.springboard-inner table, .page-webform table');
         $table.floatThead({
           scrollContainer: function ($table) {
             // These are the two types of table wrappers we have thus far.
-            return $table.closest('.webform-results-inner, .view-content');
+            return $table.closest('.view-content, .page-webform .content');
           }
         });
 
@@ -121,7 +121,7 @@
       $('.springboard-inner table').each(function() {
         var $height = $('table').outerHeight();
         if($height <  600) {
-          $('.webform-results-inner, .view-content').css('height', $height + 30);
+          $('.view-content, .page-webform .content').css('height', $height + 30);
         }
       });
 

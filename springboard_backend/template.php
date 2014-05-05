@@ -24,6 +24,12 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'page-springboard';
   }
 
+  // Add a general class to webform pages.
+  $patternwebform = "node/*/webform-*";
+  if (drupal_match_path($path, $patternwebform)) {
+    $vars['classes_array'][] = 'page-webform';
+  }
+
   // Add body classes to various pages for better theming.
 
   if (arg(0) == "node" && arg(2) == "submission" && arg(4) == 'edit') {
@@ -32,6 +38,10 @@ function springboard_backend_preprocess_html(&$vars) {
 
   if (arg(0) == "node" && arg(2) == "submission" && arg(4) == NULL) {
     $vars['classes_array'][] = 'webform-submission-view';
+  }
+
+  if (arg(0) == "node" && arg(2) == "webform-results" && arg(3) == NULL) {
+    $vars['classes_array'][] = 'webform-results';
   }
 
   if (arg(0) == "node" && arg(2) == "webform-results" && arg(3) == 'table') {
