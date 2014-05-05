@@ -83,8 +83,9 @@ function springboard_backend_preprocess_page(&$vars) {
     )
   );
 
-  // @todo - possibly create a condtional so the below three only load on pages with tables.
-
+  /** start jquery.floatThead-slim.js
+   *  @todo - possibly create a condtional so the below three only load on pages with tables.
+  */
   // Load JQuery UI.
   drupal_add_library('system', 'ui');
 
@@ -95,14 +96,14 @@ function springboard_backend_preprocess_page(&$vars) {
     )
   );
 
-  // Add jquery.floatThead-slim.js cdn. (slim is if you have underscore).
+  // Add jquery.floatThead-slim.js cdn. ('slim' because you have underscore).
   drupal_add_js(' //cdnjs.cloudflare.com/ajax/libs/floatthead/1.2.7/jquery.floatThead-slim.js',
     array(
       'type' => 'external',
     )
   );
 
-// Set a var for springboard home page.
+  // Set a var for springboard home page.
   if (arg(0) == "springboard" && arg(1) == NULL) {
     $vars['sb_dashboard'] = '';
   }
