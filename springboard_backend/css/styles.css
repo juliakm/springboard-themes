@@ -1492,7 +1492,7 @@ td pre {
   white-space: -moz-pre-wrap;
   white-space: -hp-pre-wrap;
   word-wrap: break-word;
-  /*width: 110px;*/
+  width: 110px;
   font-size: 10px;
   padding: 3px;
   margin: 3px 0 5px 0;
