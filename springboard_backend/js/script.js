@@ -107,14 +107,25 @@
 
       // Instantiate floatThead if the script is present.
       if($().floatThead) {
-        // @todo make the class below more global. right now this works on /admin/reports/salesforce/item
-        var $table = $('.view-salesforce-log-item table.views-table');
+        var $table = $('.springboard-inner table');
         $table.floatThead({
           scrollContainer: function ($table) {
-            return $table.closest('.view-content');
+            // These are the two types of table wrappers we have thus far.
+            return $table.closest('.webform-results-inner, .view-content');
           }
         });
-      }
+
+      /** Set a var for table height and add it as a style if the table is less than 600.
+        * 600 high or more tables get the 600 fixed height and then scrolls automtically if needed.
+      */
+      $('.springboard-inner table').each(function() {
+        var $height = $('table').outerHeight();
+        if($height <  600) {
+          $('.webform-results-inner, .view-content').css('height', $height + 30);
+        }
+      });
+
+      } // end if floatthead.
 
     } // attach.function
   } // drupal.behaviors

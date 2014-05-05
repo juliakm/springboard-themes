@@ -1420,23 +1420,29 @@ blockquote {
 /***** Tables *****/
 
 table {
-  width: 900px;
   border-collapse: separate;
   border-spacing: 0px;
-  margin: 10px 0;
-  max-width: inherit;
+  margin: 0 0 10px 0;
+  max-width: none;
+  border-style: none;
 }
 
-.wrapper, .view-content {
+.springboard-inner table {
+  width: 1170px;
+}
+
+/* setup floatthead wrappers for data tables */
+.springboard-inner .wrapper,
+.springboard-inner .view-content,
+.springboard-inner .webform-results-inner {
   width: 100%;
   height: 600px;
   overflow: auto;
   position: relative;
 }
 
-table {
-  max-width: none;
-  border-style: none;
+.webform-results-per-page {
+  margin-bottom: 10px;
 }
 
 fieldset table {

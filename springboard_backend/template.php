@@ -49,6 +49,9 @@ function springboard_backend_preprocess_html(&$vars) {
   if (arg(0) == "springboard" && arg(1) == NULL) {
     $vars['classes_array'][] = 'springboard-dashboard';
   }
+  else {
+    $vars['classes_array'][] = 'springboard-inner';
+  }
 
 }
 
@@ -212,9 +215,9 @@ function springboard_backend_webform_results_table($vars) {
 
   $output = '';
   // Add custom classes for better theming.
+  $output .= theme('webform_results_per_page', array('total_count' => $total_count, 'pager_count' => $pager_count));
   $output .= '<div class="webform-results-wrapper">';
   $output .= '<div class="webform-results-inner">';
-  $output .= theme('webform_results_per_page', array('total_count' => $total_count, 'pager_count' => $pager_count));
   $output .= theme('table', array('header' => $header, 'rows' => $rows));
   $output .= '</div>';
   $output .= '</div>';
