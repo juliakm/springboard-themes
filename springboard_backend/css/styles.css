@@ -1434,7 +1434,7 @@ table {
 /* setup floatthead wrappers for data tables */
 .springboard-inner .wrapper,
 .springboard-inner .view-content,
-/*.springboard-inner .webform-results-inner,*/
+.springboard-inner .webform-results-inner,
 .page-webform .content{
   width: 100%;
   height: 600px;
@@ -1501,7 +1501,7 @@ td pre {
 }
 
 td.views-field.views-field-sobject pre {
-  width: 180px;
+  width: 180px !important;
 }
 
 .views-field-error-code pre.td-code {

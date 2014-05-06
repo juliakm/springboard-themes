@@ -17,10 +17,9 @@
  * - $table['#operation_total']: Maximum number of operations in the operation column.
  */
 ?>
-
 <?php if (count($table['#rows'])): ?>
   <?php print theme('webform_results_per_page', array('total_count' => $total_count, 'pager_count' => $pager_count)); ?>
- <div id="foobar">
+ <div class="webform-results-inner">
   <?php print render($table); ?>
  </div>
 <?php else: ?>

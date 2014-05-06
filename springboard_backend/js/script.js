@@ -111,7 +111,7 @@
         $table.floatThead({
           scrollContainer: function ($table) {
             // These are the two types of table wrappers we have thus far.
-            return $table.closest('.view-content, .page-webform .content');
+            return $table.closest('.view-content, .webform-results-inner');
           }
         });
 
@@ -121,11 +121,14 @@
       $('.springboard-inner table').each(function() {
         var $height = $('table').outerHeight();
         if($height <  600) {
-          $('.view-content, .page-webform .content').css('height', $height + 30);
+          $('.view-content, .webform-results-inner').css('height', $height + 30);
         }
       });
 
       } // end if floatthead.
+
+      // Move this out of the scrollable area if needed.
+      $('.webform-results-per-page').prependTo('#block-system-main');
 
     } // attach.function
   } // drupal.behaviors
