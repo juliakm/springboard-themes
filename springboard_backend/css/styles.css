@@ -1881,11 +1881,11 @@ td.views-field.table-actions a {
 @media (min-width: 990px) {
 
   .springboard-column.sb-col-left {
-    width: 67%;
+    width: 57%;
   }
 
   .springboard-column.sb-col-right {
-    width: 31%;
+    width: 41%;
     margin-left: 2%;
   }
 
