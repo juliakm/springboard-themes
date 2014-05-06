@@ -1550,7 +1550,7 @@ td {
   border-top: 3px solid #f4f3ee;
   background: #fefefe;
   border-right: 1px solid #e6e6e6;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 18px;
 }
 
@@ -1815,8 +1815,17 @@ div.springboard-pane {
 }
 
 .view-salesforce-log-item .view-content td {
-  font-size: 12px;
   padding: 4px 14px;
+  font-size: 12px;
+}
+
+td.views-field.table-actions {
+  padding: 0 1%;
+  width: 140px;
+}
+
+td.views-field.table-actions a {
+  padding: 0 3px;
 }
 
 /* Views Filters */
@@ -1990,12 +1999,12 @@ div.springboard-pane {
   }
 
   .springboard-column.sb-col-left {
-    width: 54.7%;
+    width: 49%;
   }
 
   .springboard-column.sb-col-right {
-    width: 44.2%;
-    margin-left: 1%;
+    width: 49%;
+    margin-left: 2%;
   }
 
   input,
