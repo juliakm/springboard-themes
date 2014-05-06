@@ -714,6 +714,11 @@ ul.tabs.primary li.active a:hover {
   padding: 7px 10px 7px 10px;
 }
 
+#edit-date-filter-min-wrapper,
+#edit-date-filter-max-wrapper {
+  display: inline-block;
+}
+
 /* GA field formatting */
 
 #edit-springboard-ga-trans .control-group,
@@ -1191,12 +1196,13 @@ html.js input.throbbing {
 .control-group label:first-child {
   font-weight: bold;
   font-size: 1.2em;
-  /*margin-top: 25px;*/
 }
 
-/*.fieldset-wrapper label:first-child {*/
-  /*margin-top: 36px;*/
-/*}*/
+.views-widget .control-group label {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
 
 .page-node-edit .control-group label:first-child {
   margin-top: inherit;
