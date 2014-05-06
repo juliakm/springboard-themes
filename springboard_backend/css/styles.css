@@ -82,6 +82,10 @@ h4.panel-title {
   background: #0086d6;
 }
 
+.container#header-inner {
+  position: relative;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -307,6 +311,67 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   background: linear-gradient(to bottom, #1671a6 0%, #015c91 100%, #7db9e8 100%);
   color: #e9eef3;
   border: none;
+}
+
+#menu-wrapper .nav-tabs li.springboard a.lia-depth-1,
+#menu-wrapper .nav-tabs li.springboard a.lia-depth-1.active {
+  display: inline-block;
+  width: 160px;
+  height: 19px;
+  background: url("../logo.png") no-repeat !important;
+  text-align: left;
+  text-indent: -9999px;
+}
+
+#menu-wrapper .nav-tabs li.li-depth-0.springboard a.lia-depth-1:after,
+#menu-wrapper .nav-tabs li.li-depth-0.springboard a.lia-depth-1:after {
+  position: absolute;
+  left: 146px;
+  margin: 0 0 0 0;
+  color: #fff;
+  content: "\f0ab";
+  text-align: right;
+  text-decoration: inherit;
+  text-indent: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-family: FontAwesome;
+}
+
+#menu-wrapper .nav-tabs li.li-depth-0.options {
+  position: absolute;
+  right: 0;
+}
+
+#menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1,
+#menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1.active {
+  width: 20px;
+  background: none;
+  text-align: left;
+  text-indent: -9999px;
+}
+
+#menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1:after,
+#menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1.active:after {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  margin: 0 0 0 0;
+  color: #fff;
+  content: "\f013";
+  text-align: right;
+  text-decoration: inherit;
+  text-indent: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+  font-family: FontAwesome;
+}
+
+#menu-wrapper .nav-tabs li.li-depth-0.options ul.dropdown-menu.ul-depth-1 {
+  position: absolute;
+  left: -124px;
 }
 
 /* ie8 */
@@ -1433,6 +1498,7 @@ table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0px;
+  margin: 0 0 10px 0;
 }
 
 fieldset table {

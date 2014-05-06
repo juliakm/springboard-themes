@@ -2,14 +2,6 @@
 
 <header class="clearfix container" id="header-inner">
   <div id="top-wrapper">
-    <?php if ($logo) : ?>
-      <div id="logo-wrapper" class="inline-block">
-        <a href="/springboard">
-          <img src="<?php print check_url($logo); ?>" alt="<?php print $site_name; ?>" id="logo" title="<?php print $site_name; ?>"/>
-        </a>
-      </div>
-    <?php endif; ?>
-
     <div id="menu-wrapper" class="inline-block">
       <?php print render($main_menu); ?>
     </div><!--// menu-wrapper-->
