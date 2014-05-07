@@ -96,7 +96,6 @@
       // Remove empty pre tags that were rendered by drupal.
       $("pre:empty").remove();
 
-<<<<<<< HEAD
       // for each element that is classed as 'valign-bottom',
       // set its margin-top to the difference between its
       // own height and the height of its parent
@@ -104,7 +103,6 @@
         $(this).css('margin-top', $(this).parent().height()-$(this).height())
       });
 
-=======
       // Preparing for floatThead.
       // @todo - look in to using a preprocess for some of these?
 
@@ -139,7 +137,6 @@
       // Move this out of the scrollable area if needed.
       $('.webform-results-per-page').prependTo('#block-system-main');
 
->>>>>>> refs/heads/t808-floatThead
     } // attach.function
   } // drupal.behaviors
 })(jQuery);

@@ -570,7 +570,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  height: 32px;
+  height: 24px;
 }
 
 input[type="radio"],
@@ -748,6 +748,22 @@ ul.tabs.primary li.active a:hover {
   -moz-border-radius: 30px;
   border-radius: 30px;
   width: 150px;
+}
+
+.views-widget .control-group .date-padding .form-text {
+  width: 90px;
+}
+
+.views-widget .control-group .date-padding .description {
+  display: none;
+}
+
+.views-exposed-form {
+  margin-bottom: 2px;
+}
+
+.view form {
+  margin: 0;
 }
 
 /* Search fields for email and page templates  */
@@ -1541,14 +1557,18 @@ table {
   border-collapse: separate;
   border-spacing: 0px;
   margin: 0 0 10px 0;
-<<<<<<< HEAD
-=======
   max-width: none;
   border-style: none;
 }
 
 .springboard-inner table {
   width: 1170px;
+}
+
+.springboard-inner table.ui-datepicker-calendar {
+  width: inherit;
+  z-index: 700;
+
 }
 
 /* setup floatthead wrappers for data tables */
@@ -1561,9 +1581,13 @@ table {
   position: relative;
 }
 
+.floatThead-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 .webform-results-per-page {
   margin-bottom: 10px;
->>>>>>> refs/heads/t808-floatThead
 }
 
 fieldset table {
@@ -1972,7 +1996,11 @@ td.views-field.table-actions a {
 
 .views-exposed-widget {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: bottom;
+}
+
+.views-exposed-widgets {
+  margin-bottom: 18px;
 }
 
 #views-exposed-form-sbv-forms-page-1 div.views-exposed-widget#edit-type-1-wrapper {
