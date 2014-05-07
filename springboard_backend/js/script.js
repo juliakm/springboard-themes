@@ -96,6 +96,13 @@
       // Remove empty pre tags that were rendered by drupal.
       $("pre:empty").remove();
 
+      // for each element that is classed as 'valign-bottom',
+      // set its margin-top to the difference between its
+      // own height and the height of its parent
+      $('.valign-bottom').each(function() {
+        $(this).css('margin-top', $(this).parent().height()-$(this).height())
+      });
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);

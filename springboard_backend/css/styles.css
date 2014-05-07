@@ -779,6 +779,20 @@ ul.tabs.primary li.active a:hover {
   padding: 7px 10px 7px 10px;
 }
 
+.views-exposed-header .inline-block {
+  width: 49%;
+  vertical-align: bottom;
+}
+
+.views-exposed-form h3 {
+  margin: 0;
+}
+
+.view-filters.inline-block {
+  top: 12px;
+  position: relative;
+}
+
 #edit-date-filter-min-wrapper,
 #edit-date-filter-max-wrapper {
   display: inline-block;
@@ -1113,6 +1127,10 @@ a.accordion-toggle.collapsed:before {
 #webform-emails-form .select-wrapper,
 #views-exposed-form-donors-page #edit-sbp-state-value-wrapper .select-wrapper {
   width: 400px;
+}
+
+.views-widget-filter-status .select-wrapper {
+  width: 100px;
 }
 
 .ie8 .select-wrapper {
@@ -1460,13 +1478,38 @@ div.vertical-tabs {
 /* no fontawesome */
 .content ul.tabs li:before,
 .content ul.pager li:before,
-.content .donor-table-view .view-content ul li:before  {
+.content .donor-table-view .view-content ul li:before,
+.content ul.dropdown-menu.views-widget-dropdown li:before {
   content: "";
 }
 
 .content ul li i {
   position: absolute;
   left: -26px;
+}
+
+.page-springboard .content ul.dropdown-menu.views-widget-dropdown li {
+  left: inherit;
+  margin-bottom: inherit;
+  text-align: left;
+}
+
+ul.dropdown-menu.views-widget-dropdown li a {
+  margin-left: 3px;
+  padding: 4px 12px;
+}
+
+#top-widgets-wrapper {
+  text-align: right;
+  margin-bottom: 14px;
+  position: relative;
+  right: -12px;
+}
+
+#top-widgets-wrapper .btn-group {
+  margin-right: 12px;
+  position: relative;
+  top: -2px;
 }
 
 /* Blockquotes */
@@ -1934,7 +1977,7 @@ td.views-field.table-actions a {
 
 #views-exposed-form-sbv-forms-page-1 input[type="submit"],
 #views-exposed-form-sbv-forms-page-2 input[type="submit"] {
-  margin-top: 32px;
+  margin: 32px 0 0 10px;
   padding: 5px 6px;
 }
 
