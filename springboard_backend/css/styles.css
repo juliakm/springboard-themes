@@ -2058,6 +2058,10 @@ td.views-field.table-actions a {
     width: 100px;
   }
 
+  #main .view {
+    margin: 10px 0 20px 0;
+  }
+
 }
 
 /* end min 900px media query */
@@ -2191,6 +2195,10 @@ td.views-field.table-actions a {
 
   .springboard-pane .button.add-button {
      float: none;
+  }
+
+  #menu-wrapper .nav-tabs li.li-depth-0.options {
+    left: 92%;
   }
 
 }
