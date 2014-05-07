@@ -96,6 +96,7 @@
       // Remove empty pre tags that were rendered by drupal.
       $("pre:empty").remove();
 
+<<<<<<< HEAD
       // for each element that is classed as 'valign-bottom',
       // set its margin-top to the difference between its
       // own height and the height of its parent
@@ -103,6 +104,42 @@
         $(this).css('margin-top', $(this).parent().height()-$(this).height())
       });
 
+=======
+      // Preparing for floatThead.
+      // @todo - look in to using a preprocess for some of these?
+
+      // Remove unwanted tableclasses, we'll use floatThead specific ones.
+      $("table").removeClass('sticky-enabled').removeClass('tableheader-processed').removeClass('sticky-table');
+
+      // Remove the unneeded hidden table that drupal put in.
+      $("table.sticky-header").remove();
+
+      // Instantiate floatThead if the script is present.
+      if($().floatThead) {
+        var $table = $('.springboard-inner table, .page-webform table');
+        $table.floatThead({
+          scrollContainer: function ($table) {
+            // These are the two types of table wrappers we have thus far.
+            return $table.closest('.view-content, .webform-results-inner');
+          }
+        });
+
+      /** Set a var for table height and add it as a style if the table is less than 600.
+        * 600 high or more tables get the 600 fixed height and then scrolls automtically if needed.
+      */
+      $('.springboard-inner table').each(function() {
+        var $height = $('table').outerHeight();
+        if($height <  600) {
+          $('.view-content, .webform-results-inner').css('height', $height + 30);
+        }
+      });
+
+      } // end if floatthead.
+
+      // Move this out of the scrollable area if needed.
+      $('.webform-results-per-page').prependTo('#block-system-main');
+
+>>>>>>> refs/heads/t808-floatThead
     } // attach.function
   } // drupal.behaviors
 })(jQuery);

@@ -24,6 +24,12 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'page-springboard';
   }
 
+  // Add a general class to webform pages.
+  $patternwebform = "node/*/webform-*";
+  if (drupal_match_path($path, $patternwebform)) {
+    $vars['classes_array'][] = 'page-webform';
+  }
+
   // Add body classes to various pages for better theming.
 
   if (arg(0) == "node" && arg(2) == "submission" && arg(4) == 'edit') {
@@ -32,6 +38,10 @@ function springboard_backend_preprocess_html(&$vars) {
 
   if (arg(0) == "node" && arg(2) == "submission" && arg(4) == NULL) {
     $vars['classes_array'][] = 'webform-submission-view';
+  }
+
+  if (arg(0) == "node" && arg(2) == "webform-results" && arg(3) == NULL) {
+    $vars['classes_array'][] = 'webform-results';
   }
 
   if (arg(0) == "node" && arg(2) == "webform-results" && arg(3) == 'table') {
@@ -48,6 +58,9 @@ function springboard_backend_preprocess_html(&$vars) {
 
   if (arg(0) == "springboard" && arg(1) == NULL) {
     $vars['classes_array'][] = 'springboard-dashboard';
+  }
+  else {
+    $vars['classes_array'][] = 'springboard-inner';
   }
 
 }
@@ -80,7 +93,27 @@ function springboard_backend_preprocess_page(&$vars) {
     )
   );
 
-// Set a var for springboard home page.
+  /** start jquery.floatThead-slim.js
+   *  @todo - possibly create a condtional so the below three only load on pages with tables.
+  */
+  // Load JQuery UI.
+  drupal_add_library('system', 'ui');
+
+  // Add underscore.js, floatThead works much better in combo with this.
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js',
+    array(
+      'type' => 'external',
+    )
+  );
+
+  // Add jquery.floatThead-slim.js cdn. ('slim' because you have underscore).
+  drupal_add_js(' //cdnjs.cloudflare.com/ajax/libs/floatthead/1.2.7/jquery.floatThead-slim.js',
+    array(
+      'type' => 'external',
+    )
+  );
+
+  // Set a var for springboard home page.
   if (arg(0) == "springboard" && arg(1) == NULL) {
     $vars['sb_dashboard'] = '';
   }
@@ -193,9 +226,9 @@ function springboard_backend_webform_results_table($vars) {
 
   $output = '';
   // Add custom classes for better theming.
+  $output .= theme('webform_results_per_page', array('total_count' => $total_count, 'pager_count' => $pager_count));
   $output .= '<div class="webform-results-wrapper">';
   $output .= '<div class="webform-results-inner">';
-  $output .= theme('webform_results_per_page', array('total_count' => $total_count, 'pager_count' => $pager_count));
   $output .= theme('table', array('header' => $header, 'rows' => $rows));
   $output .= '</div>';
   $output .= '</div>';
