@@ -83,6 +83,7 @@ function springboard_backend_preprocess_page(&$vars) {
     $vars['footer_menu'] = preg_replace('/class="dropdown-menu "/', '/class="child-menu"/', $vars['footer_menu']);
     // change sub li's class so drop-down styling isn't applied
     $vars['footer_menu'] = preg_replace('/dropdown/', '', $vars['footer_menu']);
+    $vars['footer_menu'] = preg_replace('/id="/', '/id="fm-', $vars['footer_menu']);
   }
 
   // Open sans font.
