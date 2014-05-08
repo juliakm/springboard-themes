@@ -355,7 +355,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 #menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1:after,
 #menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1.active:after {
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 14px;
   margin: 0 0 0 0;
   color: #fff;
@@ -672,22 +672,38 @@ ul.tabs.primary li a:hover,
   line-height: 20px;
 }
 
+a.button.add-button:before {
+  content: "\f067";
+  font-family: FontAwesome;
+  margin: 0px 8px 0 0;
+  display: inline-block;
+}
+
 input[type="submit"],
 #edit-actions #edit-cancel,
 #edit-actions-cancel {
-  margin: 10px 10px 10px 0;
+  margin: 10px 10px 12px 0;
 }
 
 input#edit-submit-donors {
   margin: 30px 0 0 14px;
 }
 
-input#edit-submit-salesforce-log-item {
-  margin: 32px 0 0 10px;
-}
+/*input#edit-submit-salesforce-log-item {*/
+  /*margin: 32px 0 0 10px;*/
+/*}*/
 
 input#edit-submit-sbv-contacts {
   margin: 30px 10px 10px 8px;
+}
+
+a.button.add-button {
+  position: relative;
+  top: 10px;
+}
+
+.springboard-inner a.button.add-button {
+  top: inherit;
 }
 
 .ie8 input[type="submit"],
@@ -1517,7 +1533,7 @@ ul.dropdown-menu.views-widget-dropdown li a {
 
 #top-widgets-wrapper {
   text-align: right;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
   position: relative;
   right: -12px;
 }
@@ -1559,6 +1575,7 @@ table {
   margin: 0 0 10px 0;
   max-width: none;
   border-style: none;
+  width: 100%;
 }
 
 .springboard-inner table {
@@ -1584,6 +1601,7 @@ table {
 .floatThead-wrapper {
   position: relative;
   z-index: 1;
+  margin-top: 10px;
 }
 
 .webform-results-per-page {
@@ -2000,7 +2018,7 @@ td.views-field.table-actions a {
 }
 
 .views-exposed-widgets {
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 #views-exposed-form-sbv-forms-page-1 div.views-exposed-widget#edit-type-1-wrapper {
@@ -2027,14 +2045,9 @@ td.views-field.table-actions a {
 
 #views-exposed-form-sbv-forms-page-1 input[type="submit"],
 #views-exposed-form-sbv-forms-page-2 input[type="submit"] {
-  margin: 32px 0 0 10px;
+  /*margin: 32px 0 0 10px;*/
   padding: 5px 6px;
 }
-
-/*#main .view {*/
-  /*position: relative;*/
-  /*margin: 0 0 20px 0;*/
-/*}*/
 
 .ie8 .springboard-column.sb-col-left {
   width: 65%;
@@ -2044,7 +2057,6 @@ td.views-field.table-actions a {
   width: 32%;
   margin-left: 2%;
 }
-
 
 @media (min-width: 990px) {
 
