@@ -143,7 +143,7 @@ function springboard_base_preprocess_page(&$variables) {
 
   // Add Font awesome cdn.
   // http://fortawesome.github.io/Font-Awesome/get-started/
-  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css',
+  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css',
     array(
       'type' => 'external',
     )
