@@ -1741,6 +1741,18 @@ table#fundraiser-payment-methods input[type="text"]{
   top: -6px;
 }
 
+/* Contacts Report Table */
+.view-sbv-contacts table td.views-field-edit-node {
+  min-width: 140px; 
+}
+
+.view-sbv-contacts table td.views-field-sbp-address {
+  max-width: 60px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 /* Webform results area */
 
 .webform-submission-edit .span6 {

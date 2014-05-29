@@ -211,3 +211,17 @@ function springboard_backend_preprocess_views_exposed_form(&$vars, $hook) {
     unset($vars['form']['submit']['#printed']);
     $vars['button'] = drupal_render($vars['form']['submit']);
 }
+
+function springboard_backend_preprocess_views_view_field(&$vars) {
+   $field = $vars['field'];
+   $view = $vars['view'];
+    if($view->name == 'sbv_contacts') {
+      // Conditionally add link to view recurring donations if user is a sustainer.
+      if($field->real_field == 'edit_node') {
+        $donations = _fundraiser_sustainers_get_donation_sets_recurr_by_uid($field->last_tokens['[uid]']);
+        if($donations) {
+          $vars['output'] .= ' | ' . l(t('Recurring Gifts'), 'user/'. $field->last_tokens['[uid]'] . '/recurring_overview');
+        }
+      }
+    }
+}
