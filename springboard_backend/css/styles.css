@@ -1570,42 +1570,10 @@ blockquote {
 /***** Tables *****/
 
 table {
+  width: 100%;
   border-collapse: separate;
   border-spacing: 0px;
   margin: 0 0 10px 0;
-  max-width: none;
-  border-style: none;
-  width: 100%;
-}
-
-.springboard-inner table {
-  width: 1170px;
-}
-
-.springboard-inner table.ui-datepicker-calendar {
-  width: inherit;
-  z-index: 700;
-
-}
-
-/* setup floatthead wrappers for data tables */
-.springboard-inner .wrapper,
-.springboard-inner .view-content,
-.springboard-inner .webform-results-inner {
-  width: 100%;
-  height: 600px;
-  overflow: auto;
-  position: relative;
-}
-
-.floatThead-wrapper {
-  position: relative;
-  z-index: 1;
-  margin-top: 10px;
-}
-
-.webform-results-per-page {
-  margin-bottom: 10px;
 }
 
 fieldset table {
@@ -1663,11 +1631,11 @@ td pre {
 }
 
 td.views-field.views-field-sobject pre {
-  width: 180px !important;
+  width: 180px;
 }
 
 .views-field-error-code pre.td-code {
-  width: 110px;
+  width: 50px;
   text-align: center;
 }
 
@@ -1988,13 +1956,13 @@ div.springboard-pane {
   display: block;
 }
 
-/*.view-salesforce-log-item .view-content {*/
-  /*overflow-x: auto;*/
-  /*overflow-y: visible;*/
-  /*padding-top: 2px;*/
-  /*max-width: 100%;*/
-  /*-webkit-overflow-scrolling: touch;*/
-/*}*/
+.view-salesforce-log-item .view-content {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-top: 2px;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
 
 .view-salesforce-log-item .view-content td {
   padding: 4px 14px;
