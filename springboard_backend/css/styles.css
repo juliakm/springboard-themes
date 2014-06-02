@@ -1927,9 +1927,10 @@ ul.tabs.secondary li a.active {
   white-space: nowrap;
 }
 
-.view.view-sbv-forms.view-id-sbv_forms.view-display-id-block .more-link,
-.view.view-sbv-forms.view-id-sbv_forms.view-display-id-block_1 .more-link,
+.springboard-recent-donation-forms .more-link,
+.springboard-recent-forms .more-link,
 .view-sbv-soap-errors .more-link {
+  display: block;
   text-align: center;
   font-size: 15px;
   margin-bottom: 10px;
