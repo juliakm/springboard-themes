@@ -49,6 +49,8 @@
       $(".content table tr td a:visible:last-child").addClass("last");
       $(".content table th:visible:first-child").addClass("first");
       $(".content table th:visible:last-child").addClass("last");
+      $(".types-wrapper:visible:first-child").addClass("first");
+      $(".types-wrapper:visible:last-child").addClass("last");
 
       // Theme select lists, add a wrapper.
       $('select:not([multiple])').each(function () {
@@ -103,6 +105,7 @@
         $(this).css('margin-top', $(this).parent().height()-$(this).height())
       });
 
+      // end.
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
