@@ -285,14 +285,6 @@ li.leaf {
   visibility: visible;
 }
 
-.dropdown-menu li.settings .ul-depth-2 {
-  left: -226px;
-}
-
-.ie9 .dropdown-menu li.settings .ul-depth-2 {
-  left: -231px;
-}
-
 /* Force nav to expand dropdowns on hover */
 ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block;
