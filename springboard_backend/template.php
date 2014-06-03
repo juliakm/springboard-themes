@@ -16,15 +16,14 @@ function springboard_backend_preprocess_html(&$vars) {
   drupal_add_html_head($http_equiv, 'http_equiv');
 
   // Define the URL path.
-  $path = drupal_get_path_alias();
-
-// Add a class if it's a springboard page.
-  $pattern = "springboard/*\nspringboard";
-  if (drupal_match_path($path, $pattern)) {
-    $vars['classes_array'][] = 'page-springboard';
-  }
+ $path = request_uri();
 
   // Add body classes to various pages for better theming.
+
+  // General springboard page.
+  if (preg_match('|^/springboard((?:/[a-zA-Z0-9_\-]*)*)?|', $path, $matches)) {
+    $vars['classes_array'][] = 'page-springboard';
+  }
 
   if (arg(0) == "node" && arg(2) == "submission" && arg(4) == 'edit') {
     $vars['classes_array'][] = 'webform-submission-edit';
