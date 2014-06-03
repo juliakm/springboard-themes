@@ -721,9 +721,11 @@ a.button.add-button {
 }
 
 .buttons-wrapper {
-  position: absolute;
+  position: relative;
+  top: 70px;
   right: 0;
   display: inline-block;
+  float: right;
 }
 
 h2.types {
@@ -731,7 +733,17 @@ h2.types {
   margin: 0 0 10px 0;
 }
 
-.types-header .btn-group {
+.types-wrapper {
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #888;
+}
+
+.types-wrapper.last {
+  border-bottom: none;
+}
+
+.types-wrapper .btn-group {
   position: relative;
   top: 8px;
   margin: 0 10px 0 0;
