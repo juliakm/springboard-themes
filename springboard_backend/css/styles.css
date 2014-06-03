@@ -728,7 +728,7 @@ a.button.add-button {
 
 h2.types {
   display: inline-block;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 .types-header .btn-group {
@@ -798,11 +798,15 @@ ul.tabs.primary li.active a:hover {
 }
 
 .views-widget .control-group .date-padding .form-text {
-  width: 90px;
+  width: 120px;
 }
 
 .views-widget .control-group .date-padding .description {
   display: none;
+}
+
+.views-widget input#edit-combine {
+  width: 170px;
 }
 
 .views-exposed-form {
@@ -859,6 +863,14 @@ ul.tabs.primary li.active a:hover {
 #edit-date-filter-min-wrapper,
 #edit-date-filter-max-wrapper {
   display: inline-block;
+}
+
+#edit-date-filter-min-wrapper {
+
+}
+
+.views-exposed-widget label {
+  margin-left: 10px;
 }
 
 /* GA field formatting */
@@ -1827,9 +1839,7 @@ table#fundraiser-payment-methods input[type="text"]{
 }
 
 .webform-results-inner {
-  overflow-x: scroll;
   overflow-y: visible;
-  max-width: 100%;
   -webkit-overflow-scrolling: touch;
 }
 
