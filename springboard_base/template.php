@@ -13,7 +13,6 @@ function springboard_base_preprocess_html(&$variables) {
     drupal_set_message(t("Please enable jQuery version 1.7 or higher in the !link.", array('!link' => l(t('jQuery Update settings'), 'admin/config/development/jquery_update'))), 'warning');
   }
 
-  $variables['classes_array'] = array();
   // Compile a list of classes that are going to be applied to the body element.
   // This allows advanced theming based on context (home page, node of certain type, etc.).
   // Add a class that tells us whether we're on the front page or not.

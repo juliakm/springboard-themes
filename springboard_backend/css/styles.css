@@ -263,12 +263,26 @@ li.leaf {
 }
 
 #menu-wrapper ul.nav-tabs {
-  border-bottom: none;
   margin: 0;
+  border-bottom: none;
 }
 
 .dropdown-menu {
   margin: 0;
+}
+
+/* tertiary menu */
+.dropdown-menu .ul-depth-2 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  visibility: hidden;
+  margin-top: -1px;
+}
+
+.dropdown-menu li:hover .ul-depth-2 {
+  display: block;
+  visibility: visible;
 }
 
 /* Force nav to expand dropdowns on hover */
@@ -637,6 +651,31 @@ ul.tabs.primary li a,
   text-shadow: none;
 }
 
+.file-widget.form-managed-file {
+  position: relative;
+}
+
+input[type="file"] {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  text-align: right;
+  opacity: 0;
+  filter: alpha(opacity:0);
+  cursor: pointer;
+  -moz-opacity: 0;
+}
+
+i.fa.fa-file-text-o {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-size: 38px;
+  cursor: pointer;
+}
+
 input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -673,10 +712,23 @@ ul.tabs.primary li a:hover,
 }
 
 a.button.add-button:before {
+  display: inline-block;
+  margin: 0px 8px 0 0;
   content: "\f067";
   font-family: FontAwesome;
-  margin: 0px 8px 0 0;
+}
+
+a.button.more-button {
   display: inline-block;
+  margin: 6px 0;
+}
+
+a.button.more-button:after {
+  display: inline-block;
+  margin: 0px 8px 0 8px;
+  content: "\f0a9";
+  font-family: FontAwesome;
+  font-size: 14px;
 }
 
 input[type="submit"],
@@ -689,9 +741,9 @@ input#edit-submit-donors {
   margin: 30px 0 0 14px;
 }
 
-/*input#edit-submit-salesforce-log-item {*/
-  /*margin: 32px 0 0 10px;*/
-/*}*/
+.types-header {
+  position: relative;
+}
 
 input#edit-submit-sbv-contacts {
   margin: 30px 10px 10px 8px;
@@ -699,11 +751,59 @@ input#edit-submit-sbv-contacts {
 
 a.button.add-button {
   position: relative;
-  top: 10px;
+  top: 11px;
 }
 
 .springboard-inner a.button.add-button {
   top: inherit;
+}
+
+.buttons-wrapper {
+  position: relative;
+  top: 64px;
+  right: 0;
+  display: inline-block;
+  float: right;
+}
+
+h2.types {
+  display: inline-block;
+  margin: 0 0 10px 0;
+  padding: 0px 12px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #888;
+  color: #fff;
+  font-size: 17px;
+  line-height: 32px;
+}
+
+h2.types:after {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin: 0px 1px 0 12px;
+  content: "\f0ce";
+  font-weight: normal;
+  font-size: 19px;
+  font-family: FontAwesome;
+}
+
+.types-wrapper {
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+  border-bottom: 2px solid #c5c5c5;
+}
+
+.types-wrapper.last {
+  border-bottom: none;
+}
+
+.types-wrapper .btn-group {
+  position: relative;
+  top: 8px;
+  margin: 0 10px 0 0;
 }
 
 .ie8 input[type="submit"],
@@ -767,11 +867,15 @@ ul.tabs.primary li.active a:hover {
 }
 
 .views-widget .control-group .date-padding .form-text {
-  width: 90px;
+  width: 120px;
 }
 
 .views-widget .control-group .date-padding .description {
   display: none;
+}
+
+.views-widget input#edit-combine {
+  width: 170px;
 }
 
 .views-exposed-form {
@@ -812,7 +916,7 @@ ul.tabs.primary li.active a:hover {
 }
 
 .views-exposed-header .inline-block {
-  width: 49%;
+  width: 68%;
   vertical-align: bottom;
 }
 
@@ -828,6 +932,14 @@ ul.tabs.primary li.active a:hover {
 #edit-date-filter-min-wrapper,
 #edit-date-filter-max-wrapper {
   display: inline-block;
+}
+
+#edit-date-filter-min-wrapper {
+
+}
+
+.views-exposed-widget label {
+  margin-left: 10px;
 }
 
 /* GA field formatting */
@@ -1497,22 +1609,32 @@ div.vertical-tabs {
 /* fontawesome list style */
 .page-springboard .content ul li:before,
 .page-node-view .content ul li:before {
-  content: "\f00c";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
   position: absolute;
   left: -26px;
   color: #ccc;
+  content: "\f00c";
+  text-decoration: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-family: FontAwesome;
 }
 
 /* no fontawesome */
 .content ul.tabs li:before,
 .content ul.pager li:before,
 .content .donor-table-view .view-content ul li:before,
-.content ul.dropdown-menu.views-widget-dropdown li:before {
+.content ul.dropdown-menu.views-widget-dropdown li:before,
+.page-node-add .content ul li:before,
+.page-node-edit .content ul li:before {
+  left: inherit;
   content: "";
+  text-decoration: inherit;
+  font-family: inherit;
+}
+
+.page-node-add.page-springboard .content ul li,
+.page-node-edit.page-springboard .content ul li {
+  left: 0;
 }
 
 .content ul li i {
@@ -1529,19 +1651,24 @@ div.vertical-tabs {
 ul.dropdown-menu.views-widget-dropdown li a {
   margin-left: 3px;
   padding: 4px 12px;
+  font-size: 12px;
 }
 
 #top-widgets-wrapper {
-  text-align: right;
-  margin-bottom: 6px;
   position: relative;
   right: -12px;
+  margin-bottom: 6px;
+  text-align: right;
 }
 
 #top-widgets-wrapper .btn-group {
-  margin-right: 12px;
   position: relative;
   top: -2px;
+  margin-right: 12px;
+}
+
+p.wrapper-text {
+  margin: 10px 0;
 }
 
 /* Blockquotes */
@@ -1796,9 +1923,7 @@ table#fundraiser-payment-methods input[type="text"]{
 }
 
 .webform-results-inner {
-  overflow-x: scroll;
   overflow-y: visible;
-  max-width: 100%;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -1996,10 +2121,43 @@ td.views-field.table-actions a {
 .views-exposed-widget {
   display: inline-block;
   vertical-align: bottom;
+  position: relative;
+}
+
+.views-exposed-widget.views-submit-button input {
+  width: 54px;
+  text-align: left;
+}
+
+.views-exposed-widget.views-submit-button:before {
+  position: absolute;
+  top: 15px;
+  right: 11px;
+  margin: 0 6px 0 0;
+  color: #65c5fe;
+  content: "\f002";
+  font-size: 13px;
+  font-family: FontAwesome;
+  pointer-events: none;
 }
 
 .views-exposed-widgets {
   margin-bottom: 8px;
+}
+
+.ajax-progress .throbber {
+  position: absolute;
+  top: 10px;
+  right: -28px;
+  display: block;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fff url('../images/spinnergosb.gif') no-repeat;
+  opacity: 1;
 }
 
 #views-exposed-form-sbv-forms-page-1 div.views-exposed-widget#edit-type-1-wrapper {
@@ -2073,15 +2231,6 @@ td.views-field.table-actions a {
   .springboard-column {
     width: 99%;
   }
-
-  /*.view .view-content,*/
-  /*#webform-emails-form {*/
-    /*overflow-x: auto;*/
-    /*overflow-y: visible;*/
-    /*padding-top: 2px;*/
-    /*max-width: 100%;*/
-    /*-webkit-overflow-scrolling: touch;*/
-  /*}*/
 
   .dashboard {
     min-width: inherit;
