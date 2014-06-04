@@ -1584,22 +1584,32 @@ div.vertical-tabs {
 /* fontawesome list style */
 .page-springboard .content ul li:before,
 .page-node-view .content ul li:before {
-  content: "\f00c";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
   position: absolute;
   left: -26px;
   color: #ccc;
+  content: "\f00c";
+  text-decoration: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-family: FontAwesome;
 }
 
 /* no fontawesome */
 .content ul.tabs li:before,
 .content ul.pager li:before,
 .content .donor-table-view .view-content ul li:before,
-.content ul.dropdown-menu.views-widget-dropdown li:before {
+.content ul.dropdown-menu.views-widget-dropdown li:before,
+.page-node-add .content ul li:before,
+.page-node-edit .content ul li:before {
+  left: inherit;
   content: "";
+  text-decoration: inherit;
+  font-family: inherit;
+}
+
+.page-node-add.page-springboard .content ul li,
+.page-node-edit.page-springboard .content ul li {
+  left: 0;
 }
 
 .content ul li i {
