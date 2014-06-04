@@ -687,10 +687,22 @@ ul.tabs.primary li a:hover,
 }
 
 a.button.add-button:before {
+  display: inline-block;
+  margin: 0px 8px 0 0;
   content: "\f067";
   font-family: FontAwesome;
-  margin: 0px 8px 0 0;
+}
+
+a.button.more-button {
   display: inline-block;
+  margin: 6px 0;
+}
+
+a.button.more-button:after {
+  display: inline-block;
+  margin: 0px 8px 0 8px;
+  content: "\f0a9";
+  font-family: FontAwesome;
 }
 
 input[type="submit"],
@@ -741,10 +753,21 @@ h2.types {
   line-height: 32px;
 }
 
+h2.types:after {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin: 0px 1px 0 12px;
+  content: "\f0ce";
+  font-weight: normal;
+  font-size: 19px;
+  font-family: FontAwesome;
+}
+
 .types-wrapper {
   margin: 0 0 20px 0;
-  padding: 0 0 10px 0;
-  border-bottom: 1px solid #888;
+  padding: 0 0 20px 0;
+  border-bottom: 2px solid #c5c5c5;
 }
 
 .types-wrapper.last {
