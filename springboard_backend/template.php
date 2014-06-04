@@ -96,7 +96,10 @@ function springboard_backend_preprocess_page(&$vars) {
   else {
     $vars['not_loggedin'] = '';
   }
-
+  // Remove local task tabs from some admin pages.
+  if (preg_match('|^admin/springboard$|', $_GET['q']) || preg_match('|^node/([0-9]*)/clone$|', $_GET['q']) || preg_match('|^node/([0-9]*)/delete$|', $_GET['q']) || preg_match('|^admin/springboard/settings$|', $_GET['q'])) {
+    unset($vars['tabs']);
+  }
 }
 /**
  * Overrides theme_menu_tree();
