@@ -703,6 +703,7 @@ a.button.more-button:after {
   margin: 0px 8px 0 8px;
   content: "\f0a9";
   font-family: FontAwesome;
+  font-size: 14px;
 }
 
 input[type="submit"],
@@ -2081,10 +2082,43 @@ td.views-field.table-actions a {
 .views-exposed-widget {
   display: inline-block;
   vertical-align: bottom;
+  position: relative;
+}
+
+.views-exposed-widget.views-submit-button input {
+  width: 54px;
+  text-align: left;
+}
+
+.views-exposed-widget.views-submit-button:before {
+  position: absolute;
+  top: 15px;
+  right: 11px;
+  margin: 0 6px 0 0;
+  color: #65c5fe;
+  content: "\f002";
+  font-size: 13px;
+  font-family: FontAwesome;
+  pointer-events: none;
 }
 
 .views-exposed-widgets {
   margin-bottom: 8px;
+}
+
+.ajax-progress .throbber {
+  position: absolute;
+  top: 10px;
+  right: -28px;
+  display: block;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fff url('../images/spinnergosb.gif') no-repeat;
+  opacity: 1;
 }
 
 #views-exposed-form-sbv-forms-page-1 div.views-exposed-widget#edit-type-1-wrapper {
