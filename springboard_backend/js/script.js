@@ -105,6 +105,11 @@
         $(this).css('margin-top', $(this).parent().height()-$(this).height())
       });
 
+      // Add a file icon to the upload button.
+      $('input[type="file"]').once(function() {
+      $(this).after('<i class="fa fa-file-text-o"></i>');
+      });
+
       // end.
     } // attach.function
   } // drupal.behaviors
