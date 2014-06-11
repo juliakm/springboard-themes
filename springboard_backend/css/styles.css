@@ -1215,26 +1215,36 @@ fieldset.collapsible .fieldset-legend .fieldset-title {
   white-space: nowrap;
 }
 
+.sb-admin-page fieldset#edit-select .control-group,
+.sb-admin-page fieldset#edit-select input[type="submit"] {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sb-admin-page fieldset#edit-select .control-group {
+  margin: 0 10px 0 0;
+}
+
 a.accordion-toggle.collapsed:before {
   background-position: 0 -36px;
 }
 
 .fieldset.collapsible .fieldset.collapsible .panel-collapse .panel-body {
   margin: inherit;
-  padding: inherit;
-  border: inherit;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  background: inherit;
   margin: 30px 26px 20px 26px;
+  padding: inherit;
   padding: 20px;
+  border: inherit;
   border: 1px solid #dfdfdf;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  background: #f5fbfe;
   border-bottom: 2px solid #eaeaea;
+  -webkit-border-radius: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 0;
+  -moz-border-radius: 6px;
+  border-radius: 0;
+  border-radius: 6px;
+  background: inherit;
+  background: #f5fbfe;
 }
 
 .fieldset.collapsible .fieldset.collapsible {
