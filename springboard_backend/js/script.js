@@ -1,4 +1,15 @@
 (function ($) {
+  Drupal.behaviors.springboardCollapsibleTd = {
+    attach: function (context, settings) {
+     $('.sb-collapsible-td .control').click(function() {
+       console.log('clicked');
+       $(this).parent('.sb-collapsible-td').toggleClass('collapsed');
+     })
+    } // attach.function
+  } // drupal.behaviors
+})(jQuery);
+
+(function ($) {
   Drupal.behaviors.springboardBackendNav = {
     attach: function (context, settings) {
       $('.nav.nav-tabs li').mouseenter(function () {
@@ -87,13 +98,6 @@
       else {
           $('body').addClass('sf-not-connected-dashboard');
         }
-
-      // Add pre wrappers to td cells with code.
-      $('td.views-field.views-field-message').each(function () {
-        if($.trim($(this).text()).length !== 0) {
-          $(this).wrapInner('<pre class="td-code"></pre>');
-        }
-      });
 
       // Remove empty pre tags that were rendered by drupal.
       $("pre:empty").remove();

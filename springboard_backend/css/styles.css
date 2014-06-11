@@ -1850,6 +1850,53 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   margin: 0 0 0px 10px;
 }
 
+/**
+ *   Data table - simplified design
+ */
+
+table.data-table,
+.views-data-table table {
+  background-color: #e9e8e3;
+  border-collapse: separate; 
+  border-spacing: 1px;
+}
+
+table.data-table thead,
+.views-data-table table {
+  
+}
+
+table.data-table thead th,
+.views-data-table table th {
+    padding: 8px;
+  
+    border-right: 1px solid #567284;
+}
+
+table.data-table tbody tr,
+.views-data-table tbody tr {
+    /* border-spacing: 0px; */
+  
+    border: 0px;
+    /* border-collapse: collapse; */
+}
+
+table.data-table tbody td,
+.views-data-table tbody td {
+  border: 0;
+  padding: 8px;
+}
+
+table.data-table tbody tr.even td,
+.views-data-table tbody tr.even td {
+  background-color: #fff;
+}
+
+table.data-table tbody tr.odd td,
+.views-data-table tbody tr.odd td {
+  background-color: #f7f7f4;
+}
+
 .donor-table-view .views-field.views-field-nothing.last a {
   padding: 0;
 }
@@ -2094,17 +2141,82 @@ div.springboard-pane {
   display: block;
 }
 
-.view-salesforce-log-item .view-content {
-  overflow-x: auto;
-  overflow-y: visible;
-  padding-top: 2px;
-  max-width: 100%;
-  -webkit-overflow-scrolling: touch;
+/** SB replacement salesforce reports **/
+.view-sbv-sf-batch-items thead,
+.view-sbv-sf-batch-items .sticky-header {
+  z-index: 9999;
 }
 
-.view-salesforce-log-item .view-content td {
-  padding: 4px 14px;
-  font-size: 12px;
+.sb-collapsible-td {
+  position: relative;
+}
+
+.sb-collapsible-td .control {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px 6px 0 0;
+  border-bottom-color: #fff; 
+  display: block;
+  padding: 4px;
+  position: relative;
+  text-align: center;
+  z-index: 9998;
+}
+
+.sb-collapsible-td.collapsed .control {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 1;
+}
+
+.sb-collapsible-td.collapsed .control:hover {
+  background-color: #fff;
+  border-color: #eee;
+  border-radius: 6px;
+}
+
+.sb-collapsible-td .control-show {
+  display: none;
+}
+.sb-collapsible-td.collapsed .control-show {
+  display: inline;
+}
+
+.sb-collapsible-td.collapsed .control-hide {
+  display: none;
+}
+
+.sb-collapsible-td .sb-collapsible-td-content {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  display: block;
+  left: -8px;
+  margin-top: -1px;
+  max-height: 320px;
+  overflow-y: scroll;
+  padding: 8px;
+  position: absolute;
+  width: 360px;
+  z-index: 9997;
+}
+
+.sb-collapsible-td.collapsed .sb-collapsible-td-content {
+  display: none;
+}
+.sb-collapsible-td .sb-collapsible-td-content pre {
+  border: 0;
+  background: transparent;
+  width: 100% !important;
+}
+
+.views-field-sobject .sb-collapsible-td .sb-collapsible-td-content {
+  margin-left: -220px;
+  width: 620px;
+}
+
+.view-sbv-sf-batch-items .views-field-start {
+  white-space: nowrap;
 }
 
 td.views-field.table-actions {

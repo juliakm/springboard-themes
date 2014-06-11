@@ -217,7 +217,8 @@ function springboard_backend_preprocess_views_exposed_form(&$vars, $hook) {
 function springboard_backend_preprocess_views_view_field(&$vars) {
    $field = $vars['field'];
    $view = $vars['view'];
-    if($view->name == 'sbv_contacts') {
+   switch ($view->name) {
+    case 'sbv_contacts':
       // Conditionally add link to view recurring donations if user is a sustainer.
       if($field->real_field == 'edit_node') {
         $donations = _fundraiser_sustainers_get_donation_sets_recurr_by_uid($field->last_tokens['[uid]']);
@@ -225,5 +226,24 @@ function springboard_backend_preprocess_views_view_field(&$vars) {
           $vars['output'] .= ' | ' . l(t('Recurring Gifts'), 'user/'. $field->last_tokens['[uid]'] . '/recurring_overview');
         }
       }
-    }
+    break;
+    case 'sbv_sf_batch_items':
+      $field = $vars['field'];
+      switch($field->field_alias) {
+        case 'salesforce_log_item_sobject':
+        case 'salesforce_log_item_message':
+          if($vars['output'] != '') {
+            $vars['output'] = '<div class="sb-collapsible-td collapsed"><a class="control"><span class="control-show">Show</span><span class="control-hide">Hide</span></a><div class="sb-collapsible-td-content">' . $vars['output'] . '</div></div>';
+          }
+        break;
+        case 'salesforce_log_item_drupal_id':
+        break;
+        case 'salesforce_queue_salesforce_log_item_queue':
+          if ($field->last_render == 'Removed from queue') {
+            $vars['output'] = t('Removed');
+          }
+        break;
+      }
+    break;
+  }
 }

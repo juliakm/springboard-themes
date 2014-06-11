@@ -9,3 +9,10 @@ ul.nav li {
   list-style-image: none;
   list-style-type: none;
 }
+
+/* make sure devel Krumo text is always black */
+div.krumo-root,
+div.krumo-root a,
+div.krumo-root .krumo-node a {
+  color: #000;
+}
