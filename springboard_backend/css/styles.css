@@ -2220,6 +2220,39 @@ div.springboard-pane {
   width: 100% !important;
 }
 
+/** collapsible tooltip */
+.sb-errors-tip {
+  
+}
+
+.sb-errors-tip .sb-errors-control {
+  background: transparent url('../../springboard_base/img/glyphicons-halflings-white.png') no-repeat 0 -120px;
+  cursor: pointer;
+  display: inline-block;
+  height: 13px;
+  text-indent: -9999px;
+  width: 13px;
+}
+
+.sb-errors-tip .sb-errors-content {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  color: #000;
+  display: block;
+  padding: 8px;
+  position: absolute;
+  z-index: 9999;
+}
+
+.sb-errors-tip .sb-errors-content a {
+  color: #0088cc;
+}
+
+.sb-errors-tip.collapsed .sb-errors-content {
+  display: none;
+}
+
 .views-field-sobject .sb-collapsible-td .sb-collapsible-td-content {
   margin-left: -220px;
   width: 620px;

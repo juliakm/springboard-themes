@@ -1,10 +1,22 @@
 (function ($) {
+  // Collapses large table cell content into a hideable block
   Drupal.behaviors.springboardCollapsibleTd = {
     attach: function (context, settings) {
      $('.sb-collapsible-td .control').click(function() {
-       console.log('clicked');
        $(this).parent('.sb-collapsible-td').toggleClass('collapsed');
      })
+    } // attach.function
+  } // drupal.behaviors
+})(jQuery);
+
+(function ($) {
+  // Adds a tooltip for the SF Error Codes to the header of the batch item log.
+  Drupal.behaviors.springboardSfErrorCodes = {
+    attach: function (context, settings) {
+     $('.view-sbv-sf-batch-items th.views-field-error-code').append('<span class="sb-errors-tip collapsed"><a class="sb-errors-control">What\'s This?</a><span class="sb-errors-content"><a href="https://www.salesforce.com/us/developer/docs/api/Content/sforce_api_calls_concepts_core_data_objects.htm#i1421192">Error code definitions.</a></span></span>').once();
+     $('.view-sbv-sf-batch-items th.views-field-error-code .sb-errors-control').click(function(){
+       $(this).parent('.sb-errors-tip').toggleClass('collapsed');
+     });
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
