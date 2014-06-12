@@ -1635,9 +1635,10 @@ div.vertical-tabs {
 .content .donor-table-view .view-content ul li:before,
 .content ul.dropdown-menu.views-widget-dropdown li:before,
 .page-node-add .content ul li:before,
-.page-node-edit .content ul li:before {
+.page-node-edit .content ul li:before,
+.sbv-notes-view .view-content ul.notes-feed-list > li:before {
   left: inherit;
-  content: "";
+  content: " ";
   text-decoration: inherit;
   font-family: inherit;
 }
@@ -2097,6 +2098,115 @@ ul.tabs.secondary li a.active {
 
 /* Views */
 
+/* Notes */
+
+.springboard-pane.springboard-notes-feed {
+  border: 1px solid #cdcdcd;
+}
+
+.springboard-pane.springboard-notes-feed > h2 {
+  margin: 0 0 8px 0;
+  padding: 0;
+  line-height: 30px;
+}
+
+.sbv-notes-view .view-content ul.notes-feed-list li.views-row {
+  margin: 0 0 20px 0;
+}
+
+.sbv-notes-view .view-content ul.notes-feed-list li.views-row {
+  margin: 0 0 14px 0;
+  padding: 0 6% 14px 0;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.sbv-notes-view .view-content ul.notes-feed-list li.views-row.views-row-last {
+  border-bottom: none;
+}
+
+.sbv-notes-view .view-content ul.notes-feed-list,
+.sbv-notes-view .view-content ul.notes-feed-list > li {
+  margin: 0;
+  padding: 0;
+}
+
+.sbv-notes-view .view-content ul.notes-feed-list > li {
+  left: 0;
+}
+
+.sbv-notes-view .view-content ul.notes-feed-list > li p {
+  padding: 0;
+}
+
+.notes-date-wrapper,
+.notes-content {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.notes-content h3 {
+  margin: 0 0 6px 0;
+  line-height: 30px;
+}
+
+.notes-date-wrapper {
+  padding-top: 4px;
+  width: 19%;
+}
+
+.notes-content {
+  width: 79%;
+}
+
+.notes-content a.button {
+  display: block;
+  display: inline-block;
+  margin: 10px 0 0 0;
+  color: #fff;
+}
+
+.notes-content p {
+  line-height: 1.7em;
+}
+
+.content .notes-content li {
+  margin: 6px 0 6px 0;
+}
+
+.notes-day,
+.notes-month {
+  display: block;
+}
+
+.notes-date {
+  display: block;
+  width: 54px;
+  background: #f9f9f9;
+}
+
+.notes-day {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 0 0 0;
+  color: #1889c1;
+  text-align: center;
+  font-weight: normal;
+  font-weight: 300;
+  font-size: 27px;
+}
+
+.notes-month {
+  display: block;
+  padding: 0px 10px;
+  border-top: 1px solid #f3f3f3;
+  background-color: #1889c1;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 11px;
+}
+
 .view .view-content td a {
   text-transform: capitalize;
 }
@@ -2468,12 +2578,12 @@ td.views-field.table-actions a {
   }
 
   .springboard-column.sb-col-left {
-    width: 49%;
+    width: 65%;
   }
 
   .springboard-column.sb-col-right {
-    width: 49%;
-    margin-left: 2%;
+    width: 33%;
+    margin-left: 1.2%;
   }
 
   input,
