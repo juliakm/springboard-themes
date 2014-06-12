@@ -536,6 +536,39 @@ div.status button.close {
   color: #58a8a9;
 }
 
+/* Dashboard log messages */
+
+.springboard-dashboard.dashboard .views-group {
+  padding: 0 0 10px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: none;
+  color: #333;
+}
+
+.springboard-dashboard.dashboard .views-group a {
+  color: #333;
+}
+
+.springboard-dashboard.dashboard .views-group.debug ul {
+  border-left: 6px solid #edc380;
+}
+
+.springboard-dashboard.dashboard .views-group ul li {
+  margin: 0 0 10px 10px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.springboard-dashboard.dashboard .views-group.info ul {
+  border-left: 6px solid #58a8a9;
+}
+
+.springboard-dashboard.dashboard .views-group.critical ul {
+  border-left: 6px solid #da675d;
+}
+
 /* Form elements */
 
 .form-actions.form-wrapper {
