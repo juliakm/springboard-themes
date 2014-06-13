@@ -164,13 +164,20 @@ function springboard_base_form_element($variables) {
   $element += array(
     '#title_display' => 'before',
   );
+  
+  $type = springboard_base_get_element_type($element);
 
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
   // Add bootstrap group class
-  $attributes['class'][] = 'control-group';
+  $attributes['class'] = array(
+    'form-item',
+    'webform-component',
+    'webform-component-' . $type,
+    'control-group'
+  );
 
   // If #title is not set, we don't display any label or required marker.
   if (!isset($element['#title'])) {
@@ -217,14 +224,8 @@ function springboard_base_webform_element($variables) {
   );
 
   $element = $variables['element'];
-
-  // All elements using this for display only are given the "display" type.
-  if (isset($element['#format']) && $element['#format'] == 'html') {
-    $type = 'display';
-  }
-  else {
-    $type = (isset($element['#type']) && !in_array($element['#type'], array('markup', 'textfield', 'webform_email', 'webform_number'))) ? $element['#type'] : $element['#webform_component']['type'];
-  }
+  
+  $type = springboard_base_get_element_type($element);
 
   // Convert the parents array into a string, excluding the "submitted" wrapper.
   $nested_level = $element['#parents'][0] == 'submitted' ? 1 : 0;
@@ -575,4 +576,18 @@ function springboard_base_menu_link(array $variables) {
   $element['#attributes']['id'] = 'mlid-' . $element['#original_link']['mlid'];
   $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $menu_name;
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+/**
+ * Get $type (e.g. 'checkbox', 'radio', 'radios') for a form element.
+ */
+function springboard_base_get_element_type($element) {
+  // All elements using this for display only are given the "display" type.
+  if (isset($element['#format']) && $element['#format'] == 'html') {
+    $type = 'display';
+  }
+  else {
+    $type = (isset($element['#type']) && !in_array($element['#type'], array('markup', 'textfield', 'webform_email', 'webform_number'))) ? $element['#type'] : $element['#webform_component']['type'];
+  }
+  return $type;
 }
