@@ -2098,6 +2098,19 @@ ul.tabs.secondary li a.active {
 
 /* Views */
 
+/* Reports */
+
+.page-admin-reports-salesforce td .td-wrapper {
+  overflow: hidden;
+  width: 160px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-admin-reports-salesforce .views-widget .control-group .date-padding .form-text {
+  width: 90px;
+}
+
 /* Notes */
 
 .springboard-pane.springboard-notes-feed {

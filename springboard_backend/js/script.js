@@ -98,9 +98,14 @@
       // Wrap in fieldset-legend to match others.
       $('fieldset.webform-submission-info legend').wrapInner('<span class="fieldset-legend"></span>');
 
-      // Add an inner wrapper in order to truncate.
+      // Add an inner wrappers in order to truncate.
+
       $('.webform-results-wrapper th').each(function () {
         $(this).wrapInner('<div class="th-wrapper"></div>');
+      });
+
+      $('.page-admin-reports-salesforce td.views-field-field-fundraiser-internal-name').each(function () {
+        $(this).wrapInner('<div class="td-wrapper"></div>');
       });
 
       // Add a body class for SF connection status.
