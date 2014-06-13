@@ -9,3 +9,8 @@ ul.nav li {
   list-style-image: none;
   list-style-type: none;
 }
+
+/* override Drupal top margin on form items */
+.form-item.control-group {
+  margin-top: 0px;
+}
