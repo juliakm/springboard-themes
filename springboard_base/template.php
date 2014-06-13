@@ -164,13 +164,19 @@ function springboard_base_form_element($variables) {
   $element += array(
     '#title_display' => 'before',
   );
+  
+  $type = $element['#type'];
 
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
   // Add bootstrap group class
-  $attributes['class'][] = 'control-group';
+  $attributes['class'] = array(
+    'form-item',
+    'form-type-' . $type,
+    'control-group'
+  );
 
   // If #title is not set, we don't display any label or required marker.
   if (!isset($element['#title'])) {
@@ -217,7 +223,7 @@ function springboard_base_webform_element($variables) {
   );
 
   $element = $variables['element'];
-
+  
   // All elements using this for display only are given the "display" type.
   if (isset($element['#format']) && $element['#format'] == 'html') {
     $type = 'display';
