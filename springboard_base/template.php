@@ -172,9 +172,11 @@ function springboard_base_form_element($variables) {
     $attributes['id'] = $element['#id'];
   }
   // Add bootstrap group class
+  $concatenated_class = str_replace('_', '-', implode('-', $element['#parents']));
   $attributes['class'] = array(
     'form-item',
     'form-type-' . $type,
+    'form-item-' . $concatenated_class,
     'control-group'
   );
 
@@ -208,7 +210,6 @@ function springboard_base_form_element($variables) {
     $output .= '<div class="description">' . $element['#description'] . "</div>\n";
   }
   $output .= '</div>';
-
   return $output;
 }
 
