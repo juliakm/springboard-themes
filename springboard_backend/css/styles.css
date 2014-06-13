@@ -714,6 +714,7 @@ ul.tabs.primary li a:hover,
 a.button.add-button:before {
   display: inline-block;
   margin: 0px 8px 0 0;
+  color: #fff;
   content: "\f067";
   font-family: FontAwesome;
 }
@@ -727,8 +728,8 @@ a.button.more-button:after {
   display: inline-block;
   margin: 0px 8px 0 8px;
   content: "\f0a9";
-  font-family: FontAwesome;
   font-size: 14px;
+  font-family: FontAwesome;
 }
 
 input[type="submit"],
@@ -2162,6 +2163,33 @@ ul.tabs.secondary li a.active {
   line-height: 30px;
 }
 
+.sbv-notes-view .view-footer {
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  border-top: 1px solid #cdcdcd;
+  text-align: center;
+}
+
+.sbv-notes-view .view-footer a.button.all-notes,
+.sbv-notes-view  a.button.more-notes {
+  position: relative;
+  display: inline-block;
+  padding: 4px 30px 4px 6px;
+}
+
+.sbv-notes-view .view-footer a.button.all-notes:after,
+.sbv-notes-view  a.button.more-notes:after {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  margin: 0 6px 0 0;
+  color: #fff;
+  content: "\f0f6";
+  font-size: 13px;
+  font-family: FontAwesome;
+  pointer-events: none;
+}
+
 .notes-date-wrapper {
   padding-top: 4px;
   width: 19%;
@@ -2225,9 +2253,9 @@ ul.tabs.secondary li a.active {
 }
 
 .view .view-content td.views-field-mail a {
-  text-transform: inherit;
   overflow: hidden;
   width: 100px;
+  text-transform: inherit;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -2236,14 +2264,14 @@ ul.tabs.secondary li a.active {
 .springboard-recent-forms .more-link,
 .view-sbv-soap-errors .more-link {
   display: block;
+  margin-bottom: 10px;
   text-align: center;
   font-size: 15px;
-  margin-bottom: 10px;
 }
 
 .views-group {
-  padding: 12px 35px 12px 30px;
   margin-bottom: 10px;
+  padding: 12px 35px 12px 30px;
 }
 
 .views-group a {
@@ -2412,7 +2440,7 @@ td.views-field.table-actions a {
   top: 15px;
   right: 11px;
   margin: 0 6px 0 0;
-  color: #65c5fe;
+  color: #fff;;
   content: "\f002";
   font-size: 13px;
   font-family: FontAwesome;
