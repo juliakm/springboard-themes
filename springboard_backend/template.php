@@ -96,7 +96,14 @@ function springboard_backend_preprocess_page(&$vars) {
     $vars['not_loggedin'] = '';
   }
   // Remove local task tabs from some admin pages.
-  if (preg_match('|^admin/springboard$|', $_GET['q']) || preg_match('|^node/([0-9]*)/clone$|', $_GET['q']) || preg_match('|^node/([0-9]*)/delete$|', $_GET['q']) || preg_match('|^admin/springboard/settings$|', $_GET['q'])) {
+  $t1 = preg_match('|^admin/springboard$|', $_GET['q']); // Springboard dashboard.
+  $t2 = preg_match('|^node/([0-9]*)/clone$|', $_GET['q']); // Node clone confirmation page.
+  $t3 = preg_match('|^node/([0-9]*)/delete$|', $_GET['q']); // Node delete confirmation page.
+  $t4 = preg_match('|^admin/springboard/settings$|', $_GET['q']); // Springboard settings page.
+  $t5 = preg_match('|^admin/config/content/webform_goals$|', $_GET['q']); // Webform Goals page (purposefully remove access to child pages).
+  $t6 = preg_match('|^admin/config/services/springboard_social$|', $_GET['q']); // Springboard Social page (purposefully remove access to child pages).
+
+  if ($t1 || $t2 || $t3 || $t4 || $t5 || $t6) { 
     unset($vars['tabs']);
   }
 }
