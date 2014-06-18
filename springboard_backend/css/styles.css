@@ -862,15 +862,15 @@ ul.tabs.primary li.active a:hover {
 /* Search fields */
 
 .views-widget .control-group .form-text {
-  padding-right: 14px;
-  padding-right: 4px \9;
-  padding-left: 14px;
-  padding-left: 4px \9;
   margin: 0px 3px;
+  padding-right: 14px \9;
+  padding-right: 4px;
+  padding-left: 14px \9;
+  padding-left: 4px;
+  width: 150px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
-  width: 150px;
 }
 
 .views-widget .control-group .date-padding .form-text {
@@ -883,6 +883,23 @@ ul.tabs.primary li.active a:hover {
 
 .views-widget input#edit-combine {
   width: 170px;
+}
+
+.page-admin-reports-salesforce .views-widget input#edit-combine {
+  width: 120px;
+}
+
+.page-admin-reports-salesforce #edit-status-wrapper {
+  position: relative;
+  top: 8px;
+}
+
+.page-admin-reports-salesforce input#edit-mail {
+  width: 100px;
+}
+
+.page-admin-reports-salesforce .views-exposed-widget.views-submit-button {
+  margin: 0 0 0 10px;
 }
 
 .views-exposed-form {
@@ -1306,7 +1323,7 @@ a.accordion-toggle.collapsed:before {
 }
 
 .views-widget-filter-status .select-wrapper {
-  width: 100px;
+  width: 284px;
 }
 
 .ie8 .select-wrapper {
