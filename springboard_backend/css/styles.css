@@ -651,11 +651,17 @@ ul.tabs.primary li a,
   text-shadow: none;
 }
 
-.file-widget.form-managed-file {
+.file-widget.form-managed-file,
+#edit-picture .control-group {
   position: relative;
 }
 
-input[type="file"] {
+label[for="edit-picture-upload"] {
+  position: relative;
+  top: -20px;
+}
+
+.page-node input[type="file"] {
   position: relative;
   z-index: 2;
   display: inline-block;
@@ -1898,7 +1904,6 @@ table.data-table thead,
 table.data-table thead th,
 .views-data-table table th {
     padding: 8px;
-  
     border-right: 1px solid #567284;
 }
 
