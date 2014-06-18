@@ -761,7 +761,7 @@ a.button.add-button {
 
 .buttons-wrapper {
   position: relative;
-  top: 64px;
+  top: -6px;
   right: 0;
   display: inline-block;
   float: right;
@@ -1115,7 +1115,7 @@ fieldset fieldset .fieldset-wrapper {
 
 .view-header .button,
 .button-create {
-  padding: 7px 10px 7px 22px;
+  padding: 4px 10px 4px 22px;
   float: right;
 }
 
@@ -1126,6 +1126,21 @@ fieldset fieldset .fieldset-wrapper {
 }
 
 .view-header a.button:before {
+  content: "\f067";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: relative;
+  left: -12px;
+  color: #fff;
+}
+
+.button-create.button-left {
+  float: left;
+}
+
+a.button-create.button-left:before {
   content: "\f067";
   font-family: FontAwesome;
   font-style: normal;
@@ -1637,7 +1652,8 @@ div.vertical-tabs {
 .content ul.dropdown-menu.views-widget-dropdown li:before,
 .page-node-add .content ul li:before,
 .page-node-edit .content ul li:before,
-.sbv-notes-view .view-content ul.notes-feed-list > li:before {
+.sbv-notes-view .view-content ul.notes-feed-list > li:before,
+.content ul.vertical-tabs-list li:before {
   left: inherit;
   content: " ";
   text-decoration: inherit;
@@ -1645,7 +1661,8 @@ div.vertical-tabs {
 }
 
 .page-node-add.page-springboard .content ul li,
-.page-node-edit.page-springboard .content ul li {
+.page-node-edit.page-springboard .content ul li,
+.page-springboard.page-admin-config-system-googleanalytics .content ul li {
   left: 0;
 }
 
@@ -2115,6 +2132,8 @@ ul.tabs.secondary li a.active {
 /* Notes */
 
 .springboard-pane.springboard-notes-feed {
+  margin: 3px;
+  padding: 5px;
   border: 1px solid #cdcdcd;
 }
 
@@ -2448,7 +2467,7 @@ td.views-field.table-actions a {
 }
 
 .views-exposed-widgets {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .ajax-progress .throbber {
