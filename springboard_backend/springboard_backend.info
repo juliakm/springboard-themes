@@ -14,9 +14,11 @@ regions[content] = Content
 regions[footer] = Footer
 
 ;Stylesheets
+stylesheets[all][] = css/uniform_base.css
 stylesheets[all][] = css/styles.css
 
 ;Scripts
+scripts[] = js/jquery.uniform.js
 scripts[] = js/script.js
 
 ;Theme Settings
