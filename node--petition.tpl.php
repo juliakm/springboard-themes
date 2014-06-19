@@ -97,15 +97,27 @@
   <?php endif; ?>
 
   <div class="content"<?php print $content_attributes; ?>>
+    <div id="left" class="span6">
+      <div class="row-fluid">
+        <?php print render($content['body']);?>
+        <?php print render($content['field_petition_message']);?>
+      </div>
+    </div>
+    <div id="right" class="span6">
+      <div class="row-fluid">
+        <?php print render($content['webform']);?>
+      </div>
+    </div>
     <?php
       // We hide the comments and links now so that we can render them later.
+      hide($content['body']);
+      hide($content['field_petition_message']);
+      hide($content['webform']);
       hide($content['comments']);
       hide($content['links']);
       print render($content);
     ?>
   </div>
-  
-  <pre><?php print_r($content); ?></pre>
 
   <?php print render($content['links']); ?>
 
