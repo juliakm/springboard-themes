@@ -193,6 +193,11 @@
     border-top: #E0E0E0 solid 1px;
     padding-top: 20px;
 }
+.node-type-petition .node {
+    margin-bottom: 20px;
+    border-bottom: #E0E0E0 solid 1px;
+    padding-bottom: 20px;
+}
 .fundraiser-donation-form {
     margin-top: 5px;
 }
