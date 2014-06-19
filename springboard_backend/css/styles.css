@@ -2147,16 +2147,35 @@ ul.tabs.secondary li a.active {
 
 /* Notes */
 
-.springboard-pane.springboard-notes-feed {
-  margin: 3px;
-  padding: 5px;
-  border: 1px solid #cdcdcd;
+.springboard-pane.springboard-notes-feed .view-content {
+  margin: 0;
+  padding: 6px 1% 0 5%;
+  background: #fff;
 }
 
-.springboard-pane.springboard-notes-feed > h2 {
-  margin: 0 0 8px 0;
-  padding: 0;
+.springboard-pane.springboard-notes-feed .view-header {
+  vertical-align: middle;
+  color: #FFF;
+  background: -moz-linear-gradient(top, #143c54 0%, #08314b 100%, #7db9e8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #143C54), color-stop(100%, #08314B), color-stop(100%, #7DB9E8));
+  background: -webkit-linear-gradient(top, #143C54 0%, #08314B 100%, #7DB9E8 100%);
+  background: -o-linear-gradient(top, #143c54 0%, #08314b 100%, #7db9e8 100%);
+  background: -ms-linear-gradient(top, #143c54 0%, #08314b 100%, #7db9e8 100%);
+  background: linear-gradient(to bottom, #143C54 0%, #08314B 100%, #7DB9E8 100%);
+  text-align: left;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.springboard-pane.springboard-notes-feed .view-header h2 {
+  margin: 0;
+  padding: 10px;
   line-height: 30px;
+  color: #fff;
 }
 
 .sbv-notes-view .view-content ul.notes-feed-list li.views-row {
@@ -2165,12 +2184,13 @@ ul.tabs.secondary li a.active {
 
 .sbv-notes-view .view-content ul.notes-feed-list li.views-row {
   margin: 0 0 14px 0;
-  padding: 0 6% 14px 0;
-  border-bottom: 1px solid #cdcdcd;
+  padding: 0 6% 4px 0;
 }
 
 .sbv-notes-view .view-content ul.notes-feed-list li.views-row.views-row-last {
   border-bottom: none;
+  margin: 0;
+  padding: 0 0 20px 0;
 }
 
 .sbv-notes-view .view-content ul.notes-feed-list,
@@ -2199,10 +2219,11 @@ ul.tabs.secondary li a.active {
 }
 
 .sbv-notes-view .view-footer {
-  margin: 10px 0 0 0;
+  margin: 0;
   padding: 10px 0 0 0;
-  border-top: 1px solid #cdcdcd;
   text-align: center;
+  background: #fff;
+  border-top: 1px solid #cdcdcd;
 }
 
 .sbv-notes-view .view-footer a.button.all-notes,
@@ -2225,13 +2246,8 @@ ul.tabs.secondary li a.active {
   pointer-events: none;
 }
 
-.notes-date-wrapper {
-  padding-top: 4px;
-  width: 19%;
-}
-
-.notes-content {
-  width: 79%;
+.notes-timestamp {
+  font-weight: bold;
 }
 
 .notes-content a.button {
