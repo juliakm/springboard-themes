@@ -174,9 +174,24 @@
   margin:50px auto 10px;
 }
 /* Standardized form and font styles for Springboard forms */
+.node-type-petition .webform-client-form,
+.field-name-field-petition-message,
+.node-type-petition .field-name-body,
 .node-type-donation-form .field-name-body {
     padding: 0 10px;
     max-width: 630px;
+}
+.node-type-petition .webform-client-form {
+    margin: 0 0 0 10px;
+}
+.field-name-field-petition-message,
+.node-type-petition .field-name-body {
+    margin: 0 10px 0 0;
+}
+.field-name-field-petition-message {
+    margin-top: 20px;
+    border-top: #E0E0E0 solid 1px;
+    padding-top: 20px;
 }
 .fundraiser-donation-form {
     margin-top: 5px;
@@ -197,15 +212,18 @@
     font-size: 22px;
     font-weight: bold;
 }
+.node-type-petition label,
 .node-type-donation-form label {
     font-size: 16px;
 }
+.node-type-petition label.option,
 .node-type-donation-form label.option {
     margin-left: 5px;
 }
 .node-type-donation-form select {
     width: 280px;
 }
+
 .node-type-donation-form textarea, 
 .node-type-donation-form input[type="text"], 
 .node-type-donation-form input[type="password"], 
@@ -224,14 +242,27 @@
 .node-type-donation-form .uneditable-input {
     width: 268px;
 }
+.node-type-petition textarea,
+.node-type-petition input[type="text"],
+.node-type-petition input[type="email"],
+.node-type-petition input.input-medium,
+.node-type-petition .uneditable-input {
+    width: 370px;
+}
+.node-type-petition select.input-medium {
+    width: 390px;
+}
 .node-type-donation-form input.input-medium,
 .node-type-donation-form select.input-medium {
     width: 150px;
 }
+.node-type-petition input.input-small,
+.node-type-petition select.input-small,
 .node-type-donation-form input.input-small,
 .node-type-donation-form select.input-small {
     width: 90px;
 }
+.node-type-petition .description,
 .node-type-donation-form .description {
     font-size: 12px;
     line-height: 16px;
@@ -241,11 +272,13 @@
 .node-type-donation-form .fundraiser_submit_message {
     margin-left: 10px;
 }
+.node-type-petition .form-actions,
 .node-type-donation-form .form-actions {
     background: none;
     border: 0px;
     padding: 0;
 }
+.node-type-petition input[type="submit"].btn, 
 .node-type-donation-form input[type="submit"].btn {
     padding: 20px 0;
     margin-left: 10px;
@@ -266,9 +299,18 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65d34a', endColorstr='#59c143',GradientType=0 );
     border: 0px;
 }
-
+.node-type-petition input[type="submit"].btn {
+    margin-left: 0;
+    width: 390px;
+}
 
 @media (min-width: 768px) {
+    .node-type-petition textarea,
+    .node-type-petition input[type="text"],
+    .node-type-petition input[type="email"],
+    .node-type-petition input.input-medium,
+    .node-type-petition .uneditable-input,
+    .node-type-petition input[type="submit"].btn,
     .node-type-donation-form .two-column-donation .span6 textarea, 
     .node-type-donation-form .two-column-donation .span6 input[type="text"], 
     .node-type-donation-form .two-column-donation .span6 input[type="password"], 
@@ -289,12 +331,15 @@
     .node-type-donation-form .two-column-donation .span6 input[type="submit"].btn {
         width: 97%;
     }
+    .node-type-petition select.input-medium,
     .node-type-donation-form .two-column-donation .span6 select {
         width: 100%;
     }
     
     .node-type-donation-form .two-column-donation .span6 input.input-medium,
     .node-type-donation-form .two-column-donation .span6 select.input-medium,
+    .node-type-petition input.input-small,
+    .node-type-petition select.input-small,
     .node-type-donation-form .two-column-donation .span6 input.input-small, 
     .node-type-donation-form .two-column-donation .span6 select.input-small {
         width: 48%;
@@ -314,8 +359,13 @@
   }
 }
 
-
 @media (max-width: 480px) {
+    .node-type-petition textarea,
+    .node-type-petition input[type="text"],
+    .node-type-petition input[type="email"],
+    .node-type-petition input.input-medium,
+    .node-type-petition .uneditable-input,
+    .node-type-petition input[type="submit"].btn,
     .node-type-donation-form textarea, 
     .node-type-donation-form input[type="text"], 
     .node-type-donation-form input[type="password"], 
@@ -337,12 +387,15 @@
     .node-type-donation-form input[type="submit"].btn {
         width: 100%;
     }
+    .node-type-petition select,
+    .node-type-petition select.input-medium,
     .node-type-donation-form select {
         width: 103%;
     }
+    .node-type-petition input.input-small,
+    .node-type-petition select.input-small,
     .node-type-donation-form input.input-small, 
     .node-type-donation-form select.input-small {
         width: 48%;
-    }
-    
+    } 
 }
