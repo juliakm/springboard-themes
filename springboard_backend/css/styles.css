@@ -749,10 +749,6 @@ input#edit-submit-donors {
   position: relative;
 }
 
-input#edit-submit-sbv-contacts {
-  margin: 30px 10px 10px 8px;
-}
-
 a.button.add-button {
   position: relative;
   top: 11px;
@@ -955,8 +951,9 @@ ul.tabs.primary li.active a:hover {
   display: inline-block;
 }
 
-#edit-date-filter-min-wrapper {
-
+#edit-sbp-state-value-wrapper {
+  position: relative;
+  top: 6px;
 }
 
 .views-exposed-widget label {
@@ -1137,6 +1134,7 @@ fieldset fieldset .fieldset-wrapper {
 .button-create {
   padding: 4px 10px 4px 22px;
   float: right;
+  text-transform: capitalize;
 }
 
 .view-header .button:hover,
@@ -1160,7 +1158,7 @@ fieldset fieldset .fieldset-wrapper {
   float: left;
 }
 
-a.button-create.button-left:before {
+a.button-create:before {
   content: "\f067";
   font-family: FontAwesome;
   font-style: normal;
@@ -1398,6 +1396,11 @@ html.js input.throbbing {
   margin-top: inherit;
 }
 
+.views-button {
+  position: relative;
+  top: 30px;
+}
+
 .webform-submission-view .control-group label:first-child {
   margin-top: 12px;
 }
@@ -1562,7 +1565,7 @@ div.vertical-tabs {
   padding-left: 0;
 }
 
-.page-springboard .content ul li,
+.page-springboard-view .content ul li,
 .page-node-view .content ul li {
   list-style: none;
   position: relative;
@@ -1583,6 +1586,8 @@ div.vertical-tabs {
 }
 
 /* no fontawesome */
+.page-springboard .content table ul li:before,
+.page-springboard .content ul.contextual-links li:before,
 .content ul.tabs li:before,
 .content ul.pager li:before,
 .content .donor-table-view .view-content ul li:before,
@@ -1701,6 +1706,10 @@ th {
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
+}
+
+form .field-multiple-table th.field-label {
+  padding-left: 8px;
 }
 
 body:not(.springboard-dashboard) th {
