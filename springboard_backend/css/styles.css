@@ -180,18 +180,15 @@ body #block-system-main {
 /* sync-status dashboard */
 
 .springboard-sf-status .sf-status {
-  background: #fefefe;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 0px;
-  padding-left: 20px;
   margin-bottom: 15px;
+  padding: 10px 20px 0 20px;
+  background: #fefefe;
 }
 
 .springboard-sf-status ul li,
 .springboard-sf-status .sf-status {
-  border-bottom: solid 1px #e8e7e2;
   padding-bottom: 10px;
+  border-bottom: solid 1px #e8e7e2;
 }
 
 .springboard-sf-status ul li:last-child {
@@ -2141,10 +2138,7 @@ ul.tabs.secondary li a.active {
 /* Reports */
 
 .page-admin-reports-salesforce td .td-wrapper {
-  overflow: hidden;
-  width: 160px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 120px;
 }
 
 .page-admin-reports-salesforce .views-widget .control-group .date-padding .form-text {
