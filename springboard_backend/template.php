@@ -45,7 +45,7 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'springboard-templates';
   }
 
-  if (arg(0) == "springboard" && arg(1) == NULL) {
+  if (arg(1) == "springboard" && arg(2) == NULL) {
     $vars['classes_array'][] = 'springboard-dashboard';
   }
 
