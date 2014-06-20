@@ -49,6 +49,11 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'springboard-dashboard';
   }
 
+  // Not any kind of node add or edit page.
+  if (!(arg(1) == 'add' || arg(1) == 'edit' || arg(2) == 'edit' || arg(3) == 'edit' || arg(4) == 'edit' || arg(4) == 'fundraiser_upsell')) {
+    $vars['classes_array'][] = 'page-springboard-view';
+  }
+
 }
 
 /**
@@ -253,4 +258,22 @@ function springboard_backend_preprocess_views_view_field(&$vars) {
       }
     break;
   }
+}
+
+/**
+ * Implements hook_preprocess_views().
+ *
+ */
+function springboard_backend_preprocess_views_view(&$vars) {
+
+  // Preprocess views.
+  $view = $vars['view'];
+
+  // Set a var for the argument on sbv_assets.
+  if ($view->name == 'sbv_assets') {
+    // Get the views argument.
+    $view = views_get_current_view();
+    $vars['arg0'] = $view->args[0];
+  }
+
 }

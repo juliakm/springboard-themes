@@ -38,6 +38,9 @@
   Drupal.behaviors.springboardMisc = {
     attach: function (context, settings) {
 
+      // Add uniform to selects
+      $("select").uniform();
+
       // Set ul depths for better theming.
       $('#footer ul, #menu-wrapper ul').each(function () {
         var depth = $(this).parents('ul').length;
@@ -75,14 +78,6 @@
       $(".types-wrapper:visible:first-child").addClass("first");
       $(".types-wrapper:visible:last-child").addClass("last");
 
-      // Theme select lists, add a wrapper.
-      $('select:not([multiple])').each(function () {
-        $(this).once(function () {
-          $(this).wrap('<div class="select-wrapper"></div>');
-          $('.select-wrapper').append('<div class="arrow"></div> ');
-        });
-      });
-
       // Move the footer home link to the end.
       $('.nav-footer li.home').appendTo('.nav-footer li.options ul');
 
@@ -104,10 +99,6 @@
         $(this).wrapInner('<div class="th-wrapper"></div>');
       });
 
-      $('.page-admin-reports-salesforce td.views-field-field-fundraiser-internal-name').each(function () {
-        $(this).wrapInner('<div class="td-wrapper"></div>');
-      });
-
       // Add a body class for SF connection status.
         if ($('.sf-status p').hasClass('sf-connected')){
           $('body').addClass('sf-connected-dashboard');
@@ -127,7 +118,7 @@
       });
 
       // Add a file icon to the upload button.
-      $('input[type="file"]').once(function() {
+      $('.page-node input[type="file"]').once(function() {
       $(this).after('<i class="fa fa-file-text-o"></i>');
       });
 
