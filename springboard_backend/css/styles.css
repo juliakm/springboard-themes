@@ -2291,15 +2291,27 @@ ul.tabs.secondary li a.active {
   margin: 20px 0;
 }
 
-.views-field.views-field-field-fundraiser-internal-name {
+.springboard-dashboard td.views-field.views-field-title a,
+.springboard-dashboard td.views-field-field-fundraiser-internal-name span {
+  display: block;
+  overflow: hidden;
+  margin: 0 0 4px 0;
+  padding: 0 0 4px 0;
+  width: 170px;
+  text-transform: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-admin-reports-salesforce-donations .views-field.views-field-field-fundraiser-internal-name {
   width: 210px;
 }
 
-td.views-field.views-field-status {
+.page-admin-reports-salesforce-donations td.views-field.views-field-status {
   width: 154px;
 }
 
-td.views-field.views-field-view-order.last {
+.page-admin-reports-salesforce-donations td.views-field.views-field-view-order {
   width: 140px;
 }
 
