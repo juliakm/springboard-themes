@@ -62,8 +62,17 @@ function springboard_backend_preprocess_html(&$vars) {
 function springboard_backend_preprocess_page(&$vars) {
   // Override menu settings and display the springboard admin menu as the main menu
   if (module_exists('springboard_admin')) {
-    $vars['main_menu']['links'] = menu_tree('springboard_admin_menu');
-
+    $main_menu = menu_tree('springboard_admin_menu');
+    // Get rid of third level menu items
+    foreach ($main_menu as $key => $items) {
+      if(isset($items['#below'])) {
+        foreach($items['#below'] as $key2 => $item) {
+          unset($main_menu[$key]['#below'][$key2]['#below']);
+        }
+      }      
+    }
+    $vars['main_menu']['links'] = $main_menu;
+    
     // menu_tree() is the best available option for rendering menu links, but
     // isn't flexible for changing the HTML/Classes in different contexts.
     // So, use a regex to change the classes on the menu for the footer.
