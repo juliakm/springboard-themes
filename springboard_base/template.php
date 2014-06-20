@@ -524,7 +524,7 @@ function springboard_base_menu_link(array $variables) {
   $pattern = '/[^a-z]+/ ';
   $menu_name = preg_replace($pattern, '', $name_id);
 
-  if ($element['#below']) {
+  if (isset($element['#below'])) {
     // Prevent dropdown functions from being added to management menu so it
     // does not affect the navbar module.
     if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
