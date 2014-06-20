@@ -2186,8 +2186,6 @@ ul.tabs.secondary li a.active {
 .notes-timestamp {
   display: block;
   margin: 0 0 10px 0;
-  font-weight: bold;
-  font-size: 14px;
 }
 
 .notes-content a.button {
