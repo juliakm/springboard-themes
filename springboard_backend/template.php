@@ -67,7 +67,9 @@ function springboard_backend_preprocess_page(&$vars) {
     foreach ($main_menu as $key => $items) {
       if(isset($items['#below'])) {
         foreach($items['#below'] as $key2 => $item) {
-          unset($main_menu[$key]['#below'][$key2]['#below']);
+          if(isset($main_menu[$key]['#below'][$key2]['#below'])) {
+            unset($main_menu[$key]['#below'][$key2]['#below']);
+          }
         }
       }      
     }
