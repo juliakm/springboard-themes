@@ -461,6 +461,10 @@ ul.nav.nav-footer li a.lia-depth-1:hover {
   text-decoration: underline;
 }
 
+ul.nav.nav-footer ul.ul-depth-2 {
+  display: none;
+}
+
 .ie8 ul.nav.nav-footer li.li-depth-0 {
   width: 140px;
 }
