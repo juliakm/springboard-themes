@@ -2289,6 +2289,21 @@ ul.tabs.secondary li a.active {
   margin: 20px 0;
 }
 
+.views-field.views-field-field-fundraiser-internal-name {
+  width: 180px;
+}
+
+.form-name-title.truncate a {
+  display: block;
+  overflow: hidden;
+  margin: 0 0 4px 0;
+  padding: 0 0 4px 0;
+  width: 170px;
+  text-transform: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 div.springboard-pane {
   display: block;
 }

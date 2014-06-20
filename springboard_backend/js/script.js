@@ -38,11 +38,8 @@
   Drupal.behaviors.springboardMisc = {
     attach: function (context, settings) {
 
+      // Add uniform to selects
       $("select").uniform();
-
-//      $("select").uniform({
-//        selectAutoWidth: false
-//      });
 
       // Set ul depths for better theming.
       $('#footer ul, #menu-wrapper ul').each(function () {
@@ -100,10 +97,6 @@
 
       $('.webform-results-wrapper th').each(function () {
         $(this).wrapInner('<div class="th-wrapper"></div>');
-      });
-
-      $('.page-admin-reports-salesforce td.views-field-field-fundraiser-internal-name').each(function () {
-        $(this).wrapInner('<div class="td-wrapper"></div>');
       });
 
       // Add a body class for SF connection status.
