@@ -2290,7 +2290,15 @@ ul.tabs.secondary li a.active {
 }
 
 .views-field.views-field-field-fundraiser-internal-name {
-  width: 180px;
+  width: 210px;
+}
+
+td.views-field.views-field-status {
+  width: 154px;
+}
+
+td.views-field.views-field-view-order.last {
+  width: 140px;
 }
 
 .form-name-title.truncate a {
@@ -2298,7 +2306,7 @@ ul.tabs.secondary li a.active {
   overflow: hidden;
   margin: 0 0 4px 0;
   padding: 0 0 4px 0;
-  width: 170px;
+  width: 208px;
   text-transform: inherit;
   text-overflow: ellipsis;
   white-space: nowrap;
