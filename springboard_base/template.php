@@ -564,3 +564,11 @@ function springboard_base_menu_link(array $variables) {
   $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $menu_name;
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Implements hook_form_alter()
+ * Add button class to form submit buttons.
+ */
+function springboard_base_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#attributes']['class'][] = 'btn';
+}
