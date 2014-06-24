@@ -635,7 +635,8 @@ input[type="reset"],
 .button,
 ul.tabs.primary li a,
 #edit-actions #edit-cancel,
-#edit-actions-cancel {
+#edit-actions-cancel,
+a.views-data-export {
   margin: 0 0 10px 0;
   padding: 4px 6px;
   border: 1px solid #01598e;
@@ -651,6 +652,20 @@ ul.tabs.primary li a,
   color: #fff;
   text-shadow: none;
 }
+
+a.views-data-export {
+  float: right;
+  position: relative;
+  top: 34px;
+  text-decoration: none;
+}
+
+.feed-icon a.views-data-export {
+  float: none;
+  position: relative;
+  top: inherit;
+}
+
 
 .file-widget.form-managed-file,
 #edit-picture .control-group {
@@ -693,7 +708,8 @@ input[type="reset"]:hover,
 .button:hover,
 ul.tabs.primary li a:hover,
 #edit-actions #edit-cancel:hover,
-#edit-actions-cancel:hover {
+#edit-actions-cancel:hover,
+a.views-data-export:hover {
 -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -707,7 +723,6 @@ ul.tabs.primary li a:hover,
   color: #fff;
   text-decoration: none;
   text-decoration: none;
-}
 }
 
 #edit-submit,
@@ -1192,7 +1207,7 @@ label.option {
 
 a.accordion-toggle:before {
   content: '';
-  background: url("../images/fieldset-arrows.png") no-repeat;
+  background: url('../images/fieldset-arrows.png') no-repeat;
   height: 30px;
   padding-right: 10px;
   font-size: 1.5em;
