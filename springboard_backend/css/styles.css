@@ -220,7 +220,7 @@ body #block-system-main {
 .sf-connected-dashboard .springboard-sf-status .sf-status a.button:before,
 .sf-connected-dashboard .springboard-sf-status .sf-status #springboard-dashboard-queue:before {
   position: relative;
-  top: 18px;
+  top: 2px;
   left: 20px;
   color: #fff;
   content: "\f01e";
@@ -1574,14 +1574,16 @@ div.vertical-tabs {
   padding-left: 0;
 }
 
-.page-admin-springboard-settings .content ul li {
+.page-admin-springboard-settings .content ul li,
+.springboard-dashboard .content ul li {
   list-style: none;
   position: relative;
   left: 26px;
 }
 
 /* fontawesome list style */
-.page-admin-springboard-settings .content ul li:before {
+.page-admin-springboard-settings .content ul li:before,
+.springboard-dashboard .content ul li:before {
   position: absolute;
   left: -26px;
   color: #ccc;
@@ -1592,9 +1594,20 @@ div.vertical-tabs {
   font-family: FontAwesome;
 }
 
-.page-admin-springboard-settings .content ul li i {
+.page-admin-springboard-settings .content ul li i,
+.springboard-dashboard .content ul li i {
   position: absolute;
   left: -26px;
+}
+
+
+/* no fontawesome */
+
+.sbv-notes-view .view-content ul.notes-feed-list > li:before {
+  left: inherit;
+  content: " ";
+  text-decoration: inherit;
+  font-family: inherit;
 }
 
 .page-springboard .content ul.dropdown-menu.views-widget-dropdown li {
@@ -2273,18 +2286,6 @@ ul.tabs.secondary li a.active {
 
 .view-footer {
   margin: 20px 0;
-}
-
-.springboard-dashboard td.views-field.views-field-title a,
-.springboard-dashboard td.views-field-field-fundraiser-internal-name span {
-  display: block;
-  overflow: hidden;
-  margin: 0 0 4px 0;
-  padding: 0 0 4px 0;
-  width: 170px;
-  text-transform: inherit;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .page-admin-reports-salesforce-donations .views-field.views-field-field-fundraiser-internal-name {
