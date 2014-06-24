@@ -1569,16 +1569,14 @@ div.vertical-tabs {
   padding-left: 0;
 }
 
-.page-springboard-view .content ul li,
-.page-node-view .content ul li {
+.page-admin-springboard-settings .content ul li {
   list-style: none;
   position: relative;
   left: 26px;
 }
 
 /* fontawesome list style */
-.page-springboard .content ul li:before,
-.page-node-view .content ul li:before {
+.page-admin-springboard-settings .content ul li:before {
   position: absolute;
   left: -26px;
   color: #ccc;
@@ -1589,30 +1587,7 @@ div.vertical-tabs {
   font-family: FontAwesome;
 }
 
-/* no fontawesome */
-.page-springboard .content table ul li:before,
-.page-springboard .content ul.contextual-links li:before,
-.content ul.tabs li:before,
-.content ul.pager li:before,
-.content .donor-table-view .view-content ul li:before,
-.content ul.dropdown-menu.views-widget-dropdown li:before,
-.page-node-add .content ul li:before,
-.page-node-edit .content ul li:before,
-.sbv-notes-view .view-content ul.notes-feed-list > li:before,
-.content ul.vertical-tabs-list li:before {
-  left: inherit;
-  content: " ";
-  text-decoration: inherit;
-  font-family: inherit;
-}
-
-.page-node-add.page-springboard .content ul li,
-.page-node-edit.page-springboard .content ul li,
-.page-springboard.page-admin-config-system-googleanalytics .content ul li {
-  left: 0;
-}
-
-.content ul li i {
+.page-admin-springboard-settings .content ul li i {
   position: absolute;
   left: -26px;
 }
