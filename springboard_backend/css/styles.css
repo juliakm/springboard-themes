@@ -677,30 +677,6 @@ label[for="edit-picture-upload"] {
   top: -20px;
 }
 
-.page-node input[type="file"] {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  width: 50px;
-  height: 30px;
-  text-align: right;
-  opacity: 0;
-  filter: alpha(opacity:0);
-  cursor: pointer;
-  -moz-opacity: 0;
-}
-
-i.fa.fa-file-text-o {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  font-size: 38px;
-  cursor: pointer;
-}
-
-.page-node-share-settings i.fa.fa-file-text-o {
-  top:30px;
-}
 
 input[type="submit"]:hover,
 input[type="button"]:hover,
@@ -1350,6 +1326,36 @@ div.selector.focus {
 div.selector.hover span,
 div.selector.focus span {
   background-position: right -45px;
+}
+
+div.uploader {
+  width: 252px;
+  border: 1px dotted #333;
+  margin: 0 10px 0 0;
+}
+
+div.uploader span.filename {
+  width: 116px;
+}
+
+div.uploader span.action {
+  width: 100px;
+}
+
+div.uploader span.action:after {
+  content: "\f0f6";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: relative;
+  left: 8px;
+  color: #333;
+}
+
+div.uploader span.filename {
+  color: #333;
+  font-weight: bold;
 }
 
 .tabledrag-toggle-weight-wrapper {

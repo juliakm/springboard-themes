@@ -41,6 +41,9 @@
       // Add uniform to selects
       $("select").uniform();
 
+      // Add uniform to file upload.
+      $('input[type=file]').uniform();
+
       // Set ul depths for better theming.
       $('#footer ul, #menu-wrapper ul').each(function () {
         var depth = $(this).parents('ul').length;
@@ -115,11 +118,6 @@
       // own height and the height of its parent
       $('.valign-bottom').each(function() {
         $(this).css('margin-top', $(this).parent().height()-$(this).height())
-      });
-
-      // Add a file icon to the upload button.
-      $('.page-node input[type="file"]').once(function() {
-      $(this).after('<i class="fa fa-file-text-o"></i>');
       });
 
       // end.
