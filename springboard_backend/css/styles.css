@@ -655,19 +655,26 @@ a.views-data-export {
 
 a.views-data-export {
   position: relative;
-  top: 28px;
+  top: 30px;
   float: right;
+  padding: 5px 18px 5px 12px;
   text-decoration: none;
 }
 
-.feed-icon a.views-data-export {
+a.views-data-export:after {
   position: relative;
-  top: -40px;
-  float: none;
+  top: 1px;
+  right: -12px;
+  margin: 0 6px 0 0;
+  color: #fff;
+  content: "\f019";
+  font-family: FontAwesome;
+  pointer-events: none;
+  font-size: 17px;
 }
 
-div.feed-icon {
-  float: right;
+.view div.feed-icon {
+  display: none;
 }
 
 h3.data-file-download {
