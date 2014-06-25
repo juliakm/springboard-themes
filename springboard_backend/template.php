@@ -288,3 +288,25 @@ function springboard_backend_preprocess_views_view(&$vars) {
   }
 
 }
+
+/**
+ * Theme callback for the export complete page.
+ *
+ * Override this function for better theming and ux on the data export file download page.
+ */
+function springboard_backend_views_data_export_complete_page($variables) {
+  extract($variables, EXTR_SKIP);
+  drupal_set_title(t('Data export successful'));
+  drupal_add_html_head(array('#tag' => 'meta', '#attributes' => array('http-equiv' =>"Refresh", 'content' => '3;url='. $file)), 'views_data_export_download');
+  $output = '';
+  $output .= '<h3 class="data-file-download">';
+  $output .= t('Your export has been created. View/download the file <a href="@link">here</a> (will automatically download in 3 seconds.)', array('@link' => $file));
+  $output .= '</h3>';
+
+  if (!empty($return_url)) {
+    $output .= '<h3>';
+    $output .= l(t('Return to previous page'), $return_url);
+    $output .= '</h3>';
+  }
+  return $output;
+}
