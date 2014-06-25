@@ -220,7 +220,7 @@ body #block-system-main {
 .sf-connected-dashboard .springboard-sf-status .sf-status a.button:before,
 .sf-connected-dashboard .springboard-sf-status .sf-status #springboard-dashboard-queue:before {
   position: relative;
-  top: 2px;
+  top: 18px;
   left: 20px;
   color: #fff;
   content: "\f01e";
@@ -1835,6 +1835,10 @@ table.sticky-enabled.tableheader-processed.sticky-table th img {
   position: relative;
   top: -2px;
   margin: 0 0 0px 10px;
+}
+
+table.sticky-header {
+  z-index: 500;
 }
 
 /**
