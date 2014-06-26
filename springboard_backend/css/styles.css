@@ -240,7 +240,7 @@ form#springboard-dashboard-queue {
 
 /* SB Version Pane */
 
-div.springboard-sb-version {
+div.springboard-pane.springboard-sb-version {
   background-color: #fff;
   margin-bottom: 20px;
   padding: 0px;
