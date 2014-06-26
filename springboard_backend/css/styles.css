@@ -161,6 +161,10 @@ h4.panel-title {
   margin-bottom: 22px;
 }
 
+.springboard-dashboard.dashboard.row-fluid .span4 {
+  padding: 0 0 0 1%;
+}
+
 #salesforce-status-pane {
   padding: 0;
 }
@@ -1350,7 +1354,7 @@ select {
   width: inherit;
 }
 
-/* Uniform global select lists */
+/* Uniform global */
 
 div.selector,
 div.selector span {
@@ -1950,6 +1954,10 @@ table.data-table tbody tr.odd td,
   background-color: #f7f7f4;
 }
 
+td.views-field.views-field-sbstats-total-transactions {
+  white-space: nowrap;
+}
+
 .donor-table-view .views-field.views-field-nothing.last a {
   padding: 0;
 }
@@ -2203,18 +2211,14 @@ ul.tabs.secondary li a.active {
   line-height: 30px;
 }
 
-.sbv-notes-view .view-content ul.notes-feed-list li.views-row {
-  margin: 0 0 20px 0;
-}
-
-.sbv-notes-view .view-content ul.notes-feed-list li.views-row {
-  margin: 0 0 14px 0;
-  padding: 0 6% 4px 0;
+.sbv-notes-view .view-content ul.notes-feed-list li.views-row,
+.springboard-pane.springboard-sf-status ul li {
+  margin: 0 0 6px 0;
+  padding: 0 7% 14px 0;
 }
 
 .sbv-notes-view .view-content ul.notes-feed-list li.views-row.views-row-last {
   margin: 0;
-  padding: 0 0 20px 0;
   border-bottom: none;
 }
 
@@ -2560,26 +2564,9 @@ ul.pager .ajax-progress .throbber {
   padding: 5px 6px;
 }
 
-.ie8 .springboard-column.sb-col-left {
-  width: 65%;
-}
-
-.ie8 .springboard-column.sb-col-right {
-  width: 32%;
-  margin-left: 2%;
-}
-
-@media (min-width: 990px) {
-
-  .springboard-column.sb-col-left {
-    width: 57%;
-  }
-
-  .springboard-column.sb-col-right {
-    width: 41%;
-    margin-left: 2%;
-  }
-
+div.springboard-pane {
+  padding: 5px;
+  margin: 3px;
 }
 
 /* if under 1199px media query */
@@ -2600,8 +2587,9 @@ ul.pager .ajax-progress .throbber {
 
 @media (max-width: 989px) {
 
-  .springboard-column {
-    width: 99%;
+
+  .springboard-dashboard.row-fluid [class*="span"] {
+    width: 100%;
   }
 
   .dashboard {
@@ -2678,19 +2666,6 @@ ul.pager .ajax-progress .throbber {
 
   ul.nav.nav-footer li.li-depth-0 {
     width: 15.9%;
-  }
-
-  .springboard-column {
-    width: 44.7%;
-  }
-
-  .springboard-column.sb-col-left {
-    width: 65%;
-  }
-
-  .springboard-column.sb-col-right {
-    width: 33%;
-    margin-left: 1.2%;
   }
 
   input,
