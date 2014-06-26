@@ -1309,7 +1309,7 @@ select {
   width: inherit;
 }
 
-/* Uniform global select lists */
+/* Uniform global */
 
 div.selector,
 div.selector span {
@@ -1925,6 +1925,10 @@ table#fundraiser-payment-methods td {
 table#fundraiser-payment-methods input[type="text"]{
   position: relative;
   top: -6px;
+}
+
+td.views-field.views-field-sbstats-total-transactions {
+  white-space: nowrap;
 }
 
 /* Contacts Report Table */
