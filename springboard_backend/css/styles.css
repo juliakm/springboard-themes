@@ -801,6 +801,17 @@ a.button.add-button {
   float: right;
 }
 
+.view-webform-ab-tests .buttons-wrapper {
+  top: 0;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.view-webform-ab-tests .buttons-wrapper a.button {
+  top: 0;
+  display: block;
+}
+
 h2.types {
   display: inline-block;
   margin: 0 0 10px 0;
