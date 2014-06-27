@@ -308,20 +308,38 @@
     margin-left: 0;
     width: 390px;
 }
+#webform-component-tickets table {
+    width: 100%;
+}
 
 #webform-component-tickets th {
     border-bottom: 0px;
     font-size: 16px;
     padding-bottom: 5px;
 }
-#webform-component-tickets tr.even {
-    background-color: #fff;
+#webform-component-tickets tr.even,
+#webform-component-tickets tr.odd {
+    border-bottom: solid 1px #E5E5E5;
+}
+#webform-component-tickets tr.even:last-child,
+#webform-component-tickets tr.odd:last-child {
+    border-bottom: 0px;
+    font-size: 16px;
+    font-weight: bold;
 }
 #webform-component-tickets tr.odd {
     background-color: #F0F0F0;
 }
+#webform-component-tickets tr.odd:last-child,
+#webform-component-tickets tr.even {
+    background-color: #fff;
+}
 #webform-component-tickets td { 
     padding: 10px;
+}
+#webform-component-tickets .control-group {
+    margin-bottom: 0px;
+    margin-top: 10px;
 }
 
 @media (min-width: 768px) {
