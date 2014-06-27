@@ -2379,10 +2379,16 @@ div.springboard-pane {
 }
 .sb-collapsible-td.collapsed .control-show {
   display: inline;
+  cursor: pointer;
 }
 
 .sb-collapsible-td.collapsed .control-hide {
   display: none;
+  cursor: pointer;
+}
+
+.sb-collapsible-td .control-hide {
+  cursor: pointer;
 }
 
 .sb-collapsible-td .sb-collapsible-td-content {
@@ -2424,14 +2430,14 @@ div.springboard-pane {
 }
 
 .sb-errors-tip .sb-errors-content {
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  color: #000;
-  display: block;
-  padding: 8px;
   position: absolute;
   z-index: 9999;
+  display: block;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #000;
 }
 
 .sb-errors-tip .sb-errors-content a {
@@ -2444,7 +2450,10 @@ div.springboard-pane {
 
 .views-field-sobject .sb-collapsible-td .sb-collapsible-td-content {
   margin-left: -220px;
+  padding: 0 6px;
   width: 620px;
+  border: 1px dotted #888;
+  border-radius: 0;
 }
 
 .view-sbv-sf-batch-items .views-field-start {

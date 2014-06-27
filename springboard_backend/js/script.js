@@ -2,9 +2,23 @@
   // Collapses large table cell content into a hideable block
   Drupal.behaviors.springboardCollapsibleTd = {
     attach: function (context, settings) {
-     $('.sb-collapsible-td .control').click(function() {
-       $(this).parent('.sb-collapsible-td').toggleClass('collapsed');
-     })
+
+    // Show hide the error messages and close if clicked outside.
+      $('.sb-collapsible-td .control').each(function () {
+        $(this).click(function (e) {
+          $(this).parent('.sb-collapsible-td').toggleClass('collapsed');
+          e.stopPropagation();
+        });
+        // In case clicked inside the opened content.
+        $(".sb-collapsible-td").click(function (e) {
+          e.stopPropagation();
+        });
+        // Now close if clicked outside the opened content.
+        $(document).click(function () {
+          $(".sb-collapsible-td").addClass('collapsed');
+        });
+      });
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
