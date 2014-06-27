@@ -134,6 +134,15 @@
         $(this).css('margin-top', $(this).parent().height()-$(this).height())
       });
 
+      // Theme the feed icon wrapper.
+      $('.feed-icon-wrapper img').each(function (i, ele) {
+        var alt = this.alt;
+      $(this).after("<span " + "class='img-caption'>" + this.alt + "</span>");
+        $(this).parent('a').addClass('views-data-export');
+        $(this).remove();
+      });
+
+
       // end.
     } // attach.function
   } // drupal.behaviors

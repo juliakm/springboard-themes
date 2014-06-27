@@ -43,7 +43,9 @@
   <?php if ($exposed): ?>
 
     <div class="view-filters">
-      <?php print $view->feed_icon; ?>
+      <div class="feed-icon-wrapper">
+        <?php print $view->feed_icon; ?>
+      </div>
       <?php print $exposed; ?>
 
     </div>
