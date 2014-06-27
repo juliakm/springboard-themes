@@ -2,9 +2,23 @@
   // Collapses large table cell content into a hideable block
   Drupal.behaviors.springboardCollapsibleTd = {
     attach: function (context, settings) {
-     $('.sb-collapsible-td .control').click(function() {
-       $(this).parent('.sb-collapsible-td').toggleClass('collapsed');
-     })
+
+    // Show hide the error messages and close if clicked outside.
+      $('.sb-collapsible-td .control').each(function () {
+        $(this).click(function (e) {
+          $(this).parent('.sb-collapsible-td').toggleClass('collapsed');
+          e.stopPropagation();
+        });
+        // In case clicked inside the opened content.
+        $(".sb-collapsible-td").click(function (e) {
+          e.stopPropagation();
+        });
+        // Now close if clicked outside the opened content.
+        $(document).click(function () {
+          $(".sb-collapsible-td").addClass('collapsed');
+        });
+      });
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
@@ -119,6 +133,15 @@
       $('.valign-bottom').each(function() {
         $(this).css('margin-top', $(this).parent().height()-$(this).height())
       });
+
+      // Theme the feed icon wrapper.
+      $('.feed-icon-wrapper img').each(function (i, ele) {
+        var alt = this.alt;
+      $(this).after("<span " + "class='img-caption'>" + this.alt + "</span>");
+        $(this).parent('a').addClass('views-data-export');
+        $(this).remove();
+      });
+
 
       // end.
     } // attach.function
