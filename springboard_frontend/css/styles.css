@@ -341,6 +341,9 @@
     margin-bottom: 0px;
     margin-top: 10px;
 }
+#webform-component-tickets select {
+    width: 120px;
+}
 
 @media (min-width: 768px) {
     .node-type-petition textarea,
