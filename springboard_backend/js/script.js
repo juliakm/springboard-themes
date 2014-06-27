@@ -2,9 +2,23 @@
   // Collapses large table cell content into a hideable block
   Drupal.behaviors.springboardCollapsibleTd = {
     attach: function (context, settings) {
-     $('.sb-collapsible-td .control').click(function() {
-       $(this).parent('.sb-collapsible-td').toggleClass('collapsed');
-     })
+
+    // Show hide the error messages and close if clicked outside.
+      $('.sb-collapsible-td .control').each(function () {
+        $(this).click(function (e) {
+          $(this).parent('.sb-collapsible-td').toggleClass('collapsed');
+          e.stopPropagation();
+        });
+        // In case clicked inside the opened content.
+        $(".sb-collapsible-td").click(function (e) {
+          e.stopPropagation();
+        });
+        // Now close if clicked outside the opened content.
+        $(document).click(function () {
+          $(".sb-collapsible-td").addClass('collapsed');
+        });
+      });
+
     } // attach.function
   } // drupal.behaviors
 })(jQuery);
@@ -37,6 +51,12 @@
 (function ($) {
   Drupal.behaviors.springboardMisc = {
     attach: function (context, settings) {
+
+      // Add uniform to selects
+      $("select").uniform();
+
+      // Add uniform to file upload.
+      $('input[type=file]').uniform();
 
       // Set ul depths for better theming.
       $('#footer ul, #menu-wrapper ul').each(function () {
@@ -75,14 +95,6 @@
       $(".types-wrapper:visible:first-child").addClass("first");
       $(".types-wrapper:visible:last-child").addClass("last");
 
-      // Theme select lists, add a wrapper.
-      $('select:not([multiple])').each(function () {
-        $(this).once(function () {
-          $(this).wrap('<div class="select-wrapper"></div>');
-          $('.select-wrapper').append('<div class="arrow"></div> ');
-        });
-      });
-
       // Move the footer home link to the end.
       $('.nav-footer li.home').appendTo('.nav-footer li.options ul');
 
@@ -104,10 +116,6 @@
         $(this).wrapInner('<div class="th-wrapper"></div>');
       });
 
-      $('.page-admin-reports-salesforce td.views-field-field-fundraiser-internal-name').each(function () {
-        $(this).wrapInner('<div class="td-wrapper"></div>');
-      });
-
       // Add a body class for SF connection status.
         if ($('.sf-status p').hasClass('sf-connected')){
           $('body').addClass('sf-connected-dashboard');
@@ -126,10 +134,14 @@
         $(this).css('margin-top', $(this).parent().height()-$(this).height())
       });
 
-      // Add a file icon to the upload button.
-      $('.page-node input[type="file"]').once(function() {
-      $(this).after('<i class="fa fa-file-text-o"></i>');
+      // Theme the feed icon wrapper.
+      $('.feed-icon-wrapper img').each(function (i, ele) {
+        var alt = this.alt;
+      $(this).after("<span " + "class='img-caption'>" + this.alt + "</span>");
+        $(this).parent('a').addClass('views-data-export');
+        $(this).remove();
       });
+
 
       // end.
     } // attach.function

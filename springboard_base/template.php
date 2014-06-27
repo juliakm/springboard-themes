@@ -524,7 +524,7 @@ function springboard_base_menu_link(array $variables) {
   $pattern = '/[^a-z]+/ ';
   $menu_name = preg_replace($pattern, '', $name_id);
 
-  if ($element['#below']) {
+  if (isset($element['#below'])) {
     // Prevent dropdown functions from being added to management menu so it
     // does not affect the navbar module.
     if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
@@ -563,4 +563,12 @@ function springboard_base_menu_link(array $variables) {
   $element['#attributes']['id'] = 'mlid-' . $element['#original_link']['mlid'];
   $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $menu_name;
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+/**
+ * Implements hook_form_alter()
+ * Add button class to form submit buttons.
+ */
+function springboard_base_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#attributes']['class'][] = 'btn';
 }

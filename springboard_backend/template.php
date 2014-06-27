@@ -45,8 +45,13 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'springboard-templates';
   }
 
-  if (arg(0) == "springboard" && arg(1) == NULL) {
+  if (arg(1) == "springboard" && arg(2) == NULL) {
     $vars['classes_array'][] = 'springboard-dashboard';
+  }
+
+  // Not any kind of node add or edit page.
+  if (!(arg(1) == 'add' || arg(1) == 'edit' || arg(2) == 'edit' || arg(3) == 'edit' || arg(4) == 'edit' || arg(4) == 'fundraiser_upsell')) {
+    $vars['classes_array'][] = 'page-springboard-view';
   }
 
 }
@@ -57,8 +62,19 @@ function springboard_backend_preprocess_html(&$vars) {
 function springboard_backend_preprocess_page(&$vars) {
   // Override menu settings and display the springboard admin menu as the main menu
   if (module_exists('springboard_admin')) {
-    $vars['main_menu']['links'] = menu_tree('springboard_admin_menu');
-
+    $main_menu = menu_tree('springboard_admin_menu');
+    // Get rid of third level menu items
+    foreach ($main_menu as $key => $items) {
+      if(isset($items['#below'])) {
+        foreach($items['#below'] as $key2 => $item) {
+          if(isset($main_menu[$key]['#below'][$key2]['#below'])) {
+            unset($main_menu[$key]['#below'][$key2]['#below']);
+          }
+        }
+      }      
+    }
+    $vars['main_menu']['links'] = $main_menu;
+    
     // menu_tree() is the best available option for rendering menu links, but
     // isn't flexible for changing the HTML/Classes in different contexts.
     // So, use a regex to change the classes on the menu for the footer.
@@ -253,4 +269,44 @@ function springboard_backend_preprocess_views_view_field(&$vars) {
       }
     break;
   }
+}
+
+/**
+ * Implements hook_preprocess_views().
+ *
+ */
+function springboard_backend_preprocess_views_view(&$vars) {
+
+  // Preprocess views.
+  $view = $vars['view'];
+
+  // Set a var for the argument on sbv_assets.
+  if ($view->name == 'sbv_assets') {
+    // Get the views argument.
+    $view = views_get_current_view();
+    $vars['arg0'] = $view->args[0];
+  }
+
+}
+
+/**
+ * Theme callback for the export complete page.
+ *
+ * Override this function for better theming and ux on the data export file download page.
+ */
+function springboard_backend_views_data_export_complete_page($variables) {
+  extract($variables, EXTR_SKIP);
+  drupal_set_title(t('Data export successful'));
+  drupal_add_html_head(array('#tag' => 'meta', '#attributes' => array('http-equiv' =>"Refresh", 'content' => '3;url='. $file)), 'views_data_export_download');
+  $output = '';
+  $output .= '<h3 class="data-file-download">';
+  $output .= t('Your export has been created. View/download the file <a href="@link">here</a> (will automatically download in 3 seconds.)', array('@link' => $file));
+  $output .= '</h3>';
+
+  if (!empty($return_url)) {
+    $output .= '<h3>';
+    $output .= l(t('Return to previous page'), $return_url);
+    $output .= '</h3>';
+  }
+  return $output;
 }
