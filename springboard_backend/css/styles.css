@@ -1394,14 +1394,14 @@ div.uploader span.action {
 }
 
 div.uploader span.action:after {
-  content: "\f0f6";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
   position: relative;
   left: 8px;
   color: #333;
+  content: "\f0f6";
+  text-decoration: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-family: FontAwesome;
 }
 
 div.uploader span.filename {
@@ -1411,6 +1411,28 @@ div.uploader span.filename {
 
 .tabledrag-toggle-weight-wrapper {
   padding-right: 10px;
+}
+
+div.tabledrag-changed-warning.messages.warning {
+  margin: 10px 0;
+  padding: 6px;
+  width: 98%;
+}
+
+tr.draggable .control-group {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.draggable a.tabledrag-handle {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+tr.draggable  input[type="checkbox"] {
+  top: 0;
 }
 
 .exposed-filters .filters.form-wrapper {
@@ -1688,7 +1710,7 @@ div.vertical-tabs {
 }
 
 ul.dropdown-menu.views-widget-dropdown li a {
-  margin-left: 3px;
+  margin: 0 5px 0 5px;
   padding: 4px 12px;
   font-size: 12px;
 }
