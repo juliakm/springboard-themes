@@ -1469,6 +1469,10 @@ html.js input.form-autocomplete {
   background-position: 100% -138px;
 }
 
+#autocomplete {
+  background-color: #fff;    
+}
+
 html.js input.throbbing {
   background-image: url('../images/throbber.gif');
   background-position: 96% 10px;
