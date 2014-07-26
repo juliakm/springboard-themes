@@ -200,6 +200,7 @@
 }
 .fundraiser-donation-form {
     margin-top: 5px;
+    clear: both;
 }
 .webform-component-fieldset {
   float:left;
@@ -229,22 +230,22 @@
     width: 280px;
 }
 
-.node-type-donation-form textarea, 
-.node-type-donation-form input[type="text"], 
-.node-type-donation-form input[type="password"], 
-.node-type-donation-form input[type="datetime"], 
-.node-type-donation-form input[type="datetime-local"], 
-.node-type-donation-form input[type="date"], 
-.node-type-donation-form input[type="month"], 
-.node-type-donation-form input[type="time"], 
-.node-type-donation-form input[type="week"], 
-.node-type-donation-form input[type="number"], 
-.node-type-donation-form input[type="email"], 
-.node-type-donation-form input[type="url"], 
-.node-type-donation-form input[type="search"], 
-.node-type-donation-form input[type="tel"], 
-.node-type-donation-form input[type="color"], 
-.node-type-donation-form .uneditable-input {
+textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input {
     width: 268px;
 }
 .node-type-petition textarea,
@@ -254,21 +255,19 @@
 .node-type-petition .uneditable-input {
     width: 370px;
 }
+input.input-medium,
+select.input-medium {
+    width: 150px;
+}
 .node-type-petition select.input-medium {
     width: 390px;
 }
-.node-type-donation-form input.input-medium,
-.node-type-donation-form select.input-medium {
-    width: 150px;
-}
-.node-type-petition input.input-small,
-.node-type-petition select.input-small,
-.node-type-donation-form input.input-small,
-.node-type-donation-form select.input-small {
+
+input.input-small,
+select.input-small {
     width: 90px;
 }
-.node-type-petition .description,
-.node-type-donation-form .description {
+.description {
     font-size: 12px;
     line-height: 16px;
     color: #898989;
@@ -277,12 +276,12 @@
 .node-type-donation-form .fundraiser_submit_message {
     margin-left: 10px;
 }
-.node-type-petition .form-actions,
-.node-type-donation-form .form-actions {
+.form-actions {
     background: none;
     border: 0px;
     padding: 0;
 }
+input[type="submit"].btn,
 .node-type-petition input[type="submit"].btn, 
 .node-type-donation-form input[type="submit"].btn {
     padding: 20px 0;
@@ -346,43 +345,35 @@
 }
 
 @media (min-width: 768px) {
-    .node-type-petition textarea,
-    .node-type-petition input[type="text"],
-    .node-type-petition input[type="email"],
-    .node-type-petition input.input-medium,
-    .node-type-petition .uneditable-input,
-    .node-type-petition input[type="submit"].btn,
-    .node-type-donation-form .two-column-donation .span6 textarea, 
-    .node-type-donation-form .two-column-donation .span6 input[type="text"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="password"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="datetime"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="datetime-local"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="date"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="month"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="time"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="week"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="number"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="email"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="url"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="search"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="tel"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="color"], 
-    .node-type-donation-form .two-column-donation .span6 .uneditable-input,
-    .node-type-donation-form .two-column-donation .span6 input.input-large,
-    .node-type-donation-form .two-column-donation .span6 input[type="submit"].btn {
+    textarea, 
+    input[type="text"], 
+    input[type="password"], 
+    input[type="datetime"], 
+    input[type="datetime-local"], 
+    input[type="date"], 
+    input[type="month"], 
+    input[type="time"], 
+    input[type="week"], 
+    input[type="number"], 
+    input[type="email"], 
+    input[type="url"], 
+    input[type="search"], 
+    input[type="tel"], 
+    input[type="color"], 
+    .uneditable-input,
+    input.input-large,
+    input[type="submit"].btn {
         width: 97%;
     }
-    .node-type-petition select.input-medium,
-    .node-type-donation-form .two-column-donation .span6 select {
+    select, 
+    .node-type-petition select.input-medium {
         width: 100%;
     }
     
-    .node-type-donation-form .two-column-donation .span6 input.input-medium,
-    .node-type-donation-form .two-column-donation .span6 select.input-medium,
-    .node-type-petition input.input-small,
-    .node-type-petition select.input-small,
-    .node-type-donation-form .two-column-donation .span6 input.input-small, 
-    .node-type-donation-form .two-column-donation .span6 select.input-small {
+    input.input-medium,
+    select.input-medium,
+    input.input-small, 
+    select.input-small {
         width: 48%;
     }    
 }
@@ -401,42 +392,34 @@
 }
 
 @media (max-width: 480px) {
-    .node-type-petition textarea,
-    .node-type-petition input[type="text"],
-    .node-type-petition input[type="email"],
-    .node-type-petition input.input-medium,
-    .node-type-petition .uneditable-input,
-    .node-type-petition input[type="submit"].btn,
-    .node-type-donation-form textarea, 
-    .node-type-donation-form input[type="text"], 
-    .node-type-donation-form input[type="password"], 
-    .node-type-donation-form input[type="datetime"], 
-    .node-type-donation-form input[type="datetime-local"], 
-    .node-type-donation-form input[type="date"], 
-    .node-type-donation-form input[type="month"], 
-    .node-type-donation-form input[type="time"], 
-    .node-type-donation-form input[type="week"], 
-    .node-type-donation-form input[type="number"], 
-    .node-type-donation-form input[type="email"], 
-    .node-type-donation-form input[type="url"], 
-    .node-type-donation-form input[type="search"], 
-    .node-type-donation-form input[type="tel"], 
-    .node-type-donation-form input[type="color"], 
-    .node-type-donation-form .uneditable-input,
-    .node-type-donation-form input.input-medium,
-    .node-type-donation-form select.input-medium,
-    .node-type-donation-form input[type="submit"].btn {
+    textarea, 
+    input[type="text"], 
+    input[type="password"], 
+    input[type="datetime"], 
+    input[type="datetime-local"], 
+    input[type="date"], 
+    input[type="month"], 
+    input[type="time"], 
+    input[type="week"], 
+    input[type="number"], 
+    input[type="email"], 
+    input[type="url"], 
+    input[type="search"], 
+    input[type="tel"], 
+    input[type="color"], 
+    .uneditable-input,
+    input.input-medium,
+    select.input-medium,
+    input[type="submit"].btn {
         width: 100%;
     }
+    select, 
     .node-type-petition select,
-    .node-type-petition select.input-medium,
-    .node-type-donation-form select {
+    .node-type-petition select.input-medium {
         width: 103%;
     }
-    .node-type-petition input.input-small,
-    .node-type-petition select.input-small,
-    .node-type-donation-form input.input-small, 
-    .node-type-donation-form select.input-small {
+    input.input-small, 
+    select.input-small {
         width: 48%;
     } 
 }
