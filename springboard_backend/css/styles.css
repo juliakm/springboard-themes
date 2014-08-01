@@ -570,6 +570,11 @@ div.status button.close {
   border-top: none;
 }
 
+.field-prefix,
+.field-suffix {
+  display: inline-block;
+}
+
 select,
 button,
 textarea,
