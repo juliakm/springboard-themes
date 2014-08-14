@@ -10,6 +10,11 @@ ul.nav li {
   list-style-type: none;
 }
 
+/* override Drupal top margin on form items */
+.form-item.control-group {
+  margin-top: 0px;
+}
+
 /* make sure devel Krumo text is always black */
 div.krumo-root,
 div.krumo-root a,
