@@ -54,6 +54,14 @@ function springboard_backend_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'page-springboard-view';
   }
 
+  if (arg(2) == "salesforce" && arg(3) == "donations") {
+    $vars['classes_array'][] = 'sbv-donations';
+  }
+
+  if (arg(2) == "reports" && arg(3) == "contacts") {
+    $vars['classes_array'][] = 'sbv-contacts';
+  }
+
 }
 
 /**

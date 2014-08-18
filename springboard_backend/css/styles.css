@@ -700,7 +700,8 @@ a.views-data-export:after {
   font-size: 17px;
 }
 
-.view div.feed-icon {
+.sbv-donations .feed-icon,
+.sbv-contacts .feed-icon {
   display: none;
 }
 
