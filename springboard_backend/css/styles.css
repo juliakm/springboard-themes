@@ -700,10 +700,6 @@ a.views-data-export:after {
   font-size: 17px;
 }
 
-.view div.feed-icon {
-  display: none;
-}
-
 h3.data-file-download {
   padding: 4px 10px;
   border: 1px solid #ccc;
