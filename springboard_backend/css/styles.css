@@ -663,7 +663,8 @@ input[type="reset"],
 ul.tabs.primary li a,
 #edit-actions #edit-cancel,
 #edit-actions-cancel,
-a.views-data-export {
+a.views-data-export,
+.action-links a {
   margin: 0 0 10px 0;
   padding: 4px 6px;
   border: 1px solid #01598e;
@@ -678,6 +679,21 @@ a.views-data-export {
   background: linear-gradient(to bottom, #3182b2 0%, #0265a0 100%, #7db9e8 100%);
   color: #fff;
   text-shadow: none;
+}
+
+ul.action-links {
+  list-style: none;
+  margin: 10px 0 0 10px;
+}
+
+ul.action-links li a {
+  background: #888;
+  border: none;
+}
+
+ul.action-links li a:hover {
+  text-decoration: none;
+  background: #777;
 }
 
 a.views-data-export {
