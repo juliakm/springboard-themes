@@ -1956,9 +1956,7 @@ table.data-table thead th,
 
 table.data-table tbody tr,
 .views-data-table tbody tr {
-  /* border-spacing: 0px; */
   border: 0px;
-  /* border-collapse: collapse; */
 }
 
 table.data-table tbody td,
@@ -2599,6 +2597,82 @@ ul.pager .ajax-progress .throbber {
 div.springboard-pane {
   padding: 5px;
   margin: 3px;
+}
+
+/* ctools modals */
+
+div.ctools-modal-content {
+  border: none;
+  background: none;
+}
+
+div.ctools-modal-content .modal-content {
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+  background: #fff;
+}
+
+div.ctools-modal-content a.close {
+  position: relative;
+  float: right;
+  padding: 0 44px 0 0;
+  color: #fff;
+  text-shadow: none;
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: inherit;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+div.ctools-modal-content a.close:after {
+  position: absolute;
+  top: -2px;
+  left: 120px;
+  margin: 0 0 0 0;
+  padding: 3px 4px 3px 3px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #a50000;
+  color: #fff;
+  content: "\f00d";
+  text-align: right;
+  text-decoration: inherit;
+  text-indent: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 23px;
+  font-family: FontAwesome;
+}
+
+div.ctools-modal-content .modal-title {
+  font-size: 25px;
+}
+
+div.ctools-modal-content a.close img {
+  display: none;
+}
+
+div.ctools-modal-content .modal-header {
+  padding: 10px .25em 10px 1em;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  background-color: #08314B;
+}
+
+/* ctools modal adding springboard_frontend css fix */
+
+.not-front header.container {
+  margin: 0 auto;
 }
 
 /* fixing mysterious hiding of refund options */
