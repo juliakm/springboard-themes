@@ -1811,6 +1811,14 @@ body:not(.springboard-dashboard) th {
   white-space: nowrap;
 }
 
+body .types-wrapper.p2p-views th {
+  white-space: inherit;
+}
+
+th.views-field.views-field-edit-node {
+  width: 15%;
+}
+
 td pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -2598,6 +2606,24 @@ fieldset#edit-refund-options {
   display: block !important;
 }
 
+.form-item.form-type-select.form-item-operation.control-group {
+  display: inline-block;
+}
+
+.vbo-widget {
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+
+.vbo-widget label {
+  margin: 0;
+}
+
+.types-wrapper.p2p-views {
+
+}
+
 /* if under 1199px media query */
 
 @media (max-width: 1199px) {
@@ -2615,6 +2641,11 @@ fieldset#edit-refund-options {
 /* end under 1199px media query */
 
 @media (max-width: 989px) {
+
+
+  .vbo-widget {
+    position: inherit;
+  }
 
 
   .springboard-dashboard.row-fluid [class*="span"] {
