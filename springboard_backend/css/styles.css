@@ -1529,6 +1529,10 @@ html.js input.throbbing {
   margin-top: 12px;
 }
 
+.node-form .description {
+  margin: 2px 0 25px 0;
+}
+
 /* Primary / secondary tabs */
 
 ul.tabs.primary {
