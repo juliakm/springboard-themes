@@ -163,21 +163,26 @@ function springboard_base_form_element($variables) {
   $element += array(
     '#title_display' => 'before',
   );
-  
+
   $type = $element['#type'];
 
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
+
   // Add bootstrap group class
-  $concatenated_class = str_replace('_', '-', implode('-', $element['#parents']));
   $attributes['class'] = array(
     'form-item',
     'form-type-' . $type,
-    'form-item-' . $concatenated_class,
-    'control-group'
   );
+
+  if (isset($element['#parents'])) {
+    $concatenated_class = str_replace('_', '-', implode('-', $element['#parents']));
+    $attributes['class'][] = 'form-item-' . $concatenated_class;
+  }
+
+  $attributes['class'][] = 'control-group';
 
   // If #title is not set, we don't display any label or required marker.
   if (!isset($element['#title'])) {
@@ -223,7 +228,7 @@ function springboard_base_webform_element($variables) {
   );
 
   $element = $variables['element'];
-  
+
   // All elements using this for display only are given the "display" type.
   if (isset($element['#format']) && $element['#format'] == 'html') {
     $type = 'display';
@@ -235,7 +240,7 @@ function springboard_base_webform_element($variables) {
   // Convert the parents array into a string, excluding the "submitted" wrapper.
   $nested_level = $element['#parents'][0] == 'submitted' ? 1 : 0;
   $parents = str_replace('_', '-', implode('--', array_slice($element['#parents'], $nested_level)));
-  
+
   $wrapper_classes = array(
     'form-item',
     'webform-component',
@@ -244,7 +249,7 @@ function springboard_base_webform_element($variables) {
   );
 
   $output = '<div class="' . implode(' ', $wrapper_classes) . '" id="webform-component-' . $parents . '">' . "\n";
-  
+
   // If #title is not set, we don't display any label or required marker.
   if (!isset($element['#title'])) {
     $element['#title_display'] = 'none';
