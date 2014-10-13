@@ -177,6 +177,8 @@ function springboard_base_form_element($variables) {
     'form-type-' . $type,
   );
 
+  // The VBO select all checkbox does not have #parents, so this check
+  // is included to avoid issues.
   if (isset($element['#parents'])) {
     $concatenated_class = str_replace('_', '-', implode('-', $element['#parents']));
     $attributes['class'][] = 'form-item-' . $concatenated_class;
