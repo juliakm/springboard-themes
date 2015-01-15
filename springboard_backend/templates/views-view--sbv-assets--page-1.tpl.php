@@ -36,7 +36,8 @@
 
   <div class="views-button <?php print preg_replace('/_/', '-', $arg0); ?>">
   <?php // create button pulling in the arg ?>
-  <a href="/node/add/<?php print preg_replace('/_/', '-', $arg0); ?>" class="button button-create">Create <?php print preg_replace('/_/', ' ', $arg0); ?></a>
+  <a href="<?php print base_path(); ?>node/add/<?php print preg_replace
+  ('/_/', '-', $arg0); ?>" class="button button-create">Create <?php print preg_replace('/_/', ' ', $arg0); ?></a>
   </div>
 
   <?php if ($header): ?>
