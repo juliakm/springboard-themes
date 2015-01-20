@@ -340,8 +340,8 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   border: none;
 }
 
-#menu-wrapper .nav-tabs li.springboard a.lia-depth-1,
-#menu-wrapper .nav-tabs li.springboard a.lia-depth-1.active {
+#menu-wrapper .nav-tabs li.springboard > a,
+#menu-wrapper .nav-tabs li.springboard > a.active {
   display: inline-block;
   width: 160px;
   height: 19px;
@@ -350,8 +350,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   text-indent: -9999px;
 }
 
-#menu-wrapper .nav-tabs li.li-depth-0.springboard a.lia-depth-1:after,
-#menu-wrapper .nav-tabs li.li-depth-0.springboard a.lia-depth-1:after {
+#menu-wrapper .nav-tabs li.springboard > a:after {
   position: absolute;
   left: 146px;
   margin: 0 0 0 0;
@@ -366,21 +365,21 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   font-family: FontAwesome;
 }
 
-#menu-wrapper .nav-tabs li.li-depth-0.options {
+#menu-wrapper .nav-tabs li.options {
   position: absolute;
   right: 0;
 }
 
-#menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1,
-#menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1.active {
+#menu-wrapper .nav-tabs li.options > a,
+#menu-wrapper .nav-tabs li.options > a.active {
   width: 20px;
   background: none;
   text-align: left;
   text-indent: -9999px;
 }
 
-#menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1:after,
-#menu-wrapper .nav-tabs li.li-depth-0.options a.lia-depth-1.active:after {
+#menu-wrapper .nav-tabs li.options > a:after,
+#menu-wrapper .nav-tabs li.options > a.active:after {
   position: absolute;
   top: 8px;
   left: 14px;
@@ -396,7 +395,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   font-family: FontAwesome;
 }
 
-#menu-wrapper .nav-tabs li.li-depth-0.options ul.dropdown-menu.ul-depth-1 {
+#menu-wrapper .nav-tabs li.options > ul.dropdown-menu {
   position: absolute;
   left: -124px;
 }
@@ -2929,7 +2928,7 @@ fieldset#edit-refund-options {
      float: none;
   }
 
-  #menu-wrapper .nav-tabs li.li-depth-0.options {
+  #menu-wrapper .nav-tabs li.options {
     left: 92%;
   }
 
