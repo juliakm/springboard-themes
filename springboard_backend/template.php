@@ -61,20 +61,23 @@ function springboard_backend_preprocess_html(&$vars) {
  */
 function springboard_backend_preprocess_page(&$vars) {
   // Override menu settings and display the springboard admin menu as the main menu
+
   if (module_exists('springboard_admin')) {
-    $main_menu = menu_tree('springboard_admin_menu');
+    $menu_links = menu_tree('springboard_admin_menu');
+
     // Get rid of third level menu items
-    foreach ($main_menu as $key => $items) {
+    foreach ($menu_links as $key => $items) {
       if(isset($items['#below'])) {
         foreach($items['#below'] as $key2 => $item) {
-          if(isset($main_menu[$key]['#below'][$key2]['#below'])) {
-            unset($main_menu[$key]['#below'][$key2]['#below']);
+          if(isset($menu_links[$key]['#below'][$key2]['#below'])) {
+            unset($menu_links[$key]['#below'][$key2]['#below']);
           }
         }
-      }      
+      }
     }
-    $vars['main_menu']['links'] = $main_menu;
-    
+
+    $vars['main_menu'] = $menu_links;
+
     // menu_tree() is the best available option for rendering menu links, but
     // isn't flexible for changing the HTML/Classes in different contexts.
     // So, use a regex to change the classes on the menu for the footer.
@@ -119,7 +122,7 @@ function springboard_backend_preprocess_page(&$vars) {
   $t5 = preg_match('|^admin/config/content/webform_goals$|', $_GET['q']); // Webform Goals page (purposefully remove access to child pages).
   $t6 = preg_match('|^admin/config/services/springboard_social$|', $_GET['q']); // Springboard Social page (purposefully remove access to child pages).
 
-  if ($t1 || $t2 || $t3 || $t4 || $t5 || $t6) { 
+  if ($t1 || $t2 || $t3 || $t4 || $t5 || $t6) {
     unset($vars['tabs']);
   }
 }
