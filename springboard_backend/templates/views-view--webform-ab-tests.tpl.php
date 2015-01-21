@@ -10,7 +10,7 @@
     </div>
   <?php endif; ?>
   <div class="buttons-wrapper">
-    <a href="/node/add/webform-ab" class="button add-button">Create Multivariate Test</a>
+    <a href="<?php print base_path(); ?>node/add/webform-ab" class="button add-button">Create Multivariate Test</a>
   </div>
   <?php if ($exposed): ?>
     <div class="view-filters">

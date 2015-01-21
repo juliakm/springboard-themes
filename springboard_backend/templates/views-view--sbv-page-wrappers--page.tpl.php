@@ -34,11 +34,9 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <div class="views-button <?php print preg_replace('/_/', '-', $arg0); ?>">
-  <?php // create button pulling in the arg ?>
-  <a href="<?php print base_path(); ?>node/add/<?php print preg_replace
-  ('/_/', '-', $arg0); ?>" class="button button-create">Create <?php print preg_replace('/_/', ' ', $arg0); ?></a>
-  </div>
+  <div class="view-header">
+    <a class="button" href="<?php print base_path(); ?>node/add/page-wrapper" class="button button-create">Create Page Wrapper</a>
+    </div>
 
   <?php if ($header): ?>
     <div class="view-header">
