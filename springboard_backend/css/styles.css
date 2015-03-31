@@ -2690,6 +2690,19 @@ div.ctools-modal-content .modal-header {
   margin: 0 auto;
 }
 
+/* ctools admin */
+td.ctools-export-ui-operations {
+  background-color: #FEFEFE;
+}
+
+.ctools-dropbutton ul li {
+  margin-bottom: 0px;
+}
+
+td .ctools-dropbutton a {
+  padding: 0px;
+}
+
 /* fixing mysterious hiding of refund options */
 fieldset#edit-refund-options {
   display: block !important;
