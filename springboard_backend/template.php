@@ -328,6 +328,9 @@ function springboard_backend_form_node_form_alter(&$form, &$form_state) {
       );
     }
 
-    $form['page_wrappers_theme_css'][ $language ]['#description'] .= t(' For best compatibility include the Springboard Frontend and Backend theme CSS on your Page Wrapper.');
+    if (!empty($form['page_wrappers_theme_css'])) {
+      $language = $form['page_wrappers_theme_css']['#language'];
+      $form['page_wrappers_theme_css'][ $language ]['#description'] .= t(' For best compatibility include the Springboard Frontend and Backend theme CSS on your Page Wrapper.');
+    }
   }
 }
