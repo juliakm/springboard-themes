@@ -320,7 +320,7 @@ function springboard_backend_views_data_export_complete_page($variables) {
 function springboard_backend_form_node_form_alter(&$form, &$form_state) {
   // Set the backend and frontend themes as default values for the page wrapper theme settings field.
   if ($form['#node']->type == 'page_wrapper') {
-    if (empty($form['node']->nid) && !empty($form['page_wrappers_theme_css'])) {
+    if (empty($form['#node']->nid) && !empty($form['page_wrappers_theme_css'])) {
       $language = $form['page_wrappers_theme_css']['#language'];
       $form['page_wrappers_theme_css'][ $language ]['#default_value'] = array(
         'springboard_backend',
@@ -328,6 +328,9 @@ function springboard_backend_form_node_form_alter(&$form, &$form_state) {
       );
     }
 
-    $form['page_wrappers_theme_css'][ $language ]['#description'] .= t(' For best compatibility include the Springboard Frontend and Backend theme CSS on your Page Wrapper.');
+    if (!empty($form['page_wrappers_theme_css'])) {
+      $language = $form['page_wrappers_theme_css']['#language'];
+      $form['page_wrappers_theme_css'][ $language ]['#description'] .= t(' For best compatibility include the Springboard Frontend and Backend theme CSS on your Page Wrapper.');
+    }
   }
 }
