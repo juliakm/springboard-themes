@@ -42,7 +42,7 @@
   clear:none;
 }
 .control-group.error {
-  background:none; 
+  background:none;
   color:#333;
 }
 .control-group.error label {
@@ -152,7 +152,7 @@
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .caroufredsel_wrapper {
-  min-width:358px; 
+  min-width:358px;
 }
 
 #selected-icon {
@@ -229,21 +229,21 @@
     width: 280px;
 }
 
-.node-type-donation-form textarea, 
-.node-type-donation-form input[type="text"], 
-.node-type-donation-form input[type="password"], 
-.node-type-donation-form input[type="datetime"], 
-.node-type-donation-form input[type="datetime-local"], 
-.node-type-donation-form input[type="date"], 
-.node-type-donation-form input[type="month"], 
-.node-type-donation-form input[type="time"], 
-.node-type-donation-form input[type="week"], 
-.node-type-donation-form input[type="number"], 
-.node-type-donation-form input[type="email"], 
-.node-type-donation-form input[type="url"], 
-.node-type-donation-form input[type="search"], 
-.node-type-donation-form input[type="tel"], 
-.node-type-donation-form input[type="color"], 
+.node-type-donation-form textarea,
+.node-type-donation-form input[type="text"],
+.node-type-donation-form input[type="password"],
+.node-type-donation-form input[type="datetime"],
+.node-type-donation-form input[type="datetime-local"],
+.node-type-donation-form input[type="date"],
+.node-type-donation-form input[type="month"],
+.node-type-donation-form input[type="time"],
+.node-type-donation-form input[type="week"],
+.node-type-donation-form input[type="number"],
+.node-type-donation-form input[type="email"],
+.node-type-donation-form input[type="url"],
+.node-type-donation-form input[type="search"],
+.node-type-donation-form input[type="tel"],
+.node-type-donation-form input[type="color"],
 .node-type-donation-form .uneditable-input {
     width: 268px;
 }
@@ -284,7 +284,7 @@
     padding: 0;
 }
 
-.node-type-petition input[type="submit"].btn, 
+.node-type-petition input[type="submit"].btn,
 .node-type-donation-form input[type="submit"].btn {
     padding: 20px 0;
     margin-left: 10px;
@@ -317,7 +317,7 @@ div.donation-processing-wrapper {
   padding: 0px;
 }
 
-.node-type-petition div.donation-processing-wrapper, 
+.node-type-petition div.donation-processing-wrapper,
 .node-type-donation-form div.donation-processing-wrapper {
   padding: 20px 0;
   margin-left: 10px;
@@ -336,11 +336,11 @@ div.donation-processing-wrapper {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  
+
   position: relative;
 }
 
-.node-type-petition div.donation-processing-wrapper .donation-processing-spinner, 
+.node-type-petition div.donation-processing-wrapper .donation-processing-spinner,
 .node-type-donation-form div.donation-processing-wrapper .donation-processing-spinner{
   background: transparent url("../img/loader.gif") no-repeat left bottom;
   background-size: cover;
@@ -391,7 +391,7 @@ div.donation-processing-wrapper p.donation-processing {
 #webform-component-tickets tr.even {
     background-color: #fff;
 }
-#webform-component-tickets td { 
+#webform-component-tickets td {
     padding: 10px;
 }
 #webform-component-tickets .control-group {
@@ -402,6 +402,22 @@ div.donation-processing-wrapper p.donation-processing {
     width: 120px;
 }
 
+#sba-legislators label {
+ font-weight: bold;
+ margin-bottom: 10px;
+ font-size: 16px;
+}
+
+div.sba-legislator {
+  margin-bottom: 20px;
+}
+
+a.sba-legislator-email,
+a.sba-legislator-facebook,
+a.sba-legislator-twitter {
+  display: block;
+}
+
 @media (min-width: 768px) {
     .node-type-petition textarea,
     .node-type-petition input[type="text"],
@@ -409,21 +425,21 @@ div.donation-processing-wrapper p.donation-processing {
     .node-type-petition input.input-medium,
     .node-type-petition .uneditable-input,
     .node-type-petition input[type="submit"].btn,
-    .node-type-donation-form .two-column-donation .span6 textarea, 
-    .node-type-donation-form .two-column-donation .span6 input[type="text"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="password"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="datetime"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="datetime-local"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="date"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="month"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="time"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="week"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="number"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="email"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="url"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="search"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="tel"], 
-    .node-type-donation-form .two-column-donation .span6 input[type="color"], 
+    .node-type-donation-form .two-column-donation .span6 textarea,
+    .node-type-donation-form .two-column-donation .span6 input[type="text"],
+    .node-type-donation-form .two-column-donation .span6 input[type="password"],
+    .node-type-donation-form .two-column-donation .span6 input[type="datetime"],
+    .node-type-donation-form .two-column-donation .span6 input[type="datetime-local"],
+    .node-type-donation-form .two-column-donation .span6 input[type="date"],
+    .node-type-donation-form .two-column-donation .span6 input[type="month"],
+    .node-type-donation-form .two-column-donation .span6 input[type="time"],
+    .node-type-donation-form .two-column-donation .span6 input[type="week"],
+    .node-type-donation-form .two-column-donation .span6 input[type="number"],
+    .node-type-donation-form .two-column-donation .span6 input[type="email"],
+    .node-type-donation-form .two-column-donation .span6 input[type="url"],
+    .node-type-donation-form .two-column-donation .span6 input[type="search"],
+    .node-type-donation-form .two-column-donation .span6 input[type="tel"],
+    .node-type-donation-form .two-column-donation .span6 input[type="color"],
     .node-type-donation-form .two-column-donation .span6 .uneditable-input,
     .node-type-donation-form .two-column-donation .span6 input.input-large,
     .node-type-donation-form .two-column-donation .span6 input[type="submit"].btn {
@@ -433,15 +449,15 @@ div.donation-processing-wrapper p.donation-processing {
     .node-type-donation-form .two-column-donation .span6 select {
         width: 100%;
     }
-    
+
     .node-type-donation-form .two-column-donation .span6 input.input-medium,
     .node-type-donation-form .two-column-donation .span6 select.input-medium,
     .node-type-petition input.input-small,
     .node-type-petition select.input-small,
-    .node-type-donation-form .two-column-donation .span6 input.input-small, 
+    .node-type-donation-form .two-column-donation .span6 input.input-small,
     .node-type-donation-form .two-column-donation .span6 select.input-small {
         width: 48%;
-    }    
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -464,21 +480,21 @@ div.donation-processing-wrapper p.donation-processing {
     .node-type-petition input.input-medium,
     .node-type-petition .uneditable-input,
     .node-type-petition input[type="submit"].btn,
-    .node-type-donation-form textarea, 
-    .node-type-donation-form input[type="text"], 
-    .node-type-donation-form input[type="password"], 
-    .node-type-donation-form input[type="datetime"], 
-    .node-type-donation-form input[type="datetime-local"], 
-    .node-type-donation-form input[type="date"], 
-    .node-type-donation-form input[type="month"], 
-    .node-type-donation-form input[type="time"], 
-    .node-type-donation-form input[type="week"], 
-    .node-type-donation-form input[type="number"], 
-    .node-type-donation-form input[type="email"], 
-    .node-type-donation-form input[type="url"], 
-    .node-type-donation-form input[type="search"], 
-    .node-type-donation-form input[type="tel"], 
-    .node-type-donation-form input[type="color"], 
+    .node-type-donation-form textarea,
+    .node-type-donation-form input[type="text"],
+    .node-type-donation-form input[type="password"],
+    .node-type-donation-form input[type="datetime"],
+    .node-type-donation-form input[type="datetime-local"],
+    .node-type-donation-form input[type="date"],
+    .node-type-donation-form input[type="month"],
+    .node-type-donation-form input[type="time"],
+    .node-type-donation-form input[type="week"],
+    .node-type-donation-form input[type="number"],
+    .node-type-donation-form input[type="email"],
+    .node-type-donation-form input[type="url"],
+    .node-type-donation-form input[type="search"],
+    .node-type-donation-form input[type="tel"],
+    .node-type-donation-form input[type="color"],
     .node-type-donation-form .uneditable-input,
     .node-type-donation-form input.input-medium,
     .node-type-donation-form select.input-medium,
@@ -492,8 +508,8 @@ div.donation-processing-wrapper p.donation-processing {
     }
     .node-type-petition input.input-small,
     .node-type-petition select.input-small,
-    .node-type-donation-form input.input-small, 
+    .node-type-donation-form input.input-small,
     .node-type-donation-form select.input-small {
         width: 48%;
-    } 
+    }
 }
