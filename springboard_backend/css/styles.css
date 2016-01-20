@@ -2984,3 +2984,8 @@ fieldset#edit-refund-options {
 }
 
 /* end 769 - 979px media query */
+
+/* #808 - Fix to accommodate long node titles without them wrapping: */
+#page-title-wrapper .span8 {
+  width: 100%;
+}
