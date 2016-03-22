@@ -2985,3 +2985,13 @@ fieldset#edit-refund-options {
 }
 
 /* end 769 - 979px media query */
+
+/* #808 - Fix to accommodate long node titles by allowing longer length + making the background extend down if
+ * the title must be on multiple lines: */
+#page-title-wrapper .span8 {
+  width: 100%;
+}
+#page-title-wrapper {
+  height: 100%;
+}
+/* end 808 - long node title support */
