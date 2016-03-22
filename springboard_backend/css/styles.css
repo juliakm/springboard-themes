@@ -1493,7 +1493,7 @@ html.js input.form-autocomplete {
 }
 
 #autocomplete {
-  background-color: #fff;    
+  background-color: #fff;
 }
 
 html.js input.throbbing {
@@ -1655,21 +1655,22 @@ div.vertical-tabs {
   background: #fff;
 }
 
-.vertical-tabs ul.vertical-tabs-list li:before {
+.vertical-tabs ul.vertical-tabs-list a:before {
   content: '';
   background: url("../images/sprite.png") 4px -88px no-repeat;
   position: absolute;
   height: 17px;
   width: 30px;
   overflow: hidden;
-  margin-top: 8px;
+  margin: 1px 0 0 -30px;
 }
 
-.vertical-tabs ul.vertical-tabs-list li.selected:before {
+.vertical-tabs ul.vertical-tabs-list li.selected a:before {
   background: url("../images/sprite.png") 4px -70px no-repeat;
 }
 
 .vertical-tabs ul.vertical-tabs-list li a {
+  min-height: 35px;
   padding: 6px 6px 6px 30px;
   width: 150px;
 }
@@ -2488,7 +2489,7 @@ div.springboard-pane {
 
 /** collapsible tooltip */
 .sb-errors-tip {
-  
+
 }
 
 .sb-errors-tip .sb-errors-control {
