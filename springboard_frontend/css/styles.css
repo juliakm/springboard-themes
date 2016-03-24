@@ -9,17 +9,52 @@
   clear:both;
   float:left;
 }
-#edit-submitted-donation-amount .control-group {
+label[for=edit-submitted-donation-recurs-monthly] {
+  display: none;
+}
+#edit-submitted-donation-recurs-monthly {
+  overflow: hidden; /* contain floats */
+}
+#edit-submitted-donation-recurs-monthly .form-item {
+  float: left;
+  width: inherit;
+  clear: none;
+}
+#edit-submitted-donation-recurs-monthly input[type=radio] {
+  display: none;
+}
+#edit-submitted-donation-recurs-monthly label {
+  display: block;
+  padding: 0.3em 1.5em;
+  margin: 0 1em 0 0;
+  background: #ccc;
+  color: #666;
+}
+#edit-submitted-donation-recurs-monthly input:checked ~ label {
+  color: white;
+  background: #333;
+}
+#edit-submitted-donation-recurs-monthly input:not(:checked) ~ label:hover {
+  color: black;
+}
+#edit-submitted-donation-amount .control-group,
+#edit-submitted-donation-recurring-amount .control-group {
   width:auto;
   clear:none;
   margin-right:10px;
 }
-#edit-submitted-donation-amount .control-group input {
+#edit-submitted-donation-amount .control-group input,
+#edit-submitted-donation-recurring-amount .control-group input {
   margin-top:3px;
 }
-#edit-submitted-donation-amount .control-group label.option {
+#edit-submitted-donation-amount .control-group label.option,
+#edit-submitted-donation-recurring-amount .control-group label.option {
   margin-left:4px;
   float: left;
+}
+#edit-submitted-donation-amount .control-group label.option .form-required,
+#edit-submitted-donation-recurring-amount .control-group label.option .form-required {
+  display: none;  /* addresses core bug https://www.drupal.org/node/1239930 */
 }
 .control-group select,
 .control-group input {
@@ -75,7 +110,8 @@
 [class*="span"] {
   margin-left:0;
 }
-#webform-component-donation label[for="edit-submitted-donation-other-amount"] {
+#webform-component-donation label[for="edit-submitted-donation-other-amount"],
+#webform-component-donation label[for="edit-submitted-donation-recurring-other-amount"] {
   float:left;
   clear:none;
   margin-right: 12px;
