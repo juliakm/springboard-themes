@@ -9,32 +9,32 @@
   clear:both;
   float:left;
 }
-label[for=edit-submitted-donation-recurs-monthly] {
+.webform-component-radios #edit-submitted-donation-recurs-monthly {
+    overflow: hidden; /* contain floats */
+}
+.webform-component-radios label[for=edit-submitted-donation-recurs-monthly] {
   display: none;
 }
-#edit-submitted-donation-recurs-monthly {
-  overflow: hidden; /* contain floats */
-}
-#edit-submitted-donation-recurs-monthly .form-item {
+.webform-component-radios #edit-submitted-donation-recurs-monthly .form-item {
   float: left;
   width: inherit;
   clear: none;
 }
-#edit-submitted-donation-recurs-monthly input[type=radio] {
+.webform-component-radios #edit-submitted-donation-recurs-monthly input[type=radio] {
   display: none;
 }
-#edit-submitted-donation-recurs-monthly label {
+.webform-component-radios #edit-submitted-donation-recurs-monthly label {
   display: block;
   padding: 0.3em 1.5em;
   margin: 0 1em 0 0;
   background: #ccc;
   color: #666;
 }
-#edit-submitted-donation-recurs-monthly input:checked ~ label {
+.webform-component-radios #edit-submitted-donation-recurs-monthly input:checked ~ label {
   color: white;
   background: #333;
 }
-#edit-submitted-donation-recurs-monthly input:not(:checked) ~ label:hover {
+.webform-component-radios #edit-submitted-donation-recurs-monthly input:not(:checked) ~ label:hover {
   color: black;
 }
 #edit-submitted-donation-amount .control-group,
