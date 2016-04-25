@@ -12,6 +12,9 @@
 .webform-component-radios label[for=edit-submitted-donation-recurs-monthly] {
   display: none;
 }
+#edit-submitted-donation-recurs-monthly .form-type-radio .description {
+  margin: 10px 0 0;
+}
 #edit-submitted-donation-amount .control-group,
 #edit-submitted-donation-recurring-amount .control-group {
   width:auto;
