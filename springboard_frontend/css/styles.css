@@ -9,8 +9,8 @@
   clear:both;
   float:left;
 }
-.webform-component-radios #edit-submitted-donation-recurs-monthly {
-    overflow: hidden; /* contain floats */
+.webform-component-radios label[for=edit-submitted-donation-recurs-monthly] {
+  display: none;
 }
 #edit-submitted-donation-amount .control-group,
 #edit-submitted-donation-recurring-amount .control-group {
