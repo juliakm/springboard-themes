@@ -36,10 +36,10 @@
 
   <div class="views-button <?php print preg_replace('/_/', '-', $arg0); ?>">
   <?php // create button pulling in the arg ?>
-  <a href="<?php print base_path(); ?>node/add/<?php print preg_replace
-  ('/_/', '-', $arg0); ?>" class="button button-create">Create <?php print preg_replace('/_/', ' ', $arg0); ?></a>
+  <?php $node_type = node_type_load(preg_replace('/_/', '-', $arg0)); ?>
+  <a href="<?php print base_path(); ?>node/add/<?php print preg_replace('/_/', '-', $arg0); ?>" class="button button-create">Create <?php print $node_type->name; ?></a>
   </div>
-
+  
   <?php if ($header): ?>
     <div class="view-header">
       <?php print $header; ?>
